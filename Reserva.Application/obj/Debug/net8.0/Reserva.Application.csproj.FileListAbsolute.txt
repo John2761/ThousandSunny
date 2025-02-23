@@ -1,0 +1,24 @@
+C:\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.deps.json
+C:\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.dll
+C:\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.pdb
+C:\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.AssemblyReference.cache
+C:\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfoInputs.cache
+C:\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfo.cs
+C:\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.CoreCompileInputs.cache
+C:\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.dll
+C:\ThousandSunny\Reserva.Application\obj\Debug\net8.0\refint\Reserva.Application.dll
+C:\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.pdb
+C:\ThousandSunny\Reserva.Application\obj\Debug\net8.0\ref\Reserva.Application.dll
+C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.deps.json
+C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.dll
+C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.pdb
+C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.AssemblyReference.cache
+C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfoInputs.cache
+C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfo.cs
+C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.CoreCompileInputs.cache
+C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.dll
+C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Application\obj\Debug\net8.0\refint\Reserva.Application.dll
+C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.pdb
+C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Application\obj\Debug\net8.0\ref\Reserva.Application.dll
