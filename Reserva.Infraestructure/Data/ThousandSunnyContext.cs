@@ -326,6 +326,8 @@ public partial class ThousandSunnyContext : DbContext
             entity.Property(e => e.IdReservacion)
                 .ValueGeneratedNever()
                 .HasColumnName("idReservacion");
+            entity.Property(e => e.FechaLimite).HasColumnType("datetime");
+            entity.Property(e => e.FechaReserva).HasColumnType("datetime");
             entity.Property(e => e.IdCrucero).HasColumnName("idCrucero");
             entity.Property(e => e.IdDatosPago).HasColumnName("idDatosPago");
             entity.Property(e => e.IdFecha).HasColumnName("idFecha");
@@ -345,6 +347,11 @@ public partial class ThousandSunnyContext : DbContext
                 .HasForeignKey(d => d.IdUsuario)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Reservaci__idUsu__45F365D3");
+
+            entity.HasOne(d => d.IdFechaNavigation).WithMany(p => p.Reservacion)
+                .HasForeignKey(d => d.IdFecha)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Reservaci__idFec__44FF419A");
         });
 
         modelBuilder.Entity<Rol>(entity =>

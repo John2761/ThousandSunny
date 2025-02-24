@@ -1,5 +1,10 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\barco\atlantis.jpg
+wwwroot\images\barco\blue.jpg
+wwwroot\images\barco\MCaribe.jpg
+wwwroot\images\barco\ocean.jpg
+wwwroot\images\barco\pacific.jpg
 wwwroot\images\crucero\artico.jpg
 wwwroot\images\crucero\caribe.jpg
 wwwroot\images\crucero\caribeña.jpg

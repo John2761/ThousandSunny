@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Reserva.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af18d573f431df809ce61a3457233fbb397d00c9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8485e450c335b7479740c2190bda9d8e2bf45421")]
 [assembly: System.Reflection.AssemblyProductAttribute("Reserva.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Reserva.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

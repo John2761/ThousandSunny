@@ -25,6 +25,26 @@
       "PackagePath": "staticwebassets\\images\\ThousandSunny.png"
     },
     {
+      "Id": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\MCaribe.jpg",
+      "PackagePath": "staticwebassets\\images\\barco\\MCaribe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\atlantis.jpg",
+      "PackagePath": "staticwebassets\\images\\barco\\atlantis.jpg"
+    },
+    {
+      "Id": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\blue.jpg",
+      "PackagePath": "staticwebassets\\images\\barco\\blue.jpg"
+    },
+    {
+      "Id": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\ocean.jpg",
+      "PackagePath": "staticwebassets\\images\\barco\\ocean.jpg"
+    },
+    {
+      "Id": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\pacific.jpg",
+      "PackagePath": "staticwebassets\\images\\barco\\pacific.jpg"
+    },
+    {
       "Id": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\crucero\\artico.jpg",
       "PackagePath": "staticwebassets\\images\\crucero\\artico.jpg"
     },

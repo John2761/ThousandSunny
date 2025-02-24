@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "H33qDbgvWNIFYMMsIV65xB3zsHfVOlMC2as7/xvGaJg=",
+  "Hash": "g3R3Idn3DU9rWzbmD1R+RppUCGl5501kgNFKqJWZp+E=",
   "Source": "Reserva.Web",
   "BasePath": "_content/Reserva.Web",
   "Mode": "Default",
@@ -99,6 +99,111 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\atlantis.jpg",
+      "SourceId": "Reserva.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\",
+      "BasePath": "_content/Reserva.Web",
+      "RelativePath": "images/barco/atlantis#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3gkt249gvf",
+      "Integrity": "w27p9TaIgqRing2eP3wLt6WDRzk6om97bHKOGcSyYck=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\barco\\atlantis.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\blue.jpg",
+      "SourceId": "Reserva.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\",
+      "BasePath": "_content/Reserva.Web",
+      "RelativePath": "images/barco/blue#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "02teb9dqz5",
+      "Integrity": "mIkxqxGZ/XUZodTtervAzYoclK2bilhqUN29X0dvwFg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\barco\\blue.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\MCaribe.jpg",
+      "SourceId": "Reserva.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\",
+      "BasePath": "_content/Reserva.Web",
+      "RelativePath": "images/barco/MCaribe#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "my354y97v6",
+      "Integrity": "Tj+mrWSz3JZpmKCJSG+JGo7izeaTcEKSmJIW25KhXXQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\barco\\MCaribe.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\ocean.jpg",
+      "SourceId": "Reserva.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\",
+      "BasePath": "_content/Reserva.Web",
+      "RelativePath": "images/barco/ocean#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cylnila503",
+      "Integrity": "5HR3TozKIXgOjQvj5CpzzgQfN47TGny0+5OakjZEfDA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\barco\\ocean.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\pacific.jpg",
+      "SourceId": "Reserva.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\",
+      "BasePath": "_content/Reserva.Web",
+      "RelativePath": "images/barco/pacific#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rj2qkc8fbf",
+      "Integrity": "ZxNItUe9ruZNypJoqxHoC7ORlIoETzTDlsZ0/2Wlk/Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\barco\\pacific.jpg"
     },
     {
       "Identity": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\crucero\\artico.jpg",
@@ -1838,6 +1943,416 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/barco/atlantis.3gkt249gvf.jpg",
+      "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\atlantis.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "406131"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w27p9TaIgqRing2eP3wLt6WDRzk6om97bHKOGcSyYck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 04:09:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3gkt249gvf"
+        },
+        {
+          "Name": "label",
+          "Value": "images/barco/atlantis.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-w27p9TaIgqRing2eP3wLt6WDRzk6om97bHKOGcSyYck="
+        }
+      ]
+    },
+    {
+      "Route": "images/barco/atlantis.jpg",
+      "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\atlantis.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "406131"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w27p9TaIgqRing2eP3wLt6WDRzk6om97bHKOGcSyYck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 04:09:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-w27p9TaIgqRing2eP3wLt6WDRzk6om97bHKOGcSyYck="
+        }
+      ]
+    },
+    {
+      "Route": "images/barco/blue.02teb9dqz5.jpg",
+      "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\blue.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "60101"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mIkxqxGZ/XUZodTtervAzYoclK2bilhqUN29X0dvwFg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 04:05:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "02teb9dqz5"
+        },
+        {
+          "Name": "label",
+          "Value": "images/barco/blue.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mIkxqxGZ/XUZodTtervAzYoclK2bilhqUN29X0dvwFg="
+        }
+      ]
+    },
+    {
+      "Route": "images/barco/blue.jpg",
+      "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\blue.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "60101"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mIkxqxGZ/XUZodTtervAzYoclK2bilhqUN29X0dvwFg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 04:05:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mIkxqxGZ/XUZodTtervAzYoclK2bilhqUN29X0dvwFg="
+        }
+      ]
+    },
+    {
+      "Route": "images/barco/MCaribe.jpg",
+      "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\MCaribe.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "115770"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Tj+mrWSz3JZpmKCJSG+JGo7izeaTcEKSmJIW25KhXXQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 04:10:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Tj+mrWSz3JZpmKCJSG+JGo7izeaTcEKSmJIW25KhXXQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/barco/MCaribe.my354y97v6.jpg",
+      "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\MCaribe.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "115770"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Tj+mrWSz3JZpmKCJSG+JGo7izeaTcEKSmJIW25KhXXQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 04:10:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "my354y97v6"
+        },
+        {
+          "Name": "label",
+          "Value": "images/barco/MCaribe.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Tj+mrWSz3JZpmKCJSG+JGo7izeaTcEKSmJIW25KhXXQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/barco/ocean.cylnila503.jpg",
+      "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\ocean.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42348"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5HR3TozKIXgOjQvj5CpzzgQfN47TGny0+5OakjZEfDA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 04:07:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cylnila503"
+        },
+        {
+          "Name": "label",
+          "Value": "images/barco/ocean.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5HR3TozKIXgOjQvj5CpzzgQfN47TGny0+5OakjZEfDA="
+        }
+      ]
+    },
+    {
+      "Route": "images/barco/ocean.jpg",
+      "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\ocean.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42348"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5HR3TozKIXgOjQvj5CpzzgQfN47TGny0+5OakjZEfDA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 04:07:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5HR3TozKIXgOjQvj5CpzzgQfN47TGny0+5OakjZEfDA="
+        }
+      ]
+    },
+    {
+      "Route": "images/barco/pacific.jpg",
+      "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\pacific.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "241183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZxNItUe9ruZNypJoqxHoC7ORlIoETzTDlsZ0/2Wlk/Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 04:11:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZxNItUe9ruZNypJoqxHoC7ORlIoETzTDlsZ0/2Wlk/Q="
+        }
+      ]
+    },
+    {
+      "Route": "images/barco/pacific.rj2qkc8fbf.jpg",
+      "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\barco\\pacific.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "241183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZxNItUe9ruZNypJoqxHoC7ORlIoETzTDlsZ0/2Wlk/Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 04:11:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rj2qkc8fbf"
+        },
+        {
+          "Name": "label",
+          "Value": "images/barco/pacific.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZxNItUe9ruZNypJoqxHoC7ORlIoETzTDlsZ0/2Wlk/Q="
         }
       ]
     },
