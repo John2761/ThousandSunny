@@ -6,6 +6,6 @@ namespace Reserva.Infraestructure.Repository.Interfaces
     public interface IRepositoryReservacion
     {
         Task<ICollection<Reservacion>> ListAsync();
-        Task<Reservacion> FindByIdAsync(int id);
+        Task<Reservacion?> FindByIdAsync(int id);
     }
 }

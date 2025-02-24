@@ -4,53 +4,43 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Historial de reservaciones </h1>
+<h2 class="text-center mt-4">Historial de Reservaciones</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                # de reservacion
-            </th>
-            <th>
-                Fecha de reservacio
-            </th>
-            <th>
-                Fecha Limite de Pago
-            </th>
-            <th>
-                Fecha de salida
-            </th>
-            <th>
-                Crucero reservado
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.idReservacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaReserva)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaLimitePago)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.idFecha)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.idCrucero)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="container mt-3">
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th># Reserva</th>
+                <th>Crucero</th>
+                <th>Fecha de Reserva</th>
+                <th>Estado de Pago</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var reservacion in Model)
+            {
+                <tr>
+                    <td>@reservacion.idReservacion</td>
+                    <td>@reservacion.NombreCrucero</td>
+                    <td>@reservacion.FechaReserva.ToString("dd MMM yyyy")</td>
+                    <td>
+                        @if (reservacion.EstadoPago == "Pendiente")
+                        {
+                            <span class="badge bg-danger">Pendiente</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-success">Pagado</span>
+                        }
+                    </td>
+                    <td>
+                        <a asp-action="Detalle" asp-route-id="@reservacion.idReservacion" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye"></i> Ver Detalle
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

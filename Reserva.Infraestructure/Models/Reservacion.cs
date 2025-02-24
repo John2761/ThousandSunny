@@ -25,6 +25,7 @@ public partial class Reservacion
     public virtual DatosPago IdDatosPagoNavigation { get; set; } = null!;
 
     public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
+    public virtual Fecha IdFechaNavigation { get; set; } = null!;
 
     public virtual ICollection<ReservaComplemento> ReservaComplemento { get; set; } = new List<ReservaComplemento>();
 

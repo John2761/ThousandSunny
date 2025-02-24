@@ -4,32 +4,28 @@ namespace Reserva.Application.DTOs
 {
     public class ReservacionDTO
     {
-        public int idReservacion { get; set; } = 0!;
+        public int idReservacion { get; set; }
+        public DateTime FechaReserva { get; set; }
+        public DateTime FechaLimitePago { get; set; }
 
-        public DateTime FechaReserva { get; set; } = DateTime.Now!; // Fecha en la que se hizo la reserva
+        public string NombreCrucero { get; set; } = null!;
+        public string NombreBarco { get; set; } = null!;
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaFin => FechaInicio.AddDays(CantidadDias);
+        public string EstadoPago { get; set; } = null!;
+        public int CantidadDias { get; set; }
+        public string PuertoSalida { get; set; } = null!;
+        public string PuertoRegreso { get; set; } = null!;
+        public List<HabitacionesReservaDTO> Habitaciones { get; set; } = new();
+        public List<ComplementoReservaDTO> Complementos { get; set; } = new();
+        public List<HuespedDTO> Huespedes { get; set; } = new();
+        public decimal TotalHabitaciones { get; set; }
+        public decimal TotalComplementos { get; set; }
+        public decimal SubTotal => TotalHabitaciones + TotalComplementos;
+        public decimal Impuestos => SubTotal * 0.13m; // 13% de IVA
+        public decimal TotalPagar => SubTotal + Impuestos;
+        public decimal? MontoPendiente { get; set; } // Solo si el pago está pendiente
 
-        public DateTime FechaLimitePago { get; set; } = DateTime.Now!;  //Ultima fecha para pagar la reserva
 
-        public int idFecha { get; set; } = 0!; // Fechas del crucero
-
-        public int IdUsuario { get; set; } // id del usuario que reserva
-
-        public int idCrucero { get; set; } = 0!; // Crucero reservado
-        
-        public int idDatosPago { get; set; } = 0!; // Datos con los que se paga
-
-        public virtual ICollection<DetalleReservacion> DetalleReservacion { get; set; } = new List<DetalleReservacion>();
-
-        public virtual ICollection<Huesped> Huesped { get; set; } = new List<Huesped>();
-
-        public virtual Crucero IdCruceroNavigation { get; set; } = null!;
-
-        public virtual DatosPago IdDatosPagoNavigation { get; set; } = null!;
-
-        public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
-
-        public virtual ICollection<ReservaComplemento> ReservaComplemento { get; set; } = new List<ReservaComplemento>();
-
-        public virtual ICollection<TransaccionPago> TransaccionPago { get; set; } = new List<TransaccionPago>();
     }
 }

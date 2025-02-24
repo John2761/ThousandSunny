@@ -21,7 +21,7 @@ namespace Reserva.Application.Services.Implementations
             _mapper = mapper;
         }
 
-        public async Task<ReservacionDTO> FindByIdAsync(int id)
+        public async Task<ReservacionDTO?> FindByIdAsync(int id)
         {
             var Reservacion = await _repository.FindByIdAsync(id);
             return _mapper.Map<ReservacionDTO>(Reservacion);

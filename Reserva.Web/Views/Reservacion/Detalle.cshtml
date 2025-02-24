@@ -4,51 +4,147 @@
     ViewData["Title"] = "Detalle";
 }
 
-<h1>Detalle de la reservacion</h1>
+<h2 class="text-center mt-4">Factura de Reservación</h2>
 
-<div>
-    <h4>ReservacionDTO</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.idReservacion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.idReservacion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaReserva)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaReserva)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaLimitePago)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaLimitePago)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.idFecha)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.idFecha)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.idCrucero)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.idCrucero)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.idDatosPago)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.idDatosPago)
-        </dd>
-    </dl>
-</div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <!-- Información de la Reserva -->
+        <div class="row">
+            <div class="col-md-6">
+                <h5><strong>Reserva #@Model.idReservacion</strong></h5>
+                <p><strong>Fecha de Reserva:</strong> @Model.FechaReserva.ToString("dd MMM yyyy")</p>
+                <p>
+                    <strong>Estado de Pago:</strong>
+                    @if (Model.EstadoPago == "Pendiente") //porque no me sale :(
+                    {
+                        <span class="badge bg-danger">Pendiente</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success">Pagado</span>
+                    }
+                </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <h5><strong>Crucero:</strong> @Model.NombreCrucero</h5>
+                <p><strong>Barco:</strong> @Model.NombreBarco</p>
+                <p><strong>Itinerario:</strong> @Model.PuertoSalida → @Model.PuertoRegreso</p>
+                <p><strong>Duración:</strong> @Model.CantidadDias días</p>
+                <p><strong>Fecha de Inicio:</strong> @Model.FechaInicio.ToString("dd MMM yyyy")</p>
+                <p><strong>Fecha de Regreso:</strong> @Model.FechaFin.ToString("dd MMM yyyy")</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Sección de Habitaciones -->
+        <h4 class="text-primary">Habitaciones Reservadas</h4>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Habitación</th>
+                    <th>Huéspedes</th>
+                    <th>Precio Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var habitacion in Model.Habitaciones)
+                {
+                    <tr>
+                        <td>@habitacion.NombreHabitacion</td>
+                        <td>@habitacion.CantidadHuespedes</td>
+                        <td>₡@habitacion.PrecioTotal.ToString("N2")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <hr>
+
+        <!-- Sección de Complementos -->
+        <h4 class="text-primary">Complementos Adquiridos</h4>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Complemento</th>
+                    <th>Cantidad</th>
+                    <th>Precio Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Complementos.Any())
+                {
+                    @foreach (var complemento in Model.Complementos)
+                    {
+                        <tr>
+                            <td>@complemento.NombreComplemento</td>
+                            <td>@complemento.Cantidad</td>
+                            <td>₡@complemento.TotalComplemento.ToString("N2")</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="3" class="text-center">No se han agregado complementos</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <hr>
+
+        <!-- Resumen de Pagos -->
+        <h4 class="text-primary">Resumen de Pago</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td><strong>Total por Habitaciones:</strong></td>
+                    <td class="text-end">₡@Model.TotalHabitaciones.ToString("N2")</td>
+                </tr>
+                <tr>
+                    <td><strong>Total por Complementos:</strong></td>
+                    <td class="text-end">₡@Model.TotalComplementos.ToString("N2")</td>
+                </tr>
+                <tr>
+                    <td><strong>Subtotal:</strong></td>
+                    <td class="text-end">₡@Model.SubTotal.ToString("N2")</td>
+                </tr>
+                <tr>
+                    <td><strong>Impuestos y Tarifas (13%):</strong></td>
+                    <td class="text-end">₡@Model.Impuestos.ToString("N2")</td>
+                </tr>
+                <tr class="table-primary">
+                    <td><strong>Precio Total:</strong></td>
+                    <td class="text-end"><strong>₡@Model.TotalPagar.ToString("N2")</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <!-- Información sobre el Estado del Pago -->
+        @if (Model.EstadoPago == "Pendiente")
+        {
+            <div class="alert alert-warning">
+                <h5><strong>Pago Pendiente</strong></h5>
+                <p><strong>Fecha Límite de Pago:</strong> @Model.FechaLimitePago.ToString("dd MMM yyyy")</p>
+                <p><strong>Monto a Pagar:</strong> ₡@Model.MontoPendiente?.ToString("N2")</p>
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-success">
+                <h5><strong>Pago Completado</strong></h5>
+                <p>Esta reservación ha sido pagada en su totalidad.</p>
+            </div>
+        }
+
+        <!-- Botón de Regreso -->
+        <div class="text-center mt-4">
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Volver al Historial
+            </a>
+        </div>
+    </div>
 </div>
