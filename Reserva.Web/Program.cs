@@ -17,15 +17,19 @@ builder.Services.AddControllersWithViews();
 
 // Configurar D.I.
 //Repository 
+builder.Services.AddTransient<IRepositoryReservacion, RepositoryReservacion>();
 builder.Services.AddTransient<IRepositoryHabitacion, RepositoryHabitacion>();
 builder.Services.AddTransient<IRepositoryBarco, RepositoryBarco>();
-//Services 
+
+//Services
+builder.Services.AddTransient<IServiceReservacion, ServiceReservacion>();
 builder.Services.AddTransient<IServiceHabitacion, ServiceHabitacion>();
 builder.Services.AddTransient<IServiceBarco, ServiceBarco>();
 
 //Configurar Automapper 
 builder.Services.AddAutoMapper(config =>
 {
+    config.addProfile<ReservacionProfile>();
     config.AddProfile<HabitacionProfile>();
     config.AddProfile<BarcoProfile>();
 });

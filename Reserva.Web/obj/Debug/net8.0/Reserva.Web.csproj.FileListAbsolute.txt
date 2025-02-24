@@ -218,3 +218,4 @@ C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Web\obj\Debug\net8
 C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.pdb
 C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.genruntimeconfig.cache
 C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Web\obj\Debug\net8.0\ref\Reserva.Web.dll
+C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\refint\Reserva.Web.dll
