@@ -4,31 +4,25 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Historial de reservaciones </h1>
 
-<p>
-    <a asp-action="Create">Historial de reservaciones</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.idReservacion)
+                # de reservacion
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FechaReserva)
+                Fecha de reservacio
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FechaLimite)
+                Fecha Limite de Pago
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.idFecha)
+                Fecha de salida
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.idCrucero)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.idDatosPago)
+                Crucero reservado
             </th>
             <th></th>
         </tr>
@@ -43,16 +37,13 @@
                 @Html.DisplayFor(modelItem => item.FechaReserva)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FechaLimite)
+                @Html.DisplayFor(modelItem => item.FechaLimitePago)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.idFecha)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.idCrucero)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.idDatosPago)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |

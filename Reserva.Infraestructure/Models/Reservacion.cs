@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Reserva.Infraestructure.Models;
+﻿namespace Reserva.Infraestructure.Models;
 
 public partial class Reservacion
 {
     public int IdReservacion { get; set; }
 
-    public DateOnly FechaLimite { get; set; }
+    public DateTime FechaLimite { get; set; }
 
-    public DateOnly FechaReserva { get; set; }
+    public DateTime FechaReserva { get; set; }
 
     public int IdFecha { get; set; }
 
