@@ -1,0 +1,98 @@
+﻿@model Reserva.Application.DTOs.CruceroDTO
+
+@{
+    ViewData["Title"] = "Detalle del Crucero";
+
+    // Diccionario para asignar imágenes manualmente según el nombre del crucero
+    var imagesCrucero = new Dictionary<string, string>
+    {
+        { "Aventura Caribeña", "artico.jpg" },
+        { "Tesoros del Caribe", "caribe.jpg" },
+        { "Islas del Paraíso", "caribeña.jpg" },
+        { "Ruta Maya", "maya.jpg" },
+        { "Explorador Tropical", "tropical.jpg" }
+    };
+
+    var imagenUrl = imagesCrucero.ContainsKey(Model.Nombre)
+        ? Url.Content($"~/images/crucero/{imagesCrucero[Model.Nombre]}")
+        : Url.Content("~/images/crucero/default.jpg");
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="row g-0">
+            <!-- Columna para la imagen -->
+            <div class="col-lg-4">
+                <div class="h-100" style="background: url('@imagenUrl') center center/cover no-repeat; min-height:300px;">
+                    <!-- Imagen oculta para mantener el layout -->
+                    <img src="@imagenUrl" class="img-fluid d-none" alt="@Model.Nombre">
+                </div>
+            </div>
+            <!-- Columna para la información -->
+            <div class="col-lg-8">
+                <div class="card-body">
+                    <h2 class="card-title text-uppercase fw-bold text-primary">@Model.Nombre</h2>
+                    <p class="card-text"><strong>Descripción:</strong> @Model.Descripcion</p>
+                    <p class="card-text"><strong>Duración:</strong> @Model.CantidadDias días</p>
+                    <p class="card-text"><strong>Barco:</strong> @Model.NombreBarco</p>
+
+                    <!-- Accordion para secciones colapsables -->
+                    <div class="accordion" id="detalleAccordion">
+                        <!-- Sección de Itinerario -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingItinerario">
+                                <button class="accordion-button collapsed bg-info text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseItinerario" aria-expanded="false" aria-controls="collapseItinerario">
+                                    Itinerario
+                                </button>
+                            </h2>
+                            <div id="collapseItinerario" class="accordion-collapse collapse" aria-labelledby="headingItinerario" data-bs-parent="#detalleAccordion">
+                                <div class="accordion-body">
+                                    <ul class="list-group">
+                                        @foreach (var item in Model.Itinerario)
+                                        {
+                                            <li class="list-group-item">
+                                                <strong>Día @item.Dia:</strong> @item.Descripcion <br />
+                                                <strong>Puerto:</strong> @item.Puerto.Nombre
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sección de Fechas y Precios -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFechas">
+                                <button class="accordion-button collapsed bg-success text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFechas" aria-expanded="false" aria-controls="collapseFechas">
+                                    Fechas y Precios de Habitaciones
+                                </button>
+                            </h2>
+                            <div id="collapseFechas" class="accordion-collapse collapse" aria-labelledby="headingFechas" data-bs-parent="#detalleAccordion">
+                                <div class="accordion-body">
+                                    <ul class="list-group">
+                                        @foreach (var fp in Model.FechasPrecios)
+                                        {
+                                            <li class="list-group-item">
+                                                <strong>Fecha:</strong> @fp.FechaSalida.ToString("dd MMM yyyy")
+                                                <ul class="list-group mt-2">
+                                                    @foreach (var precio in fp.PrecioHabitacion)
+                                                    {
+                                                        <li class="list-group-item">
+                                                            <strong>@precio.NombreHabitacion:</strong> ₡@precio.PrecioHabitacion.ToString("N2")
+                                                        </li>
+                                                    }
+                                                </ul>
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón para volver a la lista -->
+                    <a asp-action="Index" class="btn btn-secondary mt-3">Volver a la Lista</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

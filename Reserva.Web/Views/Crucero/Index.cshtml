@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Reserva.Application.DTOs.CruceroDTO>
+
+@{
+    ViewData["Title"] = "Lista de Cruceros";
+
+    // Asignar imágenes manualmente según el nombre del crucero
+    var imagesCrucero = new Dictionary<string, string>
+    {
+        { "Aventura Caribeña", "artico.jpg" },
+        { "Tesoros del Caribe", "caribe.jpg" },
+        { "Islas del Paraíso", "caribeña.jpg" },
+        { "Ruta Maya", "maya.jpg" },
+        { "Explorador Tropical", "tropical.jpg" }
+    };
+}
+
+<h2 class="text-center mt-4">Explora Nuestros Cruceros</h2>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var crucero in Model)
+        {
+            var imagenUrl = imagesCrucero.ContainsKey(crucero.Nombre)
+            ? Url.Content($"~/images/crucero/{imagesCrucero[crucero.Nombre]}")
+            : Url.Content("~/images/crucero/default.jpg"); // Imagen por defecto
+
+            <div class="col">
+                <div class="card shadow-lg border-0 rounded-4 h-100">
+                    <img src="@imagenUrl" class="card-img-top" alt="@crucero.Nombre" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-uppercase fw-bold text-primary">@crucero.Nombre</h5>
+                        <p class="card-text"><strong>Duración:</strong> @crucero.CantidadDias días</p>
+                        <p class="card-text"><strong>Barco:</strong> @crucero.NombreBarco</p>
+                        <div class="mt-auto text-center">
+                            <a asp-action="Detalle" asp-route-id="@crucero.IdCrucero" class="btn btn-primary w-100">
+                                <i class="bi bi-eye"></i> Ver Detalle
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
