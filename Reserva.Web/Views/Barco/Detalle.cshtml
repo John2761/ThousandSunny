@@ -7,29 +7,43 @@
 <h1>Detalle del barco</h1>
 
 <div>
-    <h4>BarcoDTO</h4>
+    <h4>Información del Barco</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdBarco)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdBarco)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descripcion)
-        </dd>
+        <dt class="col-sm-2">ID</dt>
+        <dd class="col-sm-10">@Model.IdBarco</dd>
+
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.Nombre</dd>
+
+        <dt class="col-sm-2">Descripción</dt>
+        <dd class="col-sm-10">@Model.Descripcion</dd>
+
+        <dt class="col-sm-2">Capacidad Máxima de Huéspedes</dt>
+        <dd class="col-sm-10 fw-bold text-primary">@Model.CapacidadTotalHuespedes</dd>
+
     </dl>
+
+    <h4>Habitaciones Disponibles</h4>
+    <table class="table table-bordered">
+        <thead class="table-primary">
+            <tr>
+                <th>Tipo de Habitación</th>
+                <th>Cantidad Disponible de habitaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var habitacion in Model.Habitaciones)
+            {
+                <tr>
+                    <td>@habitacion.NombreHabitacion</td>
+                    <td>@habitacion.CantidadHabitaciones</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
+
 <div>
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     <a asp-action="Index">Back to List</a>

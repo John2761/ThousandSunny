@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\John\\Downloads\\Git\\Reserva.Application\\Reserva.Application.csproj": {}
+    "C:\\Users\\John\\Downloads\\Ambiente Web II\\Github\\ThousandSunny\\Reserva.Application\\Reserva.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\John\\Downloads\\Git\\Reserva.Application\\Reserva.Application.csproj": {
+    "C:\\Users\\John\\Downloads\\Ambiente Web II\\Github\\ThousandSunny\\Reserva.Application\\Reserva.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\John\\Downloads\\Git\\Reserva.Application\\Reserva.Application.csproj",
+        "projectUniqueName": "C:\\Users\\John\\Downloads\\Ambiente Web II\\Github\\ThousandSunny\\Reserva.Application\\Reserva.Application.csproj",
         "projectName": "Reserva.Application",
-        "projectPath": "C:\\Users\\John\\Downloads\\Git\\Reserva.Application\\Reserva.Application.csproj",
+        "projectPath": "C:\\Users\\John\\Downloads\\Ambiente Web II\\Github\\ThousandSunny\\Reserva.Application\\Reserva.Application.csproj",
         "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\John\\Downloads\\Git\\Reserva.Application\\obj\\",
+        "outputPath": "C:\\Users\\John\\Downloads\\Ambiente Web II\\Github\\ThousandSunny\\Reserva.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\John\\Downloads\\Git\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj": {
-                "projectPath": "C:\\Users\\John\\Downloads\\Git\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj"
+              "C:\\Users\\John\\Downloads\\Ambiente Web II\\Github\\ThousandSunny\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj": {
+                "projectPath": "C:\\Users\\John\\Downloads\\Ambiente Web II\\Github\\ThousandSunny\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj"
               }
             }
           }
@@ -56,7 +56,7 @@
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[14.0.0, )"
+              "version": "[13.0.1, )"
             }
           },
           "imports": [
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\John\\Downloads\\Git\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj": {
+    "C:\\Users\\John\\Downloads\\Ambiente Web II\\Github\\ThousandSunny\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\John\\Downloads\\Git\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj",
+        "projectUniqueName": "C:\\Users\\John\\Downloads\\Ambiente Web II\\Github\\ThousandSunny\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj",
         "projectName": "Reserva.Infraestructure",
-        "projectPath": "C:\\Users\\John\\Downloads\\Git\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj",
+        "projectPath": "C:\\Users\\John\\Downloads\\Ambiente Web II\\Github\\ThousandSunny\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj",
         "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\John\\Downloads\\Git\\Reserva.Infraestructure\\obj\\",
+        "outputPath": "C:\\Users\\John\\Downloads\\Ambiente Web II\\Github\\ThousandSunny\\Reserva.Infraestructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

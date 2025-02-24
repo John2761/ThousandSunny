@@ -16,7 +16,11 @@ namespace Reserva.Infraestructure.Repository.Implementations
 
         public async Task<Barco> FindByIdAsync(int id)
         {
-            return await _context.Barco.FindAsync(id);
+            return await _context.Barco
+                        .Include(b => b.BarcoHabitacion)
+                        .ThenInclude(bh => bh.IdHabitacionNavigation)
+                        .AsNoTracking()
+                        .FirstOrDefaultAsync(b => b.IdBarco == id);
         }
 
         public async Task<ICollection<Barco>> ListAsync()

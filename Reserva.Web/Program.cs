@@ -31,7 +31,7 @@ builder.Services.AddTransient<IServiceCrucero, ServiceCrucero>();
 //Configurar Automapper 
 builder.Services.AddAutoMapper(config =>
 {
-    config.addProfile<ReservacionProfile>();
+    config.AddProfile<ReservacionProfile>();
     config.AddProfile<HabitacionProfile>();
     config.AddProfile<BarcoProfile>();
     config.AddProfile<CruceroProfile>();

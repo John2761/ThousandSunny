@@ -183,7 +183,7 @@ public partial class ThousandSunnyContext : DbContext
             entity.Property(e => e.FechaSalida).HasColumnType("datetime");
             entity.Property(e => e.IdCrucero).HasColumnName("idCrucero");
 
-            entity.HasOne(d => d.IdCruceroNavigation).WithMany(p => p.Fecha)
+            entity.HasOne(d => d.IdCruceroNavigation).WithMany(p => p.Fechas)
                 .HasForeignKey(d => d.IdCrucero)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Fecha__idCrucero__3B75D760");
@@ -331,7 +331,7 @@ public partial class ThousandSunnyContext : DbContext
             entity.Property(e => e.IdFecha).HasColumnName("idFecha");
             entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
 
-            entity.HasOne(d => d.IdCruceroNavigation).WithMany(p => p.Reservacion)
+            entity.HasOne(d => d.IdCruceroNavigation).WithMany(p => p.Reservaciones)
                 .HasForeignKey(d => d.IdCrucero)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Reservaci__idCru__46E78A0C");

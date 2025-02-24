@@ -17,4 +17,8 @@
     <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Reserva.Infraestructure\Reserva.Infraestructure.csproj" />
+  </ItemGroup>
+
 </Project>

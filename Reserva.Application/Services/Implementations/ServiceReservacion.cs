@@ -10,7 +10,7 @@ using Reserva.Infraestructure.Repository.Interfaces;
 
 namespace Reserva.Application.Services.Implementations
 {
-    internal class ServiceReservacion : IServiceReservacion
+    public class ServiceReservacion : IServiceReservacion
     {
         private readonly IRepositoryReservacion _repository;
         private readonly IMapper _mapper;

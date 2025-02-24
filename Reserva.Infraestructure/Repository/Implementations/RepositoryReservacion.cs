@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Reserva.Infraestructure.Data;
 using Reserva.Infraestructure.Models;
+using Reserva.Infraestructure.Repository.Interfaces;
 
 namespace Reserva.Infraestructure.Repository.Implementations
 {
-    public class RepositoryReservacion
+    public class RepositoryReservacion : IRepositoryReservacion
     {
         private readonly ThousandSunnyContext _context;
 

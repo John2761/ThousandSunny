@@ -9,8 +9,20 @@ namespace Reserva.Application.Profiles
     {
         public BarcoProfile()
         {
-            CreateMap<BarcoDTO, Barco>().ReverseMap();
+            CreateMap<Barco, BarcoDTO>()
+            .ForMember(dest => dest.Habitaciones, opt => opt.MapFrom(src => src.BarcoHabitacion
+                .Select(bh => new HabitacionBarcoDTO
+                {
+                    NombreHabitacion = bh.IdHabitacionNavigation.Nombre,
+                    CantidadHabitaciones = bh.CantHabitaciones,
+                    HuespedesMax = bh.IdHabitacionNavigation.HuespedesMax
+                }).ToList()))
 
+            // Calcular la capacidad total de huéspedes del barco
+            .ForMember(dest => dest.CapacidadTotalHuespedes, opt => opt.MapFrom(src =>
+                src.BarcoHabitacion.Sum(bh => bh.CantHabitaciones * bh.IdHabitacionNavigation.HuespedesMax)))
+
+            .ReverseMap();
         }
 
     }
