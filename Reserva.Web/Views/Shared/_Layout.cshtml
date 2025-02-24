@@ -1,45 +1,42 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Thousand Sunny</title>
+    <title>@ViewData["Title"] | Thousand Sunny</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-Zephyr.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Reserva.Web.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="icon" href="~/images/Logo.png" type="image/png" />
+    @* <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"> *@
 </head>
 <body>
     <div class="wrapper">
         <header>
             <nav class="navbar navbar-expand-lg navbar-custom">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Thousand Sunny</a>
+                    <!-- Reemplazar el texto por un logo -->
+                    <a class="navbar-brand" href="/">
+                        <img src="~/images/Logo.png" alt="Logo" style="height:80px; width:100px">
+                    </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarColor01">
-                        <ul class="navbar-nav me-auto">
+                    <!-- Centrar los enlaces -->
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarColor01">
+                        <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link active" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Cruceros</a>
+                                <a asp-controller="Crucero" asp-action="Index" class="nav-link">Cruceros</a>
                             </li>
                             <li class="nav-item">
-                                <a asp-controller="Habitacion" asp-action="Index" class="nav-link">
-                                    <i class="fs-4 bi-house-door"></i> <span class="ms-1 d-none d-sm-inline">Habitaciones</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a asp-controller="Barco" asp-action="Index" class="nav-link">
-                                    <i class="fs-4 bi-house-door"></i> <span class="ms-1 d-none d-sm-inline">Barcos</span>
-                                </a>
+                                <a asp-controller="Habitacion" asp-action="Index" class="nav-link">Habitaciones</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Ofertas</a>
                             </li>
-
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Contacto</a>
                             </li>
@@ -53,7 +50,8 @@
                                 </div>
                             </li>
                         </ul>
-                        <form class="d-flex">
+                        <!-- Opcional: si deseas mantener el formulario de búsqueda a la derecha, puedes colocarlo fuera del contenedor centrado -->
+                        <form class="d-flex ms-auto">
                             <input class="form-control me-sm-2" type="search" placeholder="Buscar">
                             <button class="btn btn-search my-2 my-sm-0" type="submit">Buscar</button>
                         </form>
