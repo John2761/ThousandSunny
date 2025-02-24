@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Reserva.Application.DTOs.ReservacionDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Historial de reservaciones</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idReservacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaReserva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaLimite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idFecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idCrucero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idDatosPago)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idReservacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaReserva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaLimite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idFecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idCrucero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idDatosPago)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

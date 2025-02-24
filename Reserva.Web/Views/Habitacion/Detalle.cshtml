@@ -1,0 +1,63 @@
+﻿@model Reserva.Application.DTOs.HabitacionDTO
+
+@{
+    ViewData["Title"] = "Detalle Habitación";
+
+    //Asignar imagenes a cada habitacion
+    var imagesHabitacion = new Dictionary<int, string>
+    {
+        { 1, "1-estandar.png" },
+        { 2, "2-deluxe.png" },
+        { 3, "3-familiar.png" },
+        { 4, "4-junior.png" },
+        { 5, "5-presidencial.png" }
+    };
+
+    // Verificar si la habitación tiene imagen asignada
+    string imagenUrl = imagesHabitacion.ContainsKey(Model.IdHabitacion)
+        ? $"/images/habitaciones/{imagesHabitacion[Model.IdHabitacion]}"
+        : "/images/habitaciones/default.png"; // Imagen por defecto si no existe
+}
+
+<h2>Detalle de la habitación</h2>
+
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-lg border-0 rounded-4" style="max-width: 800px; background: linear-gradient(135deg, #0A1931, #185ADB); color: white;">
+        <div class="row g-0">
+            <!-- Sección de la imagen -->
+            <div class="col-md-5">
+                <img src="@imagenUrl" class="img-fluid rounded-start" alt="Imagen de la habitación">
+            </div>
+
+            <!-- Sección de la información -->
+            <div class="col-md-7">
+                <div class="card-body">
+                    <h3 class="card-title text-center text-uppercase fw-bold" style="color: #FFC947;">
+                        <i class="bi bi-house-door-fill"></i> @Model.Nombre
+                    </h3>
+                    <hr class="bg-light">
+
+                    <dl class="row">
+                        <dt class="col-sm-4"><i class="bi bi-file-text"></i> Descripción:</dt>
+                        <dd class="col-sm-8">@Model.Descripcion</dd>
+
+                        <dt class="col-sm-4"><i class="bi bi-arrows-angle-expand"></i> Tamaño:</dt>
+                        <dd class="col-sm-8">@Model.Tamaño</dd>
+
+                        <dt class="col-sm-4"><i class="bi bi-people-fill"></i> Capacidad:</dt>
+                        <dd class="col-sm-8">@Model.HuespedesMin - @Model.HuespedesMax huéspedes</dd>
+                    </dl>
+
+                    <div class="text-center mt-4">
+                        <a class="btn btn-warning text-dark fw-bold" asp-action="Edit" asp-route-id="@Model.IdHabitacion">
+                            <i class="bi bi-pencil-square"></i> Editar
+                        </a>
+                        <a class="btn btn-light fw-bold" asp-action="Index">
+                            <i class="bi bi-arrow-left"></i> Volver al listado
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

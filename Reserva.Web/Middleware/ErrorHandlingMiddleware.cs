@@ -1,6 +1,6 @@
-﻿using System.Text;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Reserva.Web.Models;
+using System.Text;
 
 namespace Reserva.Web.Middleware
 {
@@ -26,15 +26,18 @@ namespace Reserva.Web.Middleware
             {
                 routeWhereExceptionOccured = context.Request.Path;
                 path = JsonConvert.SerializeObject(routeWhereExceptionOccured);
-                // Create Random IdEvent
+
+                // Create Random IdEvent  
                 Random random = new Random();
                 eventId = random.Next(1, 5000).ToString("######") + "-" +
-               DateTime.Now.ToString("yyMMddhhmmss");
+        DateTime.Now.ToString("yyMMddhhmmss");
+
                 ErrorMiddlewareViewModel result = new ErrorMiddlewareViewModel
                 {
                     Path = path,
                     IdEvent = eventId
                 };
+
                 if (ex is AggregateException ae)
                 {
                     result.ListMessages = ae.InnerExceptions.Select(e => e.Message).ToList();
@@ -43,28 +46,31 @@ namespace Reserva.Web.Middleware
                 {
                     string messages = ex.Message;
                     result.ListMessages = new List<string> {
- messages
- };
+                                                    messages
+                                                   };
                 }
 
                 str.AppendFormat("\n");
-                str.AppendFormat("EventId :{0}\n", eventId);
-                str.AppendFormat("ErrorList :{0}\n", string.Join(",", result.ListMessages));
+                str.AppendFormat("EventId    :{0}\n", eventId);
+                str.AppendFormat("ErrorList  :{0}\n", string.Join(",", result.ListMessages));
                 str.AppendFormat("StackTrace :{0}\n", ex.StackTrace);
+
                 messagesJson = JsonConvert.SerializeObject(result);
                 context.Items["ErrorMessagesJson"] = messagesJson;
+
                 _logger.LogError(str.ToString());
+
                 await HandleErrorAsync(context);
             }
         }
+
         private static async Task HandleErrorAsync(HttpContext context)
         {
             string? msg = context.Items["ErrorMessagesJson"] as string;
             string redirectUrl = $"/Home/ErrorHandler?messagesJson={msg}";
             context.Response.Redirect(redirectUrl);
-            // Dummy Await
+            // Dummy Await  
             await Task.FromResult(1);
         }
     }
-    
 }

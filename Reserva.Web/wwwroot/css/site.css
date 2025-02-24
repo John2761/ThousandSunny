@@ -1,22 +1,113 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+/* Estilos personalizados para aplicar colores del logo */
+.navbar-custom {
+    background: linear-gradient(135deg, #0A1931, #185ADB); /* Azul oscuro a azul medio */
+}
+
+    .navbar-custom .navbar-brand {
+        color: #FFC947 !important; /* Dorado */
+        font-weight: bold;
+    }
+
+    .navbar-custom .nav-link {
+        color: #FFFFFF !important; /* Blanco */
+    }
+
+        .navbar-custom .nav-link:hover {
+            color: #FFC947 !important; /* Dorado al pasar el mouse */
+        }
+
+    .navbar-custom .dropdown-menu {
+        background-color: #0A1931; /* Fondo azul oscuro */
+    }
+
+    .navbar-custom .dropdown-item {
+        color: #FFFFFF;
+    }
+
+        .navbar-custom .dropdown-item:hover {
+            background-color: #185ADB; /* Azul medio */
+        }
+
+/* Botón de búsqueda */
+.btn-search {
+    background-color: #FFC947 !important; /* Dorado */
+    color: #0A1931 !important; /* Azul oscuro */
+    border: none;
+}
+
+    .btn-search:hover {
+        background-color: #FFD966 !important; /* Dorado más claro */
+    }
+
+/* Footer */
+.footer-custom {
+    background-color: #0A1931;
+    color: #FFFFFF;
+    padding: 15px;
+    text-align: center;
+}
+
+    .footer-custom a {
+        color: #FFC947;
+        text-decoration: none;
+    }
+
+        .footer-custom a:hover {
+            color: #FFD966;
+        }
+
+/* Asegurar que el footer se mantenga en la parte inferior */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hace que el contenido ocupe el 100% de la altura */
+}
+
+.content {
+    flex: 1; /* Empuja el footer hacia abajo si hay poco contenido */
+}
+
+.footer-custom {
+    background-color: #0A1931;
+    color: #FFFFFF;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-custom a {
+    color: #FFC947;
+    text-decoration: none;
+}
+
+.footer-custom a:hover {
+    color: #FFD966;
 }

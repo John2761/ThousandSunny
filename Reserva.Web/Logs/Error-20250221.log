@@ -1,0 +1,488 @@
+2025-02-21 11:34:47.560 -06:00 [ERR] 
+EventId    :1092-250221113447
+ErrorList  :Unable to resolve service for type 'Reserva.Application.Services.Interfaces.IServiceBarco' while attempting to activate 'Reserva.Web.Controllers.BarcoController'.
+StackTrace :   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method70(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 11:39:35.548 -06:00 [ERR] 
+EventId    :463-250221113935
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method57(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 11:40:42.325 -06:00 [ERR] 
+EventId    :2000-250221114042
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 11:40:51.767 -06:00 [ERR] 
+EventId    :4685-250221114051
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 11:42:40.360 -06:00 [ERR] 
+EventId    :4306-250221114240
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method158(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 11:42:51.521 -06:00 [ERR] 
+EventId    :3352-250221114251
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method158(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 11:46:14.229 -06:00 [ERR] 
+EventId    :3872-250221114614
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 11:47:58.212 -06:00 [ERR] 
+EventId    :1476-250221114758
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 11:48:17.994 -06:00 [ERR] 
+EventId    :1411-250221114817
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 11:48:48.434 -06:00 [ERR] 
+EventId    :2467-250221114848
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 11:49:01.689 -06:00 [ERR] 
+EventId    :4863-250221114901
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 11:58:04.574 -06:00 [ERR] 
+EventId    :2835-250221115804
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 12:00:57.098 -06:00 [ERR] 
+EventId    :934-250221120057
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 12:01:52.656 -06:00 [ERR] 
+EventId    :355-250221120152
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 12:03:28.136 -06:00 [ERR] 
+EventId    :1247-250221120328
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 12:46:10.791 -06:00 [ERR] 
+EventId    :3680-250221124610
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 12:49:01.444 -06:00 [ERR] 
+EventId    :1569-250221124901
+ErrorList  :Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Barco -> BarcoDTO
+Reserva.Infraestructure.Models.Barco -> Reserva.Application.DTOs.BarcoDTO
+StackTrace :   at lambda_method181(Closure, Object, BarcoDTO, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.FindByIdAsync(Int32 id) in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 23
+   at Reserva.Web.Controllers.BarcoController.Detalle(Int32 id) in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 26
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 12:51:34.009 -06:00 [ERR] 
+EventId    :4018-250221125133
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 19
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-02-21 13:00:17.306 -06:00 [ERR] 
+EventId    :667-250221010017
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Barco, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.BarcoDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method86(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceBarco.ListAsync() in C:\Users\John\Downloads\Git\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 29
+   at Reserva.Web.Controllers.BarcoController.Index() in C:\Users\John\Downloads\Git\Reserva.Web\Controllers\BarcoController.cs:line 18
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Git\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+

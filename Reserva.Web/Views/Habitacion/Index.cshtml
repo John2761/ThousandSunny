@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Reserva.Application.DTOs.HabitacionDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">Listado de Habitaciones</h2>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Tamaño</th>
+                    <th scope="col">Capacidad</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var habitacion in Model)
+                {
+                    <tr>
+                        <td>@habitacion.Nombre</td>
+                        <td>@habitacion.Descripcion</td>
+                        <td>@habitacion.Tamaño</td>
+                        <td>@habitacion.HuespedesMin - @habitacion.HuespedesMax huéspedes</td>
+                        <td>
+                            <a class="btn btn-info btn-sm" asp-action="Detalle" asp-route-id="@habitacion.IdHabitacion">
+                                <i class="bi bi-eye"></i> Ver Detalle
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
