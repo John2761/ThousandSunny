@@ -13,3 +13,12 @@ C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\Reserva.Applica
 C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\refint\Reserva.Application.dll
 C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\Reserva.Application.pdb
 C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\ref\Reserva.Application.dll
+C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.AssemblyReference.cache
+C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfoInputs.cache
+C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfo.cs
+C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.CoreCompileInputs.cache
+C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.sourcelink.json
+C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.dll
+C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\refint\Reserva.Application.dll
+C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.pdb
