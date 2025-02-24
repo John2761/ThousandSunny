@@ -1,28 +1,14 @@
-C:\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.deps.json
-C:\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.runtimeconfig.json
-C:\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.dll
-C:\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.AssemblyReference.cache
-C:\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfoInputs.cache
-C:\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfo.cs
-C:\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.CoreCompileInputs.cache
-C:\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.dll
-C:\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\refint\Reserva.Infraestructure.dll
-C:\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.genruntimeconfig.cache
-C:\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\ref\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.deps.json
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.runtimeconfig.json
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.AssemblyReference.cache
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfoInputs.cache
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfo.cs
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.CoreCompileInputs.cache
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\refint\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.genruntimeconfig.cache
-C:\Users\John\Downloads\Ambiente Web II\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\ref\Reserva.Infraestructure.dll
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.deps.json
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.runtimeconfig.json
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.dll
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.pdb
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfo.cs
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.dll
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\refint\Reserva.Infraestructure.dll
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.pdb
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.genruntimeconfig.cache
+C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\ref\Reserva.Infraestructure.dll

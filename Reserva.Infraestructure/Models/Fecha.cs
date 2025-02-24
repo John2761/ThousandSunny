@@ -9,9 +9,9 @@ public partial class Fecha
 
     public DateTime FechaSalida { get; set; }
 
-    public DateTime FechaRegreso { get; set; }
+    public int IdCrucero { get; set; }
+
+    public virtual Crucero IdCruceroNavigation { get; set; } = null!;
 
     public virtual ICollection<Precio> Precio { get; set; } = new List<Precio>();
-
-    public virtual ICollection<Crucero> IdCrucero { get; set; } = new List<Crucero>();
 }

@@ -11,6 +11,8 @@ public partial class Reservacion
 
     public DateOnly FechaReserva { get; set; }
 
+    public int IdFecha { get; set; }
+
     public int IdUsuario { get; set; }
 
     public int IdCrucero { get; set; }

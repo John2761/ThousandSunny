@@ -15,11 +15,11 @@ public partial class Crucero
 
     public int IdBarco { get; set; }
 
+    public virtual ICollection<Fecha> Fecha { get; set; } = new List<Fecha>();
+
     public virtual Barco IdBarcoNavigation { get; set; } = null!;
 
     public virtual ICollection<Itinerario> Itinerario { get; set; } = new List<Itinerario>();
 
     public virtual ICollection<Reservacion> Reservacion { get; set; } = new List<Reservacion>();
-
-    public virtual ICollection<Fecha> IdFecha { get; set; } = new List<Fecha>();
 }
