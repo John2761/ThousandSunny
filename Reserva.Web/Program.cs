@@ -20,11 +20,13 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IRepositoryReservacion, RepositoryReservacion>();
 builder.Services.AddTransient<IRepositoryHabitacion, RepositoryHabitacion>();
 builder.Services.AddTransient<IRepositoryBarco, RepositoryBarco>();
+builder.Services.AddTransient<IRepositoryCrucero, RepositoryCrucero>();
 
 //Services
 builder.Services.AddTransient<IServiceReservacion, ServiceReservacion>();
 builder.Services.AddTransient<IServiceHabitacion, ServiceHabitacion>();
 builder.Services.AddTransient<IServiceBarco, ServiceBarco>();
+builder.Services.AddTransient<IServiceCrucero, ServiceCrucero>();
 
 //Configurar Automapper 
 builder.Services.AddAutoMapper(config =>
@@ -32,9 +34,10 @@ builder.Services.AddAutoMapper(config =>
     config.addProfile<ReservacionProfile>();
     config.AddProfile<HabitacionProfile>();
     config.AddProfile<BarcoProfile>();
+    config.AddProfile<CruceroProfile>();
 });
 
-// Configuar Conexi髇 a la Base de Datos SQL 
+// Configuar Conexi贸n a la Base de Datos SQL 
 builder.Services.AddDbContext<ThousandSunnyContext>(options =>
 {
     // it read appsettings.json file 
@@ -43,13 +46,13 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerDataBas
         options.EnableSensitiveDataLogging();
 });
 
-//Configuraci髇 Serilog 
+//Configuraci贸n Serilog 
 // Logger. P.E. Verbose = muestra SQl Statement 
 var logger = new LoggerConfiguration()
-// Limitar la informaci髇 de depuraci髇 
+// Limitar la informaci贸n de depuraci贸n 
 .MinimumLevel.Override("Microsoft", LogEventLevel.Error)
 .Enrich.FromLogContext() 
-// Log LogEventLevel.Verbose muestra mucha informaci髇, pero no es necesaria solo para el proceso de depuraci髇 
+// Log LogEventLevel.Verbose muestra mucha informaci贸n, pero no es necesaria solo para el proceso de depuraci贸n 
 .WriteTo.Console(LogEventLevel.Information) 
 .WriteTo.Logger(l => l.Filter.ByIncludingOnly(e => e.Level == 
 LogEventLevel.Information).WriteTo.File(@"Logs\Info-.log", shared: true, encoding:
