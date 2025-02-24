@@ -29,6 +29,7 @@ body {
     .navbar-custom .navbar-brand {
         color: #FFC947 !important; /* Dorado */
         font-weight: bold;
+        
     }
 
     .navbar-custom .nav-link {
@@ -51,7 +52,9 @@ body {
             background-color: #185ADB; /* Azul medio */
         }
 
-/* Botón de búsqueda */
+
+
+/* BotÃ³n de bÃºsqueda */
 .btn-search {
     background-color: #FFC947 !important; /* Dorado */
     color: #0A1931 !important; /* Azul oscuro */
@@ -59,7 +62,7 @@ body {
 }
 
     .btn-search:hover {
-        background-color: #FFD966 !important; /* Dorado más claro */
+        background-color: #FFD966 !important; /* Dorado mÃ¡s claro */
     }
 
 /* Footer */
