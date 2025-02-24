@@ -15,18 +15,19 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-custom">
                 <div class="container-fluid">
-                    <!-- Reemplazar el texto por un logo -->
+                    <!-- Logo de la empresa -->
                     <a class="navbar-brand" href="/">
                         <img src="~/images/Logo.png" alt="Logo" style="height:80px; width:100px">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <!-- Centrar los enlaces -->
+
+                    <!-- Menú de Navegación -->
                     <div class="collapse navbar-collapse justify-content-center" id="navbarColor01">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" href="/">Home</a>
+                                <a class="nav-link active" href="/">Inicio</a>
                             </li>
                             <li class="nav-item">
                                 <a asp-controller="Crucero" asp-action="Index" class="nav-link">Cruceros</a>
@@ -35,22 +36,20 @@
                                 <a asp-controller="Habitacion" asp-action="Index" class="nav-link">Habitaciones</a>
                             </li>
                             <li class="nav-item">
+                                <a asp-controller="Barco" asp-action="Index" class="nav-link">Barcos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-controller="Reservacion" asp-action="Index" class="nav-link">Reservaciones</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#">Ofertas</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Contacto</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Iniciar sesión</a>
-                                    <a class="dropdown-item" href="#">Registrarse</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Mis Reservas</a>
-                                </div>
-                            </li>
                         </ul>
-                        <!-- Opcional: si deseas mantener el formulario de búsqueda a la derecha, puedes colocarlo fuera del contenedor centrado -->
+
+                        <!-- Botón de búsqueda opcional -->
                         <form class="d-flex ms-auto">
                             <input class="form-control me-sm-2" type="search" placeholder="Buscar">
                             <button class="btn btn-search my-2 my-sm-0" type="submit">Buscar</button>

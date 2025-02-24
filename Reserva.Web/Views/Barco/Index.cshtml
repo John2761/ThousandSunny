@@ -1,26 +1,43 @@
 ﻿@model IEnumerable<Reserva.Application.DTOs.BarcoDTO>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista de Barcos";
+
+    // Diccionario para asignar imágenes según el nombre del barco
+    var imagesBarco = new Dictionary<string, string>
+    {
+        { "Mar del Caribe", "~/images/barco/MCaribe.jpg" },
+        { "Blue Island", "~/images/barco/blue.jpg" },
+        { "Ocean Explorer", "~/images/barco/ocean.jpg" },
+        { "Pacific Dream", "~/images/barco/pacific.jpg" },
+        { "Atlantis Voyager", "~/images/barco/Atlantis.jpg" }
+    };
 }
 
-<h1>Nuestros barcos</h1>
+<h2 class="text-center mt-4">Explora Nuestros Barcos</h2>
 
-<div class="row">
-    @foreach (var barco in Model)
-    {
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-lg border-0 rounded-4">
-                <img src="~/images/barcos/@(barco.IdBarco)-@barco.Nombre" class="card-img-top" alt="@barco.Nombre">
-                <div class="card-body">
-                    <h5 class="card-title">@barco.Nombre</h5>
-                    <p class="card-text">@barco.Descripcion</p>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var barco in Model)
+        {
+            var imagenUrl = imagesBarco.ContainsKey(barco.Nombre)
+            ? Url.Content(imagesBarco[barco.Nombre])
+            : Url.Content("~/images/barco/barco-default.jpg"); // Imagen por defecto
 
-                    <a asp-action="Detalle" asp-route-id="@barco.IdBarco" class="btn btn-primary">
-                        <i class="bi bi-eye"></i> Ver Detalle
-                    </a>
+            <div class="col">
+                <div class="card shadow-lg border-0 rounded-4 h-100">
+                    <img src="@imagenUrl" class="card-img-top" alt="@barco.Nombre" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-uppercase fw-bold text-primary">@barco.Nombre</h5>
+                        <p class="card-text">@barco.Descripcion</p>
+                        <div class="mt-auto text-center">
+                            <a asp-action="Detalle" asp-route-id="@barco.IdBarco" class="btn btn-primary w-100">
+                                <i class="bi bi-eye"></i> Ver Detalle
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 </div>
