@@ -26,7 +26,7 @@ namespace Reserva.Infraestructure.Repository.Implementations
                     .ThenInclude(c => c.IdComplementoNavigation)
                 .Include(r => r.Huesped)
                 .AsNoTracking()
-                .FirstOrDefaultAsync(r => r.IdReservacion == id); ;
+                .FirstOrDefaultAsync(r => r.IdReservacion == id);
         }
 
         public async Task<ICollection<Reservacion>> ListAsync()
