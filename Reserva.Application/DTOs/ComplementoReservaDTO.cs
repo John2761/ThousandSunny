@@ -10,6 +10,6 @@ namespace Reserva.Application.DTOs
     {
         public string NombreComplemento { get; set; } = null!;
         public int Cantidad { get; set; }
-        public decimal TotalComplemento { get; set; }
+        public decimal PrecioTotal { get; set; }
     }
 }

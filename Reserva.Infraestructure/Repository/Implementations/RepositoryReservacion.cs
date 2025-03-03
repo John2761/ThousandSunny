@@ -22,6 +22,7 @@ namespace Reserva.Infraestructure.Repository.Implementations
                 .Include(r => r.IdFechaNavigation)
                 .Include(r => r.DetalleReservacion)
                     .ThenInclude(d => d.IdHabitacionNavigation)
+                    .ThenInclude(h => h.Precio)
                 .Include(r => r.ReservaComplemento)
                     .ThenInclude(c => c.IdComplementoNavigation)
                 .Include(r => r.Huesped)

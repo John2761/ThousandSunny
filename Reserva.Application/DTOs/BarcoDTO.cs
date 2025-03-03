@@ -1,6 +1,6 @@
 ﻿namespace Reserva.Application.DTOs
 {
-    public class BarcoDTO
+    public record BarcoDTO
     {
         public int IdBarco { get; set; } 
         public string Nombre { get; set; } = null!;
@@ -12,7 +12,7 @@
         public int CapacidadTotalHuespedes { get; set; }
     }
     // DTO para mostrar habitaciones del barco
-    public class HabitacionBarcoDTO
+    public record HabitacionBarcoDTO
         {
             public string NombreHabitacion { get; set; } = null!;
             public int CantidadHabitaciones { get; set; }
