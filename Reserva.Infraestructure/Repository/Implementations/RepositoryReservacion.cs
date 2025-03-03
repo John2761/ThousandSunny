@@ -19,7 +19,11 @@ namespace Reserva.Infraestructure.Repository.Implementations
             return await _context.Reservacion
                 .Include(r => r.IdCruceroNavigation)
                     .ThenInclude(c => c.IdBarcoNavigation)
+                    .Include(r => r.IdCruceroNavigation)
+                    .ThenInclude(c => c.Itinerario)
+                    .ThenInclude(i => i.IdPuertoNavigation)
                 .Include(r => r.IdFechaNavigation)
+                .Include(r => r.IdDatosPagoNavigation)
                 .Include(r => r.DetalleReservacion)
                     .ThenInclude(d => d.IdHabitacionNavigation)
                     .ThenInclude(h => h.Precio)

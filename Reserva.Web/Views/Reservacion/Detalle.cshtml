@@ -15,7 +15,7 @@
                 <p><strong>Fecha de Reserva:</strong> @Model.FechaReserva.ToString("dd MMM yyyy")</p>
                 <p>
                     <strong>Estado de Pago:</strong>
-                    @if (Model.EstadoPago == "Pendiente") //porque no me sale :(
+                    @if ((Model.EstadoPago ?? "").Trim().ToLower() == "pendiente") //porque no me sale :(
                     {
                         <span class="badge bg-danger">Pendiente</span>
                     }
@@ -24,6 +24,7 @@
                         <span class="badge bg-success">Pagado</span>
                     }
                 </p>
+                
             </div>
             <div class="col-md-6 text-md-end">
                 <h5><strong>Crucero:</strong> @Model.NombreCrucero</h5>
@@ -128,7 +129,7 @@
         {
             <div class="alert alert-warning">
                 <h5><strong>Pago Pendiente</strong></h5>
-                <p><strong>Fecha Límite de Pago:</strong> @Model.FechaLimitePago.ToString("dd MMM yyyy")</p>
+                <p><strong>Fecha Límite de Pago:</strong> @Model.FechaLimitePago?.ToString("dd MMM yyyy")</p>
                 <p><strong>Monto a Pagar:</strong> ₡@Model.MontoPendiente?.ToString("N2")</p>
             </div>
         }

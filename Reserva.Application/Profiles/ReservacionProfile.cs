@@ -11,8 +11,29 @@ namespace Reserva.Application.Profiles
         {
             CreateMap<Reservacion, ReservacionDTO>()
                  .ForMember(dest => dest.NombreCrucero, opt => opt.MapFrom(src => src.IdCruceroNavigation.Nombre))
+                 .ForMember(dest => dest.NombreBarco, opt => opt.MapFrom(src => src.IdCruceroNavigation.IdBarcoNavigation.Nombre)) 
                  .ForMember(dest => dest.FechaInicio, opt => opt.MapFrom(src => src.IdFechaNavigation.FechaSalida))
                  .ForMember(dest => dest.CantidadDias, opt => opt.MapFrom(src => src.IdCruceroNavigation.CantidadDias))
+
+                 .ForMember(dest => dest.FechaLimitePago, opt => opt.MapFrom(src =>
+                    src.FechaLimite == DateTime.MinValue ? (DateTime?)null : src.FechaLimite))
+
+                
+                .ForMember(dest => dest.MontoPendiente, opt => opt.MapFrom(src =>
+                    src.IdDatosPagoNavigation != null ? src.IdDatosPagoNavigation.MontoPendiente ?? 0 : 0))
+
+    .ForMember(dest => dest.PuertoSalida, opt => opt.MapFrom(src =>
+        src.IdCruceroNavigation.Itinerario.OrderBy(i => i.Dia).FirstOrDefault().IdPuertoNavigation.Nombre))
+
+    
+    .ForMember(dest => dest.PuertoRegreso, opt => opt.MapFrom(src =>
+        src.IdCruceroNavigation.Itinerario.OrderByDescending(i => i.Dia).FirstOrDefault().IdPuertoNavigation.Nombre))
+
+    .ForMember(dest => dest.EstadoPago, opt => opt.MapFrom(src =>
+    src.IdDatosPagoNavigation != null && src.IdDatosPagoNavigation.MontoPendiente.HasValue && src.IdDatosPagoNavigation.MontoPendiente > 0
+        ? "Pendiente"
+        : "Pagado"))
+
                  .ForMember(dest => dest.Habitaciones, opt => opt.MapFrom(src => src.DetalleReservacion))
                  .ForMember(dest => dest.Complementos, opt => opt.MapFrom(src => src.ReservaComplemento))
 
@@ -24,7 +45,7 @@ namespace Reserva.Application.Profiles
                  
             .ForMember(dest => dest.TotalComplementos, opt => opt.MapFrom(src =>
                 src.ReservaComplemento.Sum(c => c.Cantidad *
-                    (c.IdComplementoNavigation.Precio)))) // ✅ Evita `NULL`
+                    (c.IdComplementoNavigation.Precio)))) 
 
             .ReverseMap();
 

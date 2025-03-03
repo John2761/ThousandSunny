@@ -6,7 +6,7 @@ namespace Reserva.Application.DTOs
     {
         public int idReservacion { get; set; }
         public DateTime FechaReserva { get; set; }
-        public DateTime FechaLimitePago { get; set; }
+        public DateTime? FechaLimitePago { get; set; }
         public string NombreCrucero { get; set; } = null!;
         public string NombreBarco { get; set; } = null!;
         public DateTime FechaInicio { get; set; }
