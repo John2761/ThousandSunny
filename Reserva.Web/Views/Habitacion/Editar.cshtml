@@ -1,0 +1,86 @@
+﻿@model Reserva.Application.DTOs.HabitacionDTO
+
+@{
+    ViewData["Title"] = "Editar Habitación";
+}
+
+<div class="container mt-5">
+    <div class="header-bg">
+        <h2>✏️ Editar Habitación</h2>
+    </div>
+
+    <div class="mt-4">
+        <div class="form-card">
+            @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+            {
+                <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+            }
+
+            <form asp-action="Editar" method="post">
+                <input type="hidden" asp-for="IdHabitacion" />
+
+                <div class="row">
+                    <!-- Columna Izquierda -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label asp-for="Nombre" class="form-label fw-bold text-primary">Nombre</label>
+                            <input asp-for="Nombre" class="form-control" required />
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Descripcion" class="form-label fw-bold text-primary">Descripción</label>
+                            <textarea asp-for="Descripcion" class="form-control" rows="3" required></textarea>
+                            <span asp-validation-for="Descripcion" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label asp-for="Tamaño" class="form-label fw-bold text-primary">Tamaño</label>
+                            <select asp-for="Tamaño" class="form-select" required>
+                                <option value="">Seleccione un tamaño</option>
+                                <option value="Pequeña">Pequeña</option>
+                                <option value="Mediana">Mediana</option>
+                                <option value="Grande">Grande</option>
+                                <option value="Extra Grande">Extra Grande</option>
+                            </select>
+                            <span asp-validation-for="Tamaño" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="HuespedesMin" class="form-label fw-bold text-primary">Huéspedes Mínimos</label>
+                            <input asp-for="HuespedesMin" type="number" class="form-control" required min="1" />
+                            <span asp-validation-for="HuespedesMin" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="HuespedesMax" class="form-label fw-bold text-primary">Huéspedes Máximos</label>
+                            <input asp-for="HuespedesMax" type="number" class="form-control" required min="1" />
+                            <span asp-validation-for="HuespedesMax" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a asp-action="Index" class="btn btn-cancel">
+                        <i class="bi bi-arrow-left-circle"></i> Cancelar
+                    </a>
+                    <button type="submit" class="btn btn-gradient">
+                        <i class="bi bi-check-circle"></i> Guardar Cambios
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ✅ SWEETALERT PARA MENSAJES ✅ -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        @Html.Raw(TempData["SuccessMessage"])
+    </script>
+}

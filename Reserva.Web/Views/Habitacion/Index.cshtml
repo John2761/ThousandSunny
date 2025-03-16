@@ -1,36 +1,64 @@
 ﻿@model IEnumerable<Reserva.Application.DTOs.HabitacionDTO>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Habitaciones";
 }
 
 <div class="container mt-4">
-    <h2 class="mb-4 text-center">Listado de Habitaciones</h2>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="text-primary">🛏️ Listado de Habitaciones</h2>
+
+        <!-- 🔹 Botón corregido para redirigir a la vista de creación -->
+        <a class="btn btn-success" asp-action="Crear">
+            <i class="bi bi-plus-lg"></i> Nueva Habitación
+        </a>
+    </div>
+
+    <!-- ✅ SWEETALERT PARA MENSAJES ✅ -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            @Html.Raw(TempData["SuccessMessage"])
+        </script>
+    }
 
     <div class="table-responsive">
-        <table class="table table-bordered table-striped table-hover text-center">
+        <table class="table table-bordered table-striped table-hover text-center align-middle">
             <thead class="table-dark">
                 <tr>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Descripción</th>
-                    <th scope="col">Tamaño</th>
-                    <th scope="col">Capacidad</th>
-                    <th scope="col">Acciones</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Tamaño</th>
+                    <th>Capacidad</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var habitacion in Model)
+                @if (Model.Any())
+                {
+                    @foreach (var habitacion in Model)
+                    {
+                        <tr>
+                            <td>@habitacion.Nombre</td>
+                            <td>@habitacion.Descripcion</td>
+                            <td>@habitacion.Tamaño</td>
+                            <td>@habitacion.HuespedesMin - @habitacion.HuespedesMax huéspedes</td>
+                            <td class="text-center">
+                                <a class="btn btn-info btn-sm" asp-action="Detalle" asp-route-id="@habitacion.IdHabitacion">
+                                    <i class="bi bi-eye"></i> Ver
+                                </a>
+                                <a class="btn btn-warning btn-sm" asp-action="Editar" asp-route-id="@habitacion.IdHabitacion">
+                                    <i class="bi bi-pencil-square"></i> Editar
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
                 {
                     <tr>
-                        <td>@habitacion.Nombre</td>
-                        <td>@habitacion.Descripcion</td>
-                        <td>@habitacion.Tamaño</td>
-                        <td>@habitacion.HuespedesMin - @habitacion.HuespedesMax huéspedes</td>
-                        <td>
-                            <a class="btn btn-info btn-sm" asp-action="Detalle" asp-route-id="@habitacion.IdHabitacion">
-                                <i class="bi bi-eye"></i> Ver Detalle
-                            </a>
-                        </td>
+                        <td colspan="5" class="text-center text-muted">No hay habitaciones registradas.</td>
                     </tr>
                 }
             </tbody>

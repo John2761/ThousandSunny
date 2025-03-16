@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "g3R3Idn3DU9rWzbmD1R+RppUCGl5501kgNFKqJWZp+E=",
+  "Hash": "16xKVpXQNw++q02+BB8mzcW3cPxNqDT3M63JIFe6bG0=",
   "Source": "Reserva.Web",
   "BasePath": "_content/Reserva.Web",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7kdiwzbn1g",
-      "Integrity": "JxEkWHHqX78H1s623uX6kW9oUIr6RP7b5g5WkjmfWwc=",
+      "Fingerprint": "38x20qto7m",
+      "Integrity": "s4ygX7c97jlFHR2Bbt3MXdqs4LE6qFhaxT8IaXQA4o4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1783,7 +1783,7 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.7kdiwzbn1g.css",
+      "Route": "css/site.38x20qto7m.css",
       "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1793,7 +1793,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2395"
+          "Value": "3814"
         },
         {
           "Name": "Content-Type",
@@ -1801,11 +1801,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JxEkWHHqX78H1s623uX6kW9oUIr6RP7b5g5WkjmfWwc=\""
+          "Value": "\"s4ygX7c97jlFHR2Bbt3MXdqs4LE6qFhaxT8IaXQA4o4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 19:52:42 GMT"
+          "Value": "Sat, 15 Mar 2025 20:52:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1815,7 +1815,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "7kdiwzbn1g"
+          "Value": "38x20qto7m"
         },
         {
           "Name": "label",
@@ -1823,7 +1823,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-JxEkWHHqX78H1s623uX6kW9oUIr6RP7b5g5WkjmfWwc="
+          "Value": "sha256-s4ygX7c97jlFHR2Bbt3MXdqs4LE6qFhaxT8IaXQA4o4="
         }
       ]
     },
@@ -1838,7 +1838,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2395"
+          "Value": "3814"
         },
         {
           "Name": "Content-Type",
@@ -1846,11 +1846,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JxEkWHHqX78H1s623uX6kW9oUIr6RP7b5g5WkjmfWwc=\""
+          "Value": "\"s4ygX7c97jlFHR2Bbt3MXdqs4LE6qFhaxT8IaXQA4o4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 19:52:42 GMT"
+          "Value": "Sat, 15 Mar 2025 20:52:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1860,7 +1860,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JxEkWHHqX78H1s623uX6kW9oUIr6RP7b5g5WkjmfWwc="
+          "Value": "sha256-s4ygX7c97jlFHR2Bbt3MXdqs4LE6qFhaxT8IaXQA4o4="
         }
       ]
     },
