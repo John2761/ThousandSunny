@@ -22,7 +22,6 @@ namespace Reserva.Application.DTOs
         [Required(ErrorMessage = "Debe seleccionar un tamaño.")]
         [RegularExpression("Pequeña|Mediana|Grande|Extra Grande", ErrorMessage = "El tamaño debe ser Pequeña, Mediana, Grande o Extra Grande.")]
         public string Tamaño { get; set; } = null!;
-        public int? HuespedesMin { get; set; }
 
         [Required(ErrorMessage = "El número mínimo de huéspedes es obligatorio.")]
         [Range(1, 10, ErrorMessage = "El mínimo de huéspedes debe estar entre 1 y 10.")]
