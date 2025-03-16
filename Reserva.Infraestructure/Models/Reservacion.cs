@@ -1,4 +1,7 @@
-﻿namespace Reserva.Infraestructure.Models;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Reserva.Infraestructure.Models;
 
 public partial class Reservacion
 {
@@ -24,8 +27,9 @@ public partial class Reservacion
 
     public virtual DatosPago IdDatosPagoNavigation { get; set; } = null!;
 
-    public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
     public virtual Fecha IdFechaNavigation { get; set; } = null!;
+
+    public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
 
     public virtual ICollection<ReservaComplemento> ReservaComplemento { get; set; } = new List<ReservaComplemento>();
 

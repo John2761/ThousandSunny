@@ -18,7 +18,7 @@ namespace Reserva.Application.Profiles
                 .ForMember(dest => dest.NombreBarco, opt => opt.MapFrom(c => c.IdBarcoNavigation.Nombre))
                 // La imagen se asigna manualmente, por lo que se ignora en el mapeo
                 .ForMember(dest => dest.Itinerario, opt => opt.MapFrom(c => c.Itinerario))
-                .ForMember(dest => dest.FechasPrecios, opt => opt.MapFrom(c => c.Fechas))
+                .ForMember(dest => dest.FechasPrecios, opt => opt.MapFrom(c => c.Fecha))
                 .ReverseMap();
 
             // Mapeo de Itinerario a ItinerarioDTO, usando el DTO de Puerto para el puerto asociado

@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "28Gg1buJ1QFJjKbI/ROSLUeGrT1UfJRC48Y1gmUcifo=",
+=======
+  "Hash": "16xKVpXQNw++q02+BB8mzcW3cPxNqDT3M63JIFe6bG0=",
+>>>>>>> 0c1844b442d5afd69a6edb8433b42ce403811dbe
   "Source": "Reserva.Web",
   "BasePath": "_content/Reserva.Web",
   "Mode": "Default",
@@ -787,8 +791,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7kdiwzbn1g",
-      "Integrity": "JxEkWHHqX78H1s623uX6kW9oUIr6RP7b5g5WkjmfWwc=",
+      "Fingerprint": "38x20qto7m",
+      "Integrity": "s4ygX7c97jlFHR2Bbt3MXdqs4LE6qFhaxT8IaXQA4o4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2518,6 +2522,7 @@
   ],
   "Endpoints": [
     {
+<<<<<<< HEAD
       "Route": "_content/SweetAlert2/bootstrap4Theme.css",
       "AssetFile": "C:\\Users\\John\\.nuget\\packages\\sweetalert2\\1.0.1\\staticwebassets\\bootstrap4Theme.css",
       "Selectors": [],
@@ -3778,6 +3783,10 @@
     {
       "Route": "css/site.7kdiwzbn1g.css",
       "AssetFile": "C:\\Users\\John\\Downloads\\Github\\John2761\\ThousandSunny\\Reserva.Web\\wwwroot\\css\\site.css",
+=======
+      "Route": "css/site.38x20qto7m.css",
+      "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\css\\site.css",
+>>>>>>> 0c1844b442d5afd69a6edb8433b42ce403811dbe
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3786,7 +3795,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2395"
+          "Value": "3814"
         },
         {
           "Name": "Content-Type",
@@ -3794,11 +3803,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JxEkWHHqX78H1s623uX6kW9oUIr6RP7b5g5WkjmfWwc=\""
+          "Value": "\"s4ygX7c97jlFHR2Bbt3MXdqs4LE6qFhaxT8IaXQA4o4=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 03 Mar 2025 18:45:18 GMT"
+=======
+          "Value": "Sat, 15 Mar 2025 20:52:44 GMT"
+>>>>>>> 0c1844b442d5afd69a6edb8433b42ce403811dbe
         },
         {
           "Name": "Cache-Control",
@@ -3808,7 +3821,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "7kdiwzbn1g"
+          "Value": "38x20qto7m"
         },
         {
           "Name": "label",
@@ -3816,7 +3829,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-JxEkWHHqX78H1s623uX6kW9oUIr6RP7b5g5WkjmfWwc="
+          "Value": "sha256-s4ygX7c97jlFHR2Bbt3MXdqs4LE6qFhaxT8IaXQA4o4="
         }
       ]
     },
@@ -3831,7 +3844,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2395"
+          "Value": "3814"
         },
         {
           "Name": "Content-Type",
@@ -3839,11 +3852,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JxEkWHHqX78H1s623uX6kW9oUIr6RP7b5g5WkjmfWwc=\""
+          "Value": "\"s4ygX7c97jlFHR2Bbt3MXdqs4LE6qFhaxT8IaXQA4o4=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 03 Mar 2025 18:45:18 GMT"
+=======
+          "Value": "Sat, 15 Mar 2025 20:52:44 GMT"
+>>>>>>> 0c1844b442d5afd69a6edb8433b42ce403811dbe
         },
         {
           "Name": "Cache-Control",
@@ -3853,7 +3870,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JxEkWHHqX78H1s623uX6kW9oUIr6RP7b5g5WkjmfWwc="
+          "Value": "sha256-s4ygX7c97jlFHR2Bbt3MXdqs4LE6qFhaxT8IaXQA4o4="
         }
       ]
     },

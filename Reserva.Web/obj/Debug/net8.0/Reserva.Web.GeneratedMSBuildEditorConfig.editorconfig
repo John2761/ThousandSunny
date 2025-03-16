@@ -56,8 +56,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3J1Y2Vyb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Habitacion/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvblxDcmVhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Habitacion/Detalle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvblxEZXRhbGxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Habitacion/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvblxFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Habitacion/Index.cshtml]

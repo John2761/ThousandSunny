@@ -14,5 +14,6 @@ public partial class Fecha
     public virtual Crucero IdCruceroNavigation { get; set; } = null!;
 
     public virtual ICollection<Precio> Precio { get; set; } = new List<Precio>();
+
     public virtual ICollection<Reservacion> Reservacion { get; set; } = new List<Reservacion>();
 }

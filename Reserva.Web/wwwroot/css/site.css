@@ -65,6 +65,60 @@ body {
         background-color: #FFD966 !important; /* Dorado más claro */
     }
 
+/* 🔹 Estilos para el encabezado del formulario */
+.header-bg {
+    background: linear-gradient(135deg, #0A1931, #185ADB); /* Azul oscuro a azul medio */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 🔹 Tarjeta de formulario */
+.form-card {
+    background: linear-gradient(180deg, #E3F2FD, #BBDEFB); /* Azul claro degradado */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Campos de entrada estilizados */
+.form-control {
+    border: 2px solid #185ADB; /* Azul medio */
+    border-radius: 8px;
+}
+
+/* 🔹 Botón de acción con degradado dorado */
+.btn-gradient {
+    background: linear-gradient(45deg, #FFC947, #FFD966); /* Dorado degradado */
+    color: #0A1931;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+    .btn-gradient:hover {
+        background: linear-gradient(45deg, #FFB300, #FFC107); /* Dorado más fuerte */
+    }
+
+/* 🔹 Botón Cancelar con degradado rojo */
+.btn-cancel {
+    background: linear-gradient(45deg, #A81C1C, #D9534F);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+    .btn-cancel:hover {
+        background: linear-gradient(45deg, #8B0000, #C9302C);
+    }
+
 /* Footer */
 .footer-custom {
     background-color: #0A1931;
