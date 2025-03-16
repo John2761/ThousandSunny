@@ -12,7 +12,8 @@ namespace Reserva.Application.DTOs
         public string Nombre { get; set; } = null!;
         public string Descripcion { get; set; } = null!;
         public string Tamaño { get; set; } = null!;
-        public int HuespedesMin { get; set; }
+        public int? HuespedesMin { get; set; }
         public int HuespedesMax { get; set; }
+        public int? Cantidad { get; set; }
     }
 }

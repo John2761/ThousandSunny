@@ -1,0 +1,167 @@
+﻿@using static Reserva.Application.DTOs.BarcoHabitacionDTO;
+@using Reserva.Application.DTOs;
+@model Reserva.Application.DTOs.BarcoDTO
+@{
+	ViewData["Title"] = "Crear Barco";
+}
+
+<style>
+	ul.ui-autocomplete {
+		z-index: 1100;
+	}
+</style>
+
+<form asp-action="Create" id="myForm"
+	  data-ajax="true"
+	  data-ajax-method="POST"
+	  data-ajax-begin="onBegin"
+	  data-ajax-failure="onFailure"
+	  data-ajax-success="onSuccess"
+	  data-ajax-complete="onComplete">
+
+	<div class="card">
+		<div class="card-header"></div>
+		<div class="card-body">
+			<div class="container">
+				<div class="row">
+					<!-- Columna Izquierda: Datos del Barco -->
+					<div class="col-md-4">
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+						<div class="form-group">
+							<label asp-for="Nombre" class="control-label fw-normal"></label>
+							<input asp-for="Nombre" id="NombreModal" type="text" autocomplete="off" class="form-control form-control-sm" />
+							<span asp-validation-for="Nombre" class="text-danger"></span>
+						</div>
+
+						<div class="form-group">
+							<label asp-for="Descripcion" class="control-label fw-normal"></label>
+							<textarea asp-for="Descripcion" id="DescripcionModal" class="form-control form-control-sm"></textarea>
+							<span asp-validation-for="Descripcion" class="text-danger"></span>
+						</div>
+						<button type="button" class="btn btn-success" onclick="cargarHabitaciones()">
+							Agregar Habitación
+						</button>
+					</div>
+
+					<!-- Columna Derecha: Imagen del barco y detalles -->
+					<div class="col-md-4 text-center">
+						<img src="/Images/nophoto.jpg" class="img-responsive" style="height:80%;width:80%" id="ImgHabitacion">
+					</div>
+
+					<!-- Columna Derecha: Información de la Habitación -->
+					<div class="col-md-4 text-left">
+						<p id="HabitacionSelect" class="form-label fw-bold">Nombre: -</p>
+						<p id="DescripcionSelect" class="form-label fw-bold">Descripción: -</p>
+						<p id="CantidadMaximaHuespedesSelect" class="form-label fw-bold">Capacidad: -</p>
+					</div>
+				</div>
+
+				<!-- Detalle de Habitaciones Agregadas -->
+				<div class="card mt-3">
+					<div class="card-header">
+						<h4>Habitaciones Agregadas</h4>
+					</div>
+					<div class="card-body">
+						<div id="detalleHabitacionesView">
+							@await Html.PartialAsync("_DetalleHabitaciones",
+																Model.Habitaciones?.Select(bh => new HabitacionDTO
+							{
+								IdHabitacion = bh.IdHabitacionNavigation.IdHabitacion, // 🔹 Corrección
+								Nombre = bh.IdHabitacionNavigation.Nombre,
+								Descripcion = bh.IdHabitacionNavigation.Descripcion,
+								HuespedesMax = bh.IdHabitacionNavigation.HuespedesMax // 🔹 Corrección
+							}).ToList() ?? new List<HabitacionDTO>())
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="card-footer">
+			<div class="col float-end">
+				<input type="submit" value="Guardar Barco" class="btn btn-primary" />
+			</div>
+		</div>
+	</div>
+</form>
+
+<div>
+	<a asp-action="Index">Regresar al listado</a>
+</div>
+
+<!--- Modal --->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="exampleModalLabel">Habitaciones</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div id="mostrar"></div> <!-- 🔹 Aquí se inyectará la vista parcial -->
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!---Fin Modal --->
+@section Scripts {
+	<script>
+		function cargarHabitaciones() {
+			fetch('@Url.Action("GetHabitacionesDisponibles", "Barco")')
+				.then(response => response.text())
+				.then(html => {
+					document.getElementById("mostrar").innerHTML = html;
+					$("#myModal").modal("show");
+				})
+				.catch(error => console.error("Error al cargar habitaciones:", error));
+		}
+
+		function cargarHabitacionesAgregadas(idBarco) {
+			fetch(`/Barco/GetHabitacionesAgregadas?idBarco=${idBarco}`)
+				.then(response => response.text())
+				.then(html => {
+					document.getElementById("detalleHabitacionesView").innerHTML = html;
+				})
+				.catch(error => console.error("Error al cargar habitaciones agregadas:", error));
+		}
+
+		function addHabitacion(idHabitacion) {
+			let cantidad = document.getElementById(`cantidad_${idHabitacion}`).value;
+			let idBarco = document.getElementById("IdBarco")?.value; // 🔹 Obtener el ID del barco
+
+			if (!idBarco) {
+				Swal.fire({ title: "Error!", text: "Guarde primero el barco antes de agregar habitaciones.", icon: "error" });
+				return;
+			}
+
+			fetch(`/Barco/AgregarHabitacionABarco?idBarco=${idBarco}&idHabitacion=${idHabitacion}&cantidad=${cantidad}`, {
+				method: 'POST'
+			})
+			.then(response => response.text())
+			.then(html => {
+				document.getElementById("detalleHabitacionesView").innerHTML = html;
+				console.log("Tabla actualizada con nuevas habitaciones.");
+				Swal.fire({ title: "Éxito!", text: "Habitación agregada.", icon: "success" });
+			})
+			.catch(error => console.error("Error:", error));
+		}
+
+
+		function deleteHabitacion(id) {
+			fetch(`/Barco/DeleteHabitacion?idHabitacion=${id}`, { method: 'GET' })
+				.then(response => response.text())
+				.then(html => {
+					document.getElementById("detalleHabitacionesView").innerHTML = html;
+				})
+				.catch(error => {
+					Swal.fire({ title: "Error!", text: error, icon: "error" });
+				});
+		}
+	</script>
+}

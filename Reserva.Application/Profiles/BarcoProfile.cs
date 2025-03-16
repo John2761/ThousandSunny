@@ -11,10 +11,10 @@ namespace Reserva.Application.Profiles
         {
             CreateMap<Barco, BarcoDTO>()
             .ForMember(dest => dest.Habitaciones, opt => opt.MapFrom(src => src.BarcoHabitacion
-                .Select(bh => new HabitacionBarcoDTO
+                .Select(bh => new BarcoHabitacionDTO
                 {
                     NombreHabitacion = bh.IdHabitacionNavigation.Nombre,
-                    CantidadHabitaciones = bh.CantHabitaciones,
+                    CantHabitaciones = bh.CantHabitaciones,
                     HuespedesMax = bh.IdHabitacionNavigation.HuespedesMax
                 }).ToList()))
 

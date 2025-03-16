@@ -2858,23 +2858,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\perez\\.nuget\\packages\\": {},
+    "C:\\Users\\John\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Application\\Reserva.Application.csproj",
+      "projectUniqueName": "C:\\Users\\John\\Downloads\\Github\\John2761\\ThousandSunny\\Reserva.Application\\Reserva.Application.csproj",
       "projectName": "Reserva.Application",
-      "projectPath": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Application\\Reserva.Application.csproj",
-      "packagesPath": "C:\\Users\\perez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Application\\obj\\",
+      "projectPath": "C:\\Users\\John\\Downloads\\Github\\John2761\\ThousandSunny\\Reserva.Application\\Reserva.Application.csproj",
+      "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\John\\Downloads\\Github\\John2761\\ThousandSunny\\Reserva.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\perez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\John\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2889,8 +2889,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj": {
-              "projectPath": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj"
+            "C:\\Users\\John\\Downloads\\Github\\John2761\\ThousandSunny\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj": {
+              "projectPath": "C:\\Users\\John\\Downloads\\Github\\John2761\\ThousandSunny\\Reserva.Infraestructure\\Reserva.Infraestructure.csproj"
             }
           }
         }
@@ -2905,7 +2905,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -2932,7 +2932,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

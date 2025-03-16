@@ -1,21 +1,24 @@
-﻿namespace Reserva.Application.DTOs
+﻿using Reserva.Infraestructure.Models;
+
+namespace Reserva.Application.DTOs
 {
     public record BarcoDTO
     {
         public int IdBarco { get; set; } 
         public string Nombre { get; set; } = null!;
         public string Descripcion { get; set; } = null!;
-
-        // Lista de habitaciones y su cantidad en el barco
-        public List<HabitacionBarcoDTO> Habitaciones { get; set; } = new List<HabitacionBarcoDTO>();
-        // Capacidad total de huéspedes del barco
+        public List<BarcoHabitacionDTO> Habitaciones { get; set; } = new List<BarcoHabitacionDTO>();
         public int CapacidadTotalHuespedes { get; set; }
     }
     // DTO para mostrar habitaciones del barco
-    public record HabitacionBarcoDTO
+    public record BarcoHabitacionDTO
         {
+            public int idBarco { get; set; }
+            public virtual Barco IdBarcoNavigation { get; set; }
+            public int idHabitacion { get; set; }
+            public virtual Habitacion IdHabitacionNavigation { get; set; }
+            public int CantHabitaciones { get; set; }
             public string NombreHabitacion { get; set; } = null!;
-            public int CantidadHabitaciones { get; set; }
             public int HuespedesMax { get; set; }
     }
 

@@ -1,0 +1,48 @@
+﻿@model List<Reserva.Application.DTOs.HabitacionDTO>
+
+<div class="modal-header">
+    <h1 class="modal-title fs-5">Seleccionar Habitaciones</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
+<div class="modal-body">
+    @if (Model != null && Model.Any())
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Capacidad Maxima</th>
+                    <th>Seleccionar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var habitacion in Model)
+                {
+                    <tr>
+                        <td>@habitacion.Nombre</td>
+                        <td>@habitacion.Descripcion</td>
+                        <td>@habitacion.HuespedesMax</td>
+                        <td>
+                            <input type="number" id="cantidad_@habitacion.IdHabitacion" class="form-control" min="0" value="0">
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-success" onclick="addHabitacion(@habitacion.IdHabitacion, '@habitacion.Nombre')">
+                                Agregar
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-warning">No hay habitaciones disponibles.</div>
+    }
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+</div>
