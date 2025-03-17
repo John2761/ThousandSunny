@@ -8,13 +8,13 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2 class="text-primary">🛏️ Listado de Habitaciones</h2>
 
-        <!-- 🔹 Botón corregido para redirigir a la vista de creación -->
+        <!-- Botón corregido para redirigir a la vista de creación -->
         <a class="btn btn-success" asp-action="Crear">
             <i class="bi bi-plus-lg"></i> Nueva Habitación
         </a>
     </div>
 
-    <!-- ✅ SWEETALERT PARA MENSAJES ✅ -->
+    <!-- SweetAlert -->
     @if (TempData["SuccessMessage"] != null)
     {
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

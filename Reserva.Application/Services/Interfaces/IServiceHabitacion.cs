@@ -9,5 +9,6 @@ namespace Reserva.Application.Services.Interfaces
         Task<HabitacionDTO> FindByIdAsync(int id);
         Task<int> AddAsync(HabitacionDTO habitacionDto);
         Task<bool> UpdateAsync(HabitacionDTO habitacionDto);
+        Task<bool> ExisteNombreAsync(string nombre);
     }
 }

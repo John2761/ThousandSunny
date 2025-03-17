@@ -77,5 +77,10 @@ namespace Reserva.Application.Services.Implementations
             string[] tamanos = { "Pequeña", "Mediana", "Grande", "Extra Grande" };
             return tamanos.Contains(nombre);
         }
+
+        public async Task<bool> ExisteNombreAsync(string nombre)
+        {
+            return await _repository.ExisteNombreAsync(nombre);
+        }
     }
 }

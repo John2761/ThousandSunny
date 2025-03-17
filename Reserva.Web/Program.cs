@@ -21,12 +21,14 @@ builder.Services.AddTransient<IRepositoryReservacion, RepositoryReservacion>();
 builder.Services.AddTransient<IRepositoryHabitacion, RepositoryHabitacion>();
 builder.Services.AddTransient<IRepositoryBarco, RepositoryBarco>();
 builder.Services.AddTransient<IRepositoryCrucero, RepositoryCrucero>();
+builder.Services.AddTransient<IRepositoryPuerto, RepositoryPuerto>();
 
 //Services
 builder.Services.AddTransient<IServiceReservacion, ServiceReservacion>();
 builder.Services.AddTransient<IServiceHabitacion, ServiceHabitacion>();
 builder.Services.AddTransient<IServiceBarco, ServiceBarco>();
 builder.Services.AddTransient<IServiceCrucero, ServiceCrucero>();
+builder.Services.AddTransient<IServicePuerto, ServicePuerto>();
 
 //Configurar Automapper 
 builder.Services.AddAutoMapper(config =>
@@ -35,6 +37,7 @@ builder.Services.AddAutoMapper(config =>
     config.AddProfile<HabitacionProfile>();
     config.AddProfile<BarcoProfile>();
     config.AddProfile<CruceroProfile>();
+    config.AddProfile<PuertoProfile>();
 });
 
 // Configuar Conexión a la Base de Datos SQL 

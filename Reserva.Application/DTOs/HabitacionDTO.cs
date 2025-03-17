@@ -30,5 +30,6 @@ namespace Reserva.Application.DTOs
         [Required(ErrorMessage = "El número máximo de huéspedes es obligatorio.")]
         [Range(1, 10, ErrorMessage = "El máximo de huéspedes debe estar entre 1 y 10.")]
         public int HuespedesMax { get; set; }
+        public List<PrecioHabitacionDTO> Precios { get; set; } = new();
     }
 }

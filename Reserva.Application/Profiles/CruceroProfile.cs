@@ -23,7 +23,7 @@ namespace Reserva.Application.Profiles
 
             // Mapeo de Itinerario a ItinerarioDTO, usando el DTO de Puerto para el puerto asociado
             CreateMap<Itinerario, ItinerarioDTO>()
-                .ForMember(dest => dest.Puerto, opt => opt.MapFrom(i => i.IdPuertoNavigation))
+                .ForMember(dest => dest.NombrePuerto, opt => opt.MapFrom(i => i.IdPuertoNavigation))
                 .ReverseMap();
 
             // Mapeo de Puerto a PuertoDTO (tal como lo definiste)
@@ -33,6 +33,10 @@ namespace Reserva.Application.Profiles
             CreateMap<Fecha, FechaPrecioDTO>()
                 .ForMember(dest => dest.FechaSalida, opt => opt.MapFrom(f => f.FechaSalida))
                 .ForMember(dest => dest.PrecioHabitacion, opt => opt.MapFrom(f => f.Precio))
+                .ReverseMap();
+
+            CreateMap<Habitacion, HabitacionDTO>()
+                .ForMember(dest => dest.Precios, opt => opt.MapFrom(h => h.Precio)) // 🔹 Mapea los precios de la habitación
                 .ReverseMap();
 
             // Mapeo de Precio a PrecioHabitacionDTO, utilizando la navegación a Habitacion
