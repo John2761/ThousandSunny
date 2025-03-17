@@ -74,12 +74,12 @@ public partial class ThousandSunnyContext : DbContext
             entity.Property(e => e.IdBarco).HasColumnName("idBarco");
             entity.Property(e => e.IdHabitacion).HasColumnName("idHabitacion");
 
-            entity.HasOne(d => d.IdBarcoNavigation).WithMany(p => p.BarcoHabitacion)
+            entity.HasOne(d => d.BarcoNavigation).WithMany(p => p.BarcoHabitacion)
                 .HasForeignKey(d => d.IdBarco)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__BarcoHabi__idBar__34C8D9D1");
 
-            entity.HasOne(d => d.IdHabitacionNavigation).WithMany(p => p.BarcoHabitacion)
+            entity.HasOne(d => d.HabitacionNavigation).WithMany(p => p.BarcoHabitacion)
                 .HasForeignKey(d => d.IdHabitacion)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__BarcoHabi__idHab__35BCFE0A");

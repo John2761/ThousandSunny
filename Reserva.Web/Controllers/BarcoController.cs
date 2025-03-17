@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using Reserva.Application.DTOs;
 using Reserva.Application.Services.Interfaces;
 using Reserva.Infraestructure.Data;
@@ -40,51 +41,67 @@ namespace Reserva.Web.Controllers
             {
                 Habitaciones = new List<BarcoHabitacionDTO>() // Asegurar que no sea null
             };
-
+            TempData["CartShopping"] = null;
             return View(model);
         }
 
-
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        [HttpPost]
-        public IActionResult Create(BarcoDTO barcoDTO)
+        public async Task<IActionResult> Create(BarcoDTO barcoDTO)
         {
-            if (!ModelState.IsValid)
+
+             if (!ModelState.IsValid)
             {
+                ViewBag.ErrorMessage = string.Join("; ", ModelState.Values
+                                       .SelectMany(x => x.Errors)
+                                       .Select(x => x.ErrorMessage));
                 return View(barcoDTO);
             }
 
-            // Crear el barco
-            var barco = new Barco
+            using (var transaction = await _context.Database.BeginTransactionAsync()) 
             {
-                Nombre = barcoDTO.Nombre,
-                Descripcion = barcoDTO.Descripcion,
-                BarcoHabitacion = new List<BarcoHabitacion>()
-            };
-
-            _context.Barco.Add(barco);
-            _context.SaveChanges(); 
-
-            // Agregar habitaciones al barco (si existen)
-            if (barcoDTO.Habitaciones != null)
-            {
-                foreach (var habitacionDTO in barcoDTO.Habitaciones)
+                try
                 {
-                    barco.BarcoHabitacion.Add(new BarcoHabitacion
+                    // Crear el barco sin asignar `idBarco`
+                    var barco = new Barco
                     {
-                        IdBarco = barco.IdBarco, // 
-                        IdHabitacion = habitacionDTO.idHabitacion,
-                        CantHabitaciones = habitacionDTO.CantHabitaciones
-                    });
+                        Nombre = barcoDTO.Nombre,
+                        Descripcion = barcoDTO.Descripcion
+                    };
+
+                    await _context.Barco.AddAsync(barco);
+                    await _context.SaveChangesAsync();  // Barco.IdBarco` tiene el ID generado
+
+                    // Obtener habitaciones guardadas en `TempData`
+                    var jsonHabitaciones = TempData["CartShopping"] as string;
+                    List<BarcoHabitacionDTO>? habitacionesDTO = jsonHabitaciones != null
+                        ? JsonConvert.DeserializeObject<List<BarcoHabitacionDTO>>(jsonHabitaciones)
+                        : new List<BarcoHabitacionDTO>();
+
+                    // Agregar habitaciones vinculadas con el `IdBarco` generado
+                    if (habitacionesDTO != null && habitacionesDTO.Any())
+                    {
+                        foreach (var habitacionDTO in habitacionesDTO)
+                        {
+                            _context.BarcoHabitacion.Add(new BarcoHabitacion
+                            {
+                                IdBarco = barco.IdBarco, // Ahora tiene un ID válido
+                                IdHabitacion = habitacionDTO.idHabitacion,
+                                CantHabitaciones = habitacionDTO.CantHabitaciones
+                            });
+                        }
+                        await _context.SaveChangesAsync();
+                    }
+                    await transaction.CommitAsync(); // Confirmar cambios en la BD
                 }
-
-                _context.SaveChanges(); // Guardar las habitaciones
+                catch (Exception ex)
+                {
+                    await transaction.RollbackAsync();
+                    ModelState.AddModelError(string.Empty, "Error al guardar el barco: " + ex.Message);
+                    return View(barcoDTO);
+                }
             }
-
-            return RedirectToAction("Index"); // Redirige al listado tras guardar
+            return RedirectToAction("Index");
         }
-
 
         [HttpGet]
         public async Task<IActionResult> GetHabitacionesDisponibles()
@@ -106,60 +123,49 @@ namespace Reserva.Web.Controllers
             return PartialView("_AddHabitacion", habitaciones);
         }
 
-
         [HttpGet]
-        public async Task<IActionResult> GetHabitacionesAgregadas(int idBarco)
+        public async Task<IActionResult> GetHabitacionesAgregadas(int idBarco) // tabla cargada
         {
+            
             var habitaciones = await _context.BarcoHabitacion
+
                 .Include(bh => bh.IdHabitacion)
                 .Where(bh => bh.IdBarco == idBarco)
                 .ToListAsync();
-
+    
             return PartialView("_DetalleHabitaciones", habitaciones);
         }
-
 
         [HttpPost]
         public IActionResult AgregarHabitacionABarco(int idBarco, int idHabitacion, int cantidad)
         {
-            // Obtener el barco con sus habitaciones asociadas
-            var barco = _context.Barco
-                .Include(b => b.BarcoHabitacion)
-                    .ThenInclude(bh => bh.IdHabitacionNavigation) // Uso correcto de navegación
-                .FirstOrDefault(b => b.IdBarco == idBarco);
+            // Obtener habitaciones actuales de TempData
+            var json = TempData["CartShopping"] as string;
+            List<BarcoHabitacionDTO> habitaciones = json != null
+                ? JsonConvert.DeserializeObject<List<BarcoHabitacionDTO>>(json)
+                : new List<BarcoHabitacionDTO>();
 
-            if (barco == null)
-                return NotFound();
-
-            // Verificar si la habitación ya está asociada al barco
-            var existente = barco.BarcoHabitacion.FirstOrDefault(bh => bh.IdHabitacion == idHabitacion);
-            if (existente != null)
+            // Agregar nueva habitación
+            var habitacionExistente = habitaciones.FirstOrDefault(h => h.idHabitacion == idHabitacion);
+            if (habitacionExistente != null)
             {
-                existente.CantHabitaciones += cantidad;
+                habitacionExistente.CantHabitaciones += cantidad;
             }
             else
             {
-                barco.BarcoHabitacion.Add(new BarcoHabitacion
+                habitaciones.Add(new BarcoHabitacionDTO
                 {
-                    IdBarco = idBarco,
-                    IdHabitacion = idHabitacion,
+                    idHabitacion = idHabitacion,
                     CantHabitaciones = cantidad
                 });
             }
 
-            _context.SaveChanges();
+            // Guardar de nuevo en TempData
+            TempData["CartShopping"] = JsonConvert.SerializeObject(habitaciones);
 
-            // Convertir la lista intermedia a HabitacionDTO para actualizar la vista
-            var habitacionesDTO = barco.BarcoHabitacion.Select(bh => new HabitacionDTO
-            {
-                IdHabitacion = bh.IdHabitacionNavigation.IdHabitacion,
-                Nombre = bh.IdHabitacionNavigation.Nombre,
-                Descripcion = bh.IdHabitacionNavigation.Descripcion,
-                HuespedesMax = bh.IdHabitacionNavigation.HuespedesMax // Corrección del campo
-            }).ToList();
-
-            return PartialView("_DetalleHabitaciones", habitacionesDTO);
+            return PartialView("_DetalleHabitaciones", habitaciones);
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -175,7 +181,7 @@ namespace Reserva.Web.Controllers
                 return View(barco);
             }
 
-            await _serviceBarco.UpdateAsync(id, barco);
+            await _serviceBarco.UpdateAsync(barco);
             return RedirectToAction(nameof(Index));
         }
 

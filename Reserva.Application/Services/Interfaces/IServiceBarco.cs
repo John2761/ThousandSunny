@@ -7,8 +7,8 @@ namespace Reserva.Application.Services.Interfaces
     {
         Task<ICollection<BarcoDTO>> ListAsync();
         Task<BarcoDTO> FindByIdAsync(int id);
-        Task<Barco> AddAsync(BarcoDTO Barco);
-        Task UpdateAsync(int id, BarcoDTO barco);
+        Task<int> AddAsync(BarcoHabitacionDTO bhDTO);
+        Task<bool> UpdateAsync(BarcoDTO barco);
         Task<int> GetNextNumberBarco();
     }
 }

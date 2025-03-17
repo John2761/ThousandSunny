@@ -6,9 +6,13 @@ namespace Reserva.Infraestructure.Repository.Interfaces
     public interface IRepositoryBarco
     {
         Task<ICollection<Barco>> ListAsync();
+
         Task<Barco> FindByIdAsync(int Id);
-        Task<Barco> AddAsync(Barco barco);
-        Task<Barco> UpdateAsync(int id, Barco barco);
+
+        Task<int> AddAsync(BarcoHabitacion BH);
+
+        Task<bool> UpdateAsync(Barco barco);
+
         Task<int> GetNextNumberBarco();
 
     }

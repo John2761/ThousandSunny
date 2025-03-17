@@ -20,6 +20,22 @@ namespace Reserva.Application.Services.Implementations
             _repositoryHabitacion = repositoryHabitacion;
             _mapper = mapper;
         }
+        public async Task<int> AddAsync(BarcoHabitacionDTO dto)
+        {
+            // Validar Stock disponible
+            foreach (var item in dto.BarcoNavigation.BarcoHabitacion)
+            {
+                var Habitacion = await _repositoryHabitacion.FindByIdAsync(item.BarcoNavigation.IdBarco);
+
+                if (dto.CantHabitaciones < 1)
+                {
+                    throw new Exception($"No hay habitaciones disponibles para el Barco {dto.BarcoNavigation.Nombre}, cantidad en stock {item.CantHabitaciones} ");
+                }
+            }
+
+            var @object = _mapper.Map<BarcoHabitacion>(dto);
+            return await _repositoryBarco.AddAsync(@object);
+        }
 
         public async Task<BarcoDTO> FindByIdAsync(int id)
         {
@@ -33,26 +49,18 @@ namespace Reserva.Application.Services.Implementations
             return _mapper.Map<ICollection<BarcoDTO>>(list); ;
         }
 
-        public async Task<Barco> AddAsync(BarcoDTO dto)
-        {
-            // Map BarcoDTO to Barco
-            var objectMapped = _mapper.Map<Barco>(dto);
-            // Return
-            return await _repositoryBarco.AddAsync(objectMapped);
-        }
         public async Task<int> GetNextNumberBarco()
         {
             int nextBarco = await _repositoryBarco.GetNextNumberBarco();
             return nextBarco + 1;
         }
-        public async Task UpdateAsync(int id, BarcoDTO dto)
+        public async Task<bool> UpdateAsync(BarcoDTO dto)
         {
             //Obtenga el modelo original a actualizar
-            var @object = await _repositoryBarco.FindByIdAsync(id);
+            var @object = await _repositoryBarco.FindByIdAsync(dto.IdBarco);
             // source, destination
             var entity = _mapper.Map(dto, @object!);
-            await _repositoryBarco.UpdateAsync(id, entity);
+            return await _repositoryBarco.UpdateAsync(entity);
         }
-
     }
 }

@@ -18,7 +18,7 @@ namespace Reserva.Infraestructure.Repository.Implementations
         {
             return await _context.Barco
                         .Include(b => b.BarcoHabitacion)
-                        .ThenInclude(bh => bh.IdHabitacionNavigation)
+                        .ThenInclude(bh => bh.HabitacionNavigation)
                         .AsNoTracking()
                         .FirstOrDefaultAsync(b => b.IdBarco == id);
         }
@@ -27,14 +27,44 @@ namespace Reserva.Infraestructure.Repository.Implementations
         {
             return await _context.Barco.ToListAsync();
         }
-        public async Task<Barco> AddAsync(Barco entity)
+        public async Task<int> AddAsync(BarcoHabitacion entity)
         {
-            await _context.Set<Barco>().AddAsync(entity);
-            await _context.SaveChangesAsync();
-            return entity;
+            try
+            {
+                // Begin Transaction
+                await _context.Database.BeginTransactionAsync();
+                await _context.Set<BarcoHabitacion>().AddAsync(entity);
+                // Actualizar inventario
+                foreach (var item in entity.BarcoNavigation.BarcoHabitacion)
+                {
+                    //Buscar Habitacion
+                    var Habitacion = await _context.Set<Habitacion>().FindAsync(item.IdHabitacion);
+                    //Actualizar Habitacion
+                    _context.Set<Habitacion>().Update(entity.HabitacionNavigation);
+                }
+                await _context.SaveChangesAsync();
+                // Commit
+                await _context.Database.CommitTransactionAsync();
+
+                return entity.IdBarco;
+            }
+            catch (Exception ex)
+            {
+                Exception exception = ex;
+                // Rollback 
+                await _context.Database.RollbackTransactionAsync();
+                throw new Exception(ex.Message);
+            }
         }
 
-        public Task<Barco> UpdateAsync(int id, Barco barco)
+        public async Task<int> AddAsyncHabitacion(BarcoHabitacion entity, int idBarco)
+        {
+            await _context.Set<BarcoHabitacion>().AddAsync(entity);
+            await _context.SaveChangesAsync();
+            return entity.IdBarco;
+        }
+
+        public Task<bool> UpdateAsync(Barco barco)
         {
             throw new NotImplementedException();
         }

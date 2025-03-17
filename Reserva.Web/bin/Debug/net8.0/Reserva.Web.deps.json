@@ -610,8 +610,8 @@
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Metadata": "8.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "9.0.2",
-          "Microsoft.Extensions.Options": "9.0.2"
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.3",
+          "Microsoft.Extensions.Options": "9.0.3"
         }
       },
       "Microsoft.AspNetCore.Components/8.0.0": {
@@ -630,10 +630,10 @@
         "dependencies": {
           "Microsoft.AspNetCore.Components": "8.0.0",
           "Microsoft.AspNetCore.Components.Forms": "8.0.0",
-          "Microsoft.Extensions.DependencyInjection": "9.0.2",
-          "Microsoft.Extensions.Primitives": "9.0.2",
+          "Microsoft.Extensions.DependencyInjection": "9.0.3",
+          "Microsoft.Extensions.Primitives": "9.0.3",
           "Microsoft.JSInterop": "8.0.0",
-          "System.IO.Pipelines": "9.0.2"
+          "System.IO.Pipelines": "9.0.3"
         }
       },
       "Microsoft.AspNetCore.Metadata/8.0.0": {},
