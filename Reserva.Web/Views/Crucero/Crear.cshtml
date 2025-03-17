@@ -8,7 +8,7 @@
     <div class="card shadow-lg p-4 border-0 rounded-4">
         <h2 class="text-center mb-4">Registrar Nuevo Crucero</h2>
 
-        <!-- 🛑 Mensajes de error -->
+        <!-- Mensajes de error -->
         @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
         {
             <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
@@ -21,7 +21,7 @@
 
         <form asp-action="Crear" method="post">
 
-            <!-- 🔹 Información del Crucero -->
+            <!-- Información del Crucero -->
             <div class="mb-3">
                 <label asp-for="Nombre" class="form-label fw-bold">Nombre del Crucero</label>
                 <input asp-for="Nombre" class="form-control" required />
@@ -44,19 +44,19 @@
                 </div>
             </div>
 
-            <!-- 🔹 Sección de Itinerario -->
+            <!-- Sección de Itinerario -->
             <h4 class="mt-4 mb-3">Itinerario</h4>
             <div id="itinerarioContainer"></div>
             <button type="button" class="btn btn-success mt-2" onclick="agregarItinerario()">+ Agregar Día</button>
             <span id="errorItinerario" class="text-danger"></span>
 
-            <!-- 🔹 Fechas y precios de habitaciones -->
+            <!-- Fechas y precios de habitaciones -->
             <h4 class="mt-4 mb-3">Fechas y Precios de Habitaciones</h4>
             <div id="fechasPreciosContainer"></div>
             <button type="button" class="btn btn-primary mt-2" onclick="agregarFechaPrecio()">+ Agregar Fecha</button>
             <span id="errorFechas" class="text-danger"></span>
 
-            <!-- 🔹 Botones de acción -->
+            <!-- Botones de acción -->
             <div class="text-center mt-4">
                 <button type="submit" class="btn btn-primary px-4">Guardar</button>
                 <a asp-action="Index" class="btn btn-secondary px-4">Cancelar</a>

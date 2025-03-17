@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Reserva.Infraestructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c1844b442d5afd69a6edb8433b42ce403811dbe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f732e5f54f8a2627dad5e28537702a229af11142")]
 [assembly: System.Reflection.AssemblyProductAttribute("Reserva.Infraestructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Reserva.Infraestructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
