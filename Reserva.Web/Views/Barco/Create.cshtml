@@ -1,0 +1,183 @@
+﻿@using static Reserva.Application.DTOs.BarcoHabitacionDTO;
+@using Reserva.Application.DTOs;
+@model Reserva.Application.DTOs.BarcoDTO
+@{
+	ViewData["Title"] = "Crear Barco";
+}
+
+<style>
+	ul.ui-autocomplete {
+		z-index: 1100;
+	}
+</style>
+
+<form asp-action="Create" id="myForm" method="post">
+	<div class="card">
+		<div class="card-header"></div>
+		<div class="card-body">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+						<input type="hidden" asp-for="IdBarco" />
+
+						<div class="form-group">
+							<label asp-for="Nombre" class="control-label fw-normal"></label>
+							<input asp-for="Nombre" id="NombreModal" type="text" autocomplete="off" class="form-control form-control-sm" />
+							<span asp-validation-for="Nombre" class="text-danger"></span>
+						</div>
+
+						<div class="form-group">
+							<label asp-for="Descripcion" class="control-label fw-normal"></label>
+							<textarea asp-for="Descripcion" id="DescripcionModal" class="form-control form-control-sm"></textarea>
+							<span asp-validation-for="Descripcion" class="text-danger"></span>
+						</div>
+
+						<button type="button" class="btn btn-success" style="margin-top:10%" onclick="cargarHabitaciones()">Agregar Habitación</button>
+					</div>
+					<div class="col-md-4 text-center">
+						<img src="/Images/nophoto.jpg" class="img-responsive" style="height:80%;width:80%;padding-left:20%" id="ImgHabitacion">
+					</div>
+
+					</div>
+				</div>
+
+				<!-- Tabla de Habitaciones Agregadas -->
+				<div class="card mt-3">
+					<div class="card-header">
+						<h4>Habitaciones Agregadas</h4>
+					</div>
+					<div class="card-body">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Descripción</th>
+									<th>Capacidad</th>
+									<th>Cantidad</th>
+									<th>Acción</th>
+								</tr>
+							</thead>
+							<tbody id="detalleHabitacionesView"></tbody>
+						</table>
+					</div>
+				</div>
+				<!-- Inputs ocultos para enviar habitaciones -->
+				<div id="habitacionesInputs"></div>
+			</div>
+		</div>
+
+		<div class="card-footer">
+			<div class="col float-end">
+				<button type="button" class="btn btn-primary" onclick="guardarBarco()" >Guardar Barco</button>
+			</div>
+		</div>
+	</div>
+</form>
+<div>
+	<a asp-action="Index">Regresar al listado</a>
+</div>
+
+<!--- Modal --->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div id="mostrar"></div> <!-- 🔹 Aquí se inyectará la vista parcial -->
+			</div>
+		</div>
+	</div>
+</div>
+<!---Fin Modal --->
+@section Scripts {
+	<script>
+		let habitaciones = [];
+
+		function cargarHabitaciones() {
+			fetch('@Url.Action("GetHabitacionesDisponibles", "Barco")')
+				.then(response => response.text())
+				.then(html => {
+					document.getElementById("mostrar").innerHTML = html;
+					$("#myModal").modal("show");
+				})
+				.catch(error => console.error("Error al cargar habitaciones:", error));
+		}
+
+		function addHabitacion(idHabitacion, nombre, descripcion, capacidad) {
+			let cantidad = parseInt(document.getElementById(`cantidad_${idHabitacion}`).value, 10);
+
+			if (cantidad <= 0) {
+				Swal.fire({ title: "Error!", text: "Ingrese una cantidad válida.", icon: "error" });
+				return;
+			}
+
+			// Verificar si la habitación ya existe en la lista
+			let habitacionExistente = habitaciones.find(h => h.IdHabitacion === idHabitacion);
+
+			if (habitacionExistente) {
+				// Si ya existe, sumar la cantidad
+				habitacionExistente.CantHabitaciones += cantidad;
+			} else {
+				// Si no existe, agregarla al array
+				habitaciones.push({
+					IdHabitacion: idHabitacion,
+					CantHabitaciones: cantidad,
+					Nombre: nombre,
+					Descripcion: descripcion,
+					HuespedesMax: capacidad
+				});
+			}
+
+			actualizarTablaHabitaciones();
+		}
+
+
+		function actualizarTablaHabitaciones() {
+			let tbody = document.getElementById("detalleHabitacionesView");
+			tbody.innerHTML = ""; // Limpiar tabla antes de volver a renderizar
+
+			habitaciones.forEach((habitacion, index) => {
+				let row = `
+					<tr>
+						<td>${habitacion.Nombre}</td>
+						<td>${habitacion.Descripcion}</td>
+						<td>${habitacion.HuespedesMax}</td>
+						<td>${habitacion.CantHabitaciones}</td>
+						<td>
+							<button type="button" class="btn btn-danger btn-sm" onclick="eliminarHabitacion(${index})">Eliminar</button>
+						</td>
+					</tr>
+				`;
+				tbody.innerHTML += row;
+			});
+
+			// Actualizar los inputs ocultos para enviar las habitaciones al backend
+			let inputs = document.getElementById("habitacionesInputs");
+			inputs.innerHTML = "";
+			habitaciones.forEach((habitacion, index) => {
+				inputs.innerHTML += `
+					<input type="hidden" name="Habitaciones[${index}].IdHabitacion" value="${habitacion.IdHabitacion}" />
+					<input type="hidden" name="Habitaciones[${index}].CantHabitaciones" value="${habitacion.CantHabitaciones}" />
+				`;
+			});
+		}
+
+
+		function eliminarHabitacion(index) {
+			habitaciones.splice(index, 1);
+			actualizarTablaHabitaciones();
+		}
+
+		function guardarBarco() {
+			console.log("Formulario intentado enviar...");
+			let form = document.getElementById("myForm");
+			if (form) {
+				console.log("Formulario encontrado, enviando...");
+				form.submit();
+			} else {
+				console.error("No se encontró el formulario.");
+		}
+		}
+
+	</script>
+}

@@ -11,16 +11,16 @@ namespace Reserva.Application.Profiles
         {
             CreateMap<Barco, BarcoDTO>()
             .ForMember(dest => dest.Habitaciones, opt => opt.MapFrom(src => src.BarcoHabitacion
-                .Select(bh => new HabitacionBarcoDTO
+                .Select(bh => new BarcoHabitacionDTO
                 {
-                    NombreHabitacion = bh.IdHabitacionNavigation.Nombre,
-                    CantidadHabitaciones = bh.CantHabitaciones,
-                    HuespedesMax = bh.IdHabitacionNavigation.HuespedesMax
+                    NombreHabitacion = bh.HabitacionNavigation.Nombre,
+                    CantHabitaciones = bh.CantHabitaciones,
+                    HuespedesMax = bh.HabitacionNavigation.HuespedesMax
                 }).ToList()))
 
             // Calcular la capacidad total de huéspedes del barco
             .ForMember(dest => dest.CapacidadTotalHuespedes, opt => opt.MapFrom(src =>
-                src.BarcoHabitacion.Sum(bh => bh.CantHabitaciones * bh.IdHabitacionNavigation.HuespedesMax)))
+                src.BarcoHabitacion.Sum(bh => bh.CantHabitaciones * bh.HabitacionNavigation.HuespedesMax)))
 
             .ReverseMap();
         }

@@ -18,6 +18,7 @@ wwwroot\images\habitaciones\5-presidencial.png
 wwwroot\images\habitaciones\default.png
 wwwroot\images\Logo.ico
 wwwroot\images\Logo.png
+wwwroot\images\nophoto.jpg
 wwwroot\images\ThousandSunny.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

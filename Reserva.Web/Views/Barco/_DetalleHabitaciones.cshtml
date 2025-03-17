@@ -1,0 +1,34 @@
+﻿@model List<Reserva.Application.DTOs.HabitacionDTO>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-warning">No hay habitaciones agregadas.</div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Capacidad</th>
+                <td>Cantidad</td>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var habitacion in Model)
+            {
+                <tr>
+                    <td>@habitacion.Nombre</td>
+                    <td>@habitacion.Descripcion</td>
+                    <td>@habitacion.HuespedesMax</td>
+                    <td>@habitacion.Cantidad</td>
+                    <td>
+                        <button class="btn btn-danger" onclick="deleteHabitacion(@habitacion.IdHabitacion)">Eliminar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
