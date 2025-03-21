@@ -10,6 +10,8 @@ namespace Reserva.Infraestructure.Repository.Interfaces
     public interface IRepositoryCrucero
     {
         Task<ICollection<Crucero>> ListAsync();
-        Task<Crucero> FindByIdAsync(int id);
+        Task<Crucero?> FindByIdAsync(int id);
+        Task<int> AddAsync(Crucero crucero);
+        Task<List<Habitacion>> ObtenerHabitacionesPorBarcoAsync(int idBarco);
     }
 }

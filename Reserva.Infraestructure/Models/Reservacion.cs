@@ -9,7 +9,7 @@ public partial class Reservacion
 
     public DateTime FechaLimite { get; set; }
 
-    public DateTime FechaReserva { get; set; }
+    public DateOnly FechaReserva { get; set; }
 
     public int IdFecha { get; set; }
 
@@ -24,10 +24,9 @@ public partial class Reservacion
     public virtual ICollection<Huesped> Huesped { get; set; } = new List<Huesped>();
 
     public virtual Crucero IdCruceroNavigation { get; set; } = null!;
+    public virtual Fecha IdFechaNavigation { get; set; } = null!;
 
     public virtual DatosPago IdDatosPagoNavigation { get; set; } = null!;
-
-    public virtual Fecha IdFechaNavigation { get; set; } = null!;
 
     public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
 

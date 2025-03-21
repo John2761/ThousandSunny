@@ -19,7 +19,22 @@ namespace Reserva.Infraestructure.Repository.Implementations
             _context = context;
         }
 
-        public async Task<Crucero> FindByIdAsync(int id)
+        public async Task<int> AddAsync(Crucero crucero)
+        {
+            await _context.Set<Crucero>().AddAsync(crucero);
+            await _context.SaveChangesAsync();
+            return crucero.IdCrucero;
+        }
+
+        public async Task<List<Habitacion>> ObtenerHabitacionesPorBarcoAsync(int idBarco)
+        {
+            return await _context.Habitacion
+                .Where(h => h.BarcoHabitacion.Any(bh => bh.IdBarco == idBarco))
+        .Include(h => h.Precio) // ✅ Aplicado antes de Select()
+        .ToListAsync();
+        }
+
+        public async Task<Crucero?> FindByIdAsync(int id)
         {
             return await _context.Set<Crucero>()
                 .Include(c => c.IdBarcoNavigation)

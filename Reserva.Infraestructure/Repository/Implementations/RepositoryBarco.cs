@@ -18,7 +18,7 @@ namespace Reserva.Infraestructure.Repository.Implementations
         {
             return await _context.Barco
                         .Include(b => b.BarcoHabitacion)
-                        .ThenInclude(bh => bh.HabitacionNavigation)
+                        .ThenInclude(bh => bh.IdHabitacionNavigation)
                         .AsNoTracking()
                         .FirstOrDefaultAsync(b => b.IdBarco == id);
         }
@@ -35,18 +35,20 @@ namespace Reserva.Infraestructure.Repository.Implementations
                 await _context.Database.BeginTransactionAsync();
                 await _context.Set<BarcoHabitacion>().AddAsync(entity);
                 // Actualizar inventario
-                foreach (var item in entity.BarcoNavigation.BarcoHabitacion)
+                foreach (var item in entity.IdBarcoNavigation.BarcoHabitacion)
                 {
                     //Buscar Habitacion
                     var Habitacion = await _context.Set<Habitacion>().FindAsync(item.IdHabitacion);
                     //Actualizar Habitacion
-                    _context.Set<Habitacion>().Update(entity.HabitacionNavigation);
+                    _context.Set<Habitacion>().Update(entity.IdHabitacionNavigation);
+                    await AddAsyncHabitacion(entity, entity.IdBarco);
                 }
                 await _context.SaveChangesAsync();
                 // Commit
                 await _context.Database.CommitTransactionAsync();
 
                 return entity.IdBarco;
+                
             }
             catch (Exception ex)
             {
@@ -64,10 +66,20 @@ namespace Reserva.Infraestructure.Repository.Implementations
             return entity.IdBarco;
         }
 
-        public Task<bool> UpdateAsync(Barco barco)
+        public async Task<bool> UpdateAsync(Barco entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _context.Set<Barco>().Update(entity);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar el barco", ex);
+            }
         }
+
         public async Task<int> GetNextNumberBarco()
         {
             int current = 0;
