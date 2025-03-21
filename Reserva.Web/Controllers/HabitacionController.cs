@@ -40,7 +40,7 @@ namespace Reserva.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Crear(HabitacionDTO habitacionDto)
         {
-           if (!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 ViewBag.ErrorMessage = string.Join("; ", ModelState.Values
                                    .SelectMany(x => x.Errors)
@@ -50,12 +50,19 @@ namespace Reserva.Web.Controllers
 
             try
             {
+                // 🔹 Validar si el nombre ya existe antes de guardar
+                var existe = await _serviceHabitacion.ExisteNombreAsync(habitacionDto.Nombre);
+                if (existe)
+                {
+                    ViewBag.ErrorMessage = "El nombre de la habitación ya está en uso. Debe ser único.";
+                    return View(habitacionDto);
+                }
+
                 await _serviceHabitacion.AddAsync(habitacionDto);
 
-                // ✅ SWEETALERT - GUARDAR MENSAJE EN TempData ✅
                 TempData["SuccessMessage"] = SweetAlertHelper.Mensaje("Éxito", "Habitación agregada correctamente", SweetAlertMessageType.success);
 
-                return RedirectToAction("Index"); // 🔹 REDIRIGE AL INDEX
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
@@ -63,7 +70,6 @@ namespace Reserva.Web.Controllers
                 return View(habitacionDto);
             }
         }
-
 
         [HttpGet]
         public async Task<IActionResult> Editar(int id)
@@ -73,11 +79,10 @@ namespace Reserva.Web.Controllers
             return View(habitacion);
         }
 
-        
         [HttpPost]
         public async Task<IActionResult> Editar(HabitacionDTO habitacionDto)
         {
-            if (!ModelState.IsValid) 
+            if (!ModelState.IsValid)
             {
                 ViewBag.ErrorMessage = string.Join("; ", ModelState.Values
                                    .SelectMany(x => x.Errors)
@@ -89,16 +94,23 @@ namespace Reserva.Web.Controllers
             {
                 await _serviceHabitacion.UpdateAsync(habitacionDto);
 
-                // ✅ SWEETALERT - GUARDAR MENSAJE EN TempData ✅
                 TempData["SuccessMessage"] = SweetAlertHelper.Mensaje("Éxito", "Habitación actualizada correctamente", SweetAlertMessageType.success);
 
-                return RedirectToAction("Index"); // 🔹 REDIRIGE AL INDEX
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
                 ViewBag.ErrorMessage = "Error al actualizar la habitación: " + ex.InnerException?.Message ?? ex.Message;
                 return View(habitacionDto);
             }
+        }
+
+        // 🚀 Método para la validación AJAX del nombre único
+        [HttpGet]
+        public async Task<IActionResult> VerificarNombreUnico(string nombre)
+        {
+            var existe = await _serviceHabitacion.ExisteNombreAsync(nombre);
+            return Json(new { existe });
         }
     }
 }

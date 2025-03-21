@@ -1,0 +1,178 @@
+﻿@model Reserva.Application.DTOs.CruceroDTO
+
+@{
+    ViewData["Title"] = "Crear Crucero";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-4 border-0 rounded-4">
+        <h2 class="text-center mb-4">Registrar Nuevo Crucero</h2>
+
+        <!-- Mensajes de error -->
+        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+        {
+            <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+        }
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+        }
+
+        <form asp-action="Crear" method="post">
+
+            <!-- Información del Crucero -->
+            <div class="mb-3">
+                <label asp-for="Nombre" class="form-label fw-bold">Nombre del Crucero</label>
+                <input asp-for="Nombre" class="form-control" required />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="CantidadDias" class="form-label fw-bold">Cantidad de Días</label>
+                    <input asp-for="CantidadDias" id="cantidadDias" type="number" class="form-control" min="1" max="365" required onchange="validarItinerario()" />
+                    <span asp-validation-for="CantidadDias" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="NombreBarco" class="form-label fw-bold">Barco</label>
+                    <select asp-for="NombreBarco" id="barcoSelect" class="form-select" asp-items="@(new SelectList(ViewBag.Barcos, "IdBarco", "Nombre"))" required onchange="cargarHabitaciones()">
+                        <option value="">Seleccione un barco</option>
+                    </select>
+                    <span asp-validation-for="NombreBarco" class="text-danger"></span>
+                </div>
+            </div>
+
+            <!-- Sección de Itinerario -->
+            <h4 class="mt-4 mb-3">Itinerario</h4>
+            <div id="itinerarioContainer"></div>
+            <button type="button" class="btn btn-success mt-2" onclick="agregarItinerario()">+ Agregar Día</button>
+            <span id="errorItinerario" class="text-danger"></span>
+
+            <!-- Fechas y precios de habitaciones -->
+            <h4 class="mt-4 mb-3">Fechas y Precios de Habitaciones</h4>
+            <div id="fechasPreciosContainer"></div>
+            <button type="button" class="btn btn-primary mt-2" onclick="agregarFechaPrecio()">+ Agregar Fecha</button>
+            <span id="errorFechas" class="text-danger"></span>
+
+            <!-- Botones de acción -->
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary px-4">Guardar</button>
+                <a asp-action="Index" class="btn btn-secondary px-4">Cancelar</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let habitacionesDisponibles = [];
+        let contadorFechas = 0;
+        let contadorDias = 0;
+        let contadorItinerarios = 0;
+
+
+        function cargarHabitaciones() {
+            let barcoId = document.getElementById("barcoSelect").value;
+            if (!barcoId) return;
+
+            fetch(`/Crucero/ObtenerHabitaciones?idBarco=${barcoId}`)
+                .then(response => response.json())
+                .then(data => {
+                    habitacionesDisponibles = data;
+                    actualizarHabitacionesDisponibles();
+                })
+                .catch(error => console.error("Error al cargar habitaciones:", error));
+        }
+
+        function actualizarHabitacionesDisponibles() {
+            document.querySelectorAll(".habitacionSelect").forEach(select => {
+                select.innerHTML = '<option value="">Seleccione una habitación</option>';
+                habitacionesDisponibles.forEach(hab => {
+                    select.innerHTML += `<option value="${hab.id}">${hab.nombre} - ₡${hab.precios[0]?.precio ?? "Sin precio"}</option>`;
+                });
+            });
+        }
+
+                function agregarItinerario() {
+            let cantidadDias = document.getElementById("cantidadDias").value;
+            let itinerarioContainer = document.getElementById("itinerarioContainer");
+            let errorMensaje = document.getElementById("errorItinerario");
+
+            if (cantidadDias === "" || parseInt(cantidadDias) <= 0) {
+                errorMensaje.textContent = "Debe ingresar la cantidad de días antes de agregar el itinerario.";
+                return;
+            }
+
+            if (contadorItinerarios >= parseInt(cantidadDias)) {
+                errorMensaje.textContent = "No puede agregar más días que la cantidad total del crucero.";
+                return;
+            }
+
+            errorMensaje.textContent = ""; // Limpiar mensaje de error si todo está bien
+            let itinerarioDiv = document.createElement('div');
+            itinerarioDiv.classList.add('row', 'mt-2');
+            itinerarioDiv.innerHTML = `
+                <div class="col-md-3">
+                    <label>Día</label>
+                    <input type="number" name="Itinerario[${contadorItinerarios}].Dia" class="form-control" min="1" max="${cantidadDias}" required />
+                </div>
+                <div class="col-md-4">
+                    <label>Puerto</label>
+                    <select name="Itinerario[${contadorItinerarios}].IdPuerto" class="form-select" required>
+                        <option value="">Seleccione un puerto</option>
+        @foreach (var puerto in ViewBag.Puertos ?? new List<Reserva.Application.DTOs.PuertoDTO>())
+        {
+                                <option value="@puerto.IdPuerto">@puerto.Nombre</option>
+        }
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label>Descripción</label>
+                    <input type="text" name="Itinerario[${contadorItinerarios}].Descripcion" class="form-control" required />
+                </div>
+            `;
+            itinerarioContainer.appendChild(itinerarioDiv);
+            contadorItinerarios++;
+        }
+
+            function agregarFechaPrecio() {
+            let fechasPreciosContainer = document.getElementById("fechasPreciosContainer");
+            let errorFechas = document.getElementById("errorFechas");
+
+            errorFechas.textContent = ""; // Limpiar mensaje de error si todo está bien
+            let fechaDiv = document.createElement('div');
+            fechaDiv.classList.add('row', 'mt-2');
+            fechaDiv.innerHTML = `
+                <div class="col-md-3">
+                    <label>Fecha de Inicio</label>
+                    <input type="date" name="FechasPrecios[${contadorFechas}].FechaSalida" class="form-control" required />
+                </div>
+                <div class="col-md-3">
+                    <label>Fecha Límite de Pago</label>
+                    <input type="date" name="FechasPrecios[${contadorFechas}].FechaLimitePago" class="form-control" required />
+                </div>
+                <div class="col-md-3">
+                    <label>Habitación</label>
+                    <select name="FechasPrecios[${contadorFechas}].PrecioHabitacion[0].NombreHabitacion" class="form-select habitacionSelect" required>
+                        <option value="">Seleccione una habitación</option>
+        @foreach (var habitacion in ViewBag.Habitaciones ?? new List<Reserva.Application.DTOs.HabitacionDTO>())
+        {
+                                <option value="@habitacion.Nombre" data-precio="@habitacion.PrecioHabitacion">@habitacion.Nombre</option>
+        }
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label>Precio</label>
+                    <input type="number" name="FechasPrecios[${contadorFechas}].PrecioHabitacion[0].Precio" class="form-control" min="0" step="1" required />
+                </div>
+            `;
+
+            fechasPreciosContainer.appendChild(fechaDiv);
+            contadorFechas++;
+
+        }
+    </script>
+}

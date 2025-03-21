@@ -8,7 +8,9 @@ namespace Reserva.Application.DTOs
 {
     public record PrecioHabitacionDTO
     {
-        public string NombreHabitacion { get; set; } = null;
+        public string NombreHabitacion { get; set; } = null!;
         public decimal PrecioHabitacion {  set; get; }
+
+
     }
 }

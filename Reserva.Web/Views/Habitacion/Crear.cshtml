@@ -17,13 +17,13 @@
                 <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
             }
 
-            <form asp-action="Crear" method="post">
+            <form id="formHabitacion" asp-action="Crear" method="post">
                 <div class="row">
                     <!-- Columna Izquierda -->
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label asp-for="Nombre" class="form-label fw-bold text-primary">Nombre</label>
-                            <input asp-for="Nombre" class="form-control" required />
+                            <input id="Nombre" asp-for="Nombre" class="form-control" required />
                             <span asp-validation-for="Nombre" class="text-danger"></span>
                         </div>
 
@@ -50,13 +50,13 @@
 
                         <div class="mb-3">
                             <label asp-for="HuespedesMin" class="form-label fw-bold text-primary">Huéspedes Mínimos</label>
-                            <input asp-for="HuespedesMin" type="number" class="form-control" min= "0" required />
+                            <input asp-for="HuespedesMin" type="number" class="form-control" min="1" required />
                             <span asp-validation-for="HuespedesMin" class="text-danger"></span>
                         </div>
 
                         <div class="mb-3">
                             <label asp-for="HuespedesMax" class="form-label fw-bold text-primary">Huéspedes Máximos</label>
-                            <input asp-for="HuespedesMax" type="number" class="form-control" min="0" required />
+                            <input asp-for="HuespedesMax" type="number" class="form-control" min="1" required />
                             <span asp-validation-for="HuespedesMax" class="text-danger"></span>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                     <a asp-action="Index" class="btn btn-cancel">
                         <i class="bi bi-x-circle"></i> Cancelar
                     </a>
-                    <button type="submit" class="btn btn-gradient">
+                    <button type="submit" id="btnGuardar" class="btn btn-gradient">
                         <i class="bi bi-check-circle"></i> Guardar
                     </button>
                 </div>
@@ -75,7 +75,6 @@
     </div>
 </div>
 
-
 @if (!string.IsNullOrEmpty(ViewBag.SweetAlertMessage))
 {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -83,3 +82,38 @@
         @Html.Raw(ViewBag.SuccessMessage)
     </script>
 }
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btnGuardar").click(function (event) {
+            event.preventDefault(); // Evita el envío inmediato del formulario
+
+            let nombre = $("#Nombre").val().trim();
+
+            if (nombre === "") {
+                Swal.fire("Error", "El nombre de la habitación no puede estar vacío", "error");
+                return;
+            }
+
+            // Verificar si el nombre ya existe en la base de datos
+            $.ajax({
+                url: "/Habitacion/VerificarNombreUnico",
+                type: "GET",
+                data: { nombre: nombre },
+                success: function (data) {
+                    if (data.existe) {
+                        Swal.fire("Error", "El nombre de la habitación ya está en uso", "error");
+                    } else {
+                        $("#formHabitacion").submit(); // Enviar el formulario si el nombre no existe
+                    }
+                },
+                error: function () {
+                    Swal.fire("Error", "No se pudo verificar el nombre. Intente nuevamente.", "error");
+                }
+            });
+        });
+    });
+</script>

@@ -14,7 +14,23 @@
     };
 }
 
+<!-- Mostrar mensaje de éxito si existe -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
 <h2 class="text-center mt-4">Explora Nuestros Cruceros</h2>
+
+<!-- Botón para Crear Nuevo Crucero -->
+<div class="text-center mb-4">
+    <a asp-action="Crear" class="btn btn-success">+ Crear Nuevo Crucero</a>
+</div>
+
+
 
 <div class="container">
     <div class="row row-cols-1 row-cols-md-3 g-4">

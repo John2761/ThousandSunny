@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+2025-03-16 20:33:46.140 -06:00 [ERR] 
+EventId    :540-250316083346
+ErrorList  :Cannot apply the 'Include' operation with argument 'h => h.Precio'. Either the source is not a queryable of a known entity type or 'Include' has been applied after 'Select' method which projects a different entity type through navigation. Consider applying 'Include' before 'Select' method call.
+StackTrace :   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutorExpression[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass11_0`1.<ExecuteCore>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteCore[TResult](Expression query, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Reserva.Infraestructure.Repository.Implementations.RepositoryCrucero.ObtenerHabitacionesPorBarcoAsync(Int32 idBarco) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\Repository\Implementations\RepositoryCrucero.cs:line 31
+   at Reserva.Application.Services.Implementations.ServiceCrucero.ObtenerHabitacionesPorBarcoAsync(Int32 idBarco) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\Services\Implementations\ServiceCrucero.cs:line 46
+   at Reserva.Web.Controllers.CruceroController.ObtenerHabitaciones(Int32 idBarco) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\CruceroController.cs:line 119
+   at lambda_method469(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+=======
 2025-03-16 14:38:44.987 -06:00 [ERR] Failed executing DbCommand (22ms) [Parameters=[@p0='0', @p1='AMEN' (Size = 250) (DbType = AnsiString), @p2='Dios soy yo de nuevo' (Nullable = false) (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
 SET IMPLICIT_TRANSACTIONS OFF;
 SET NOCOUNT ON;
@@ -545,6 +572,7 @@ StackTrace :   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.ValidateConn
    at Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.Dispose()
    at Reserva.Web.Controllers.BarcoController.Create(BarcoDTO barcoDTO)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
@@ -560,6 +588,35 @@ StackTrace :   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.ValidateConn
    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
    at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
    at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+<<<<<<< HEAD
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-03-16 20:35:44.728 -06:00 [ERR] 
+EventId    :396-250316083544
+ErrorList  :Cannot apply the 'Include' operation with argument 'h => h.Precio'. Either the source is not a queryable of a known entity type or 'Include' has been applied after 'Select' method which projects a different entity type through navigation. Consider applying 'Include' before 'Select' method call.
+StackTrace :   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutorExpression[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass11_0`1.<ExecuteCore>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteCore[TResult](Expression query, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Reserva.Infraestructure.Repository.Implementations.RepositoryCrucero.ObtenerHabitacionesPorBarcoAsync(Int32 idBarco) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\Repository\Implementations\RepositoryCrucero.cs:line 31
+   at Reserva.Application.Services.Implementations.ServiceCrucero.ObtenerHabitacionesPorBarcoAsync(Int32 idBarco) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\Services\Implementations\ServiceCrucero.cs:line 46
+   at Reserva.Web.Controllers.CruceroController.ObtenerHabitaciones(Int32 idBarco) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\CruceroController.cs:line 119
+   at lambda_method310(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+=======
    at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context)
 
 2025-03-16 16:10:58.882 -06:00 [ERR] Failed executing DbCommand (9ms) [Parameters=[@p0='0', @p1='dadadasd' (Size = 250) (DbType = AnsiString), @p2='sassa' (Nullable = false) (Size = 50) (DbType = AnsiString), @p3='0', @p4='1', @p5='2'], CommandType='"Text"', CommandTimeout='30']
@@ -585,6 +642,7 @@ StackTrace :   at lambda_method135(Closure, Object, BarcoHabitacion, ResolutionC
    at Reserva.Application.Services.Implementations.ServiceBarco.AddAsync(BarcoDTO dto, BarcoHabitacionDTO bhDTO) in C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Application\Services\Implementations\ServiceBarco.cs:line 40
    at Reserva.Web.Controllers.BarcoController.Create(BarcoDTO barcoDTO, BarcoHabitacionDTO barcoHabitacionDTO) in C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\Controllers\BarcoController.cs:line 59
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
@@ -600,6 +658,104 @@ StackTrace :   at lambda_method135(Closure, Object, BarcoHabitacion, ResolutionC
    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
    at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
    at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+<<<<<<< HEAD
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-03-16 20:37:24.006 -06:00 [ERR] 
+EventId    :3876-250316083723
+ErrorList  :Cannot apply the 'Include' operation with argument 'h => h.Precio'. Either the source is not a queryable of a known entity type or 'Include' has been applied after 'Select' method which projects a different entity type through navigation. Consider applying 'Include' before 'Select' method call.
+StackTrace :   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutorExpression[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass11_0`1.<ExecuteCore>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteCore[TResult](Expression query, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Reserva.Infraestructure.Repository.Implementations.RepositoryCrucero.ObtenerHabitacionesPorBarcoAsync(Int32 idBarco) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\Repository\Implementations\RepositoryCrucero.cs:line 31
+   at Reserva.Application.Services.Implementations.ServiceCrucero.ObtenerHabitacionesPorBarcoAsync(Int32 idBarco) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\Services\Implementations\ServiceCrucero.cs:line 46
+   at Reserva.Web.Controllers.CruceroController.ObtenerHabitaciones(Int32 idBarco) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\CruceroController.cs:line 119
+   at lambda_method310(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-03-16 20:45:43.000 -06:00 [ERR] 
+EventId    :479-250316084542
+ErrorList  :Cannot apply the 'Include' operation with argument 'h => h.Precio'. Either the source is not a queryable of a known entity type or 'Include' has been applied after 'Select' method which projects a different entity type through navigation. Consider applying 'Include' before 'Select' method call.
+StackTrace :   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutorExpression[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass11_0`1.<ExecuteCore>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteCore[TResult](Expression query, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Reserva.Infraestructure.Repository.Implementations.RepositoryCrucero.ObtenerHabitacionesPorBarcoAsync(Int32 idBarco) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\Repository\Implementations\RepositoryCrucero.cs:line 31
+   at Reserva.Application.Services.Implementations.ServiceCrucero.ObtenerHabitacionesPorBarcoAsync(Int32 idBarco) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\Services\Implementations\ServiceCrucero.cs:line 46
+   at Reserva.Web.Controllers.CruceroController.ObtenerHabitaciones(Int32 idBarco) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\CruceroController.cs:line 119
+   at lambda_method310(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-03-16 22:35:03.896 -06:00 [ERR] Failed executing DbCommand (11ms) [Parameters=[@p0='0', @p1=NULL (Size = 250) (DbType = AnsiString), @p2='1' (Nullable = false) (Size = 50) (DbType = AnsiString), @p3='0', @p4='12', @p5=NULL (Size = 250) (DbType = AnsiString), @p6='0', @p7='Jon' (Nullable = false) (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Barco] ([idBarco], [Descripcion], [Nombre])
+VALUES (@p0, @p1, @p2);
+INSERT INTO [Crucero] ([idCrucero], [CantidadDias], [Descripcion], [idBarco], [Nombre])
+VALUES (@p3, @p4, @p5, @p6, @p7);
+2025-03-16 22:35:03.982 -06:00 [ERR] An exception occurred in the database while saving changes for context type 'Reserva.Infraestructure.Data.ThousandSunnyContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+Cannot insert explicit value for identity column in table 'Crucero' when IDENTITY_INSERT is set to OFF.
+=======
    at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
 
 2025-03-16 17:29:17.029 -06:00 [ERR] Failed executing DbCommand (20ms) [Parameters=[@p0='0', @p1='dadada' (Size = 250) (DbType = AnsiString), @p2='dasda' (Nullable = false) (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
@@ -610,6 +766,7 @@ VALUES (@p0, @p1, @p2);
 2025-03-16 17:29:17.093 -06:00 [ERR] An exception occurred in the database while saving changes for context type 'Reserva.Infraestructure.Data.ThousandSunnyContext'.
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
@@ -620,7 +777,11 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+<<<<<<< HEAD
+ClientConnectionId:723d3355-5c02-4be2-8775-72cbb417c696
+=======
 ClientConnectionId:f7410c35-900d-4170-a09b-f7a6fb96f49f
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
 Error Number:544,State:1,Class:16
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
@@ -635,6 +796,10 @@ Error Number:544,State:1,Class:16
    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+<<<<<<< HEAD
+Cannot insert explicit value for identity column in table 'Crucero' when IDENTITY_INSERT is set to OFF.
+=======
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
@@ -645,7 +810,11 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+<<<<<<< HEAD
+ClientConnectionId:723d3355-5c02-4be2-8775-72cbb417c696
+=======
 ClientConnectionId:f7410c35-900d-4170-a09b-f7a6fb96f49f
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
 Error Number:544,State:1,Class:16
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
@@ -658,6 +827,18 @@ Error Number:544,State:1,Class:16
    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+<<<<<<< HEAD
+2025-03-16 22:35:44.058 -06:00 [ERR] Failed executing DbCommand (24ms) [Parameters=[@p0='0', @p1=NULL (Size = 250) (DbType = AnsiString), @p2='1' (Nullable = false) (Size = 50) (DbType = AnsiString), @p3='0', @p4='12', @p5=NULL (Size = 250) (DbType = AnsiString), @p6='0', @p7='Jon' (Nullable = false) (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Barco] ([idBarco], [Descripcion], [Nombre])
+VALUES (@p0, @p1, @p2);
+INSERT INTO [Crucero] ([idCrucero], [CantidadDias], [Descripcion], [idBarco], [Nombre])
+VALUES (@p3, @p4, @p5, @p6, @p7);
+2025-03-16 22:35:44.065 -06:00 [ERR] An exception occurred in the database while saving changes for context type 'Reserva.Infraestructure.Data.ThousandSunnyContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+Cannot insert explicit value for identity column in table 'Crucero' when IDENTITY_INSERT is set to OFF.
+=======
 2025-03-16 17:30:10.599 -06:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[@p0='0', @p1='dadada' (Size = 250) (DbType = AnsiString), @p2='dasda' (Nullable = false) (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
 SET IMPLICIT_TRANSACTIONS OFF;
 SET NOCOUNT ON;
@@ -666,6 +847,7 @@ VALUES (@p0, @p1, @p2);
 2025-03-16 17:30:10.603 -06:00 [ERR] An exception occurred in the database while saving changes for context type 'Reserva.Infraestructure.Data.ThousandSunnyContext'.
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
@@ -676,7 +858,11 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+<<<<<<< HEAD
+ClientConnectionId:723d3355-5c02-4be2-8775-72cbb417c696
+=======
 ClientConnectionId:f7410c35-900d-4170-a09b-f7a6fb96f49f
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
 Error Number:544,State:1,Class:16
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
@@ -691,6 +877,10 @@ Error Number:544,State:1,Class:16
    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+<<<<<<< HEAD
+Cannot insert explicit value for identity column in table 'Crucero' when IDENTITY_INSERT is set to OFF.
+=======
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
@@ -701,7 +891,11 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+<<<<<<< HEAD
+ClientConnectionId:723d3355-5c02-4be2-8775-72cbb417c696
+=======
 ClientConnectionId:f7410c35-900d-4170-a09b-f7a6fb96f49f
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
 Error Number:544,State:1,Class:16
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
@@ -714,6 +908,18 @@ Error Number:544,State:1,Class:16
    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+<<<<<<< HEAD
+2025-03-16 22:36:29.770 -06:00 [ERR] Failed executing DbCommand (27ms) [Parameters=[@p0='0', @p1=NULL (Size = 250) (DbType = AnsiString), @p2='1' (Nullable = false) (Size = 50) (DbType = AnsiString), @p3='0', @p4='12', @p5=NULL (Size = 250) (DbType = AnsiString), @p6='0', @p7='Jon' (Nullable = false) (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Barco] ([idBarco], [Descripcion], [Nombre])
+VALUES (@p0, @p1, @p2);
+INSERT INTO [Crucero] ([idCrucero], [CantidadDias], [Descripcion], [idBarco], [Nombre])
+VALUES (@p3, @p4, @p5, @p6, @p7);
+2025-03-16 22:36:29.776 -06:00 [ERR] An exception occurred in the database while saving changes for context type 'Reserva.Infraestructure.Data.ThousandSunnyContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+Cannot insert explicit value for identity column in table 'Crucero' when IDENTITY_INSERT is set to OFF.
+=======
 2025-03-16 17:35:05.869 -06:00 [ERR] Failed executing DbCommand (18ms) [Parameters=[@p0='0', @p1='asdDaasD' (Size = 250) (DbType = AnsiString), @p2='ASDCSCscA' (Nullable = false) (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
 SET IMPLICIT_TRANSACTIONS OFF;
 SET NOCOUNT ON;
@@ -722,6 +928,7 @@ VALUES (@p0, @p1, @p2);
 2025-03-16 17:35:05.937 -06:00 [ERR] An exception occurred in the database while saving changes for context type 'Reserva.Infraestructure.Data.ThousandSunnyContext'.
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
@@ -732,7 +939,11 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+<<<<<<< HEAD
+ClientConnectionId:723d3355-5c02-4be2-8775-72cbb417c696
+=======
 ClientConnectionId:a6432b1a-c2ae-4757-9952-f3cb5d38372f
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
 Error Number:544,State:1,Class:16
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
@@ -747,6 +958,10 @@ Error Number:544,State:1,Class:16
    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+<<<<<<< HEAD
+Cannot insert explicit value for identity column in table 'Crucero' when IDENTITY_INSERT is set to OFF.
+=======
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
@@ -757,7 +972,11 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+<<<<<<< HEAD
+ClientConnectionId:723d3355-5c02-4be2-8775-72cbb417c696
+=======
 ClientConnectionId:a6432b1a-c2ae-4757-9952-f3cb5d38372f
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
 Error Number:544,State:1,Class:16
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
@@ -770,6 +989,18 @@ Error Number:544,State:1,Class:16
    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+<<<<<<< HEAD
+2025-03-16 22:37:06.219 -06:00 [ERR] Failed executing DbCommand (23ms) [Parameters=[@p0='0', @p1=NULL (Size = 250) (DbType = AnsiString), @p2='1' (Nullable = false) (Size = 50) (DbType = AnsiString), @p3='0', @p4='12', @p5=NULL (Size = 250) (DbType = AnsiString), @p6='0', @p7='Jon' (Nullable = false) (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Barco] ([idBarco], [Descripcion], [Nombre])
+VALUES (@p0, @p1, @p2);
+INSERT INTO [Crucero] ([idCrucero], [CantidadDias], [Descripcion], [idBarco], [Nombre])
+VALUES (@p3, @p4, @p5, @p6, @p7);
+2025-03-16 22:37:06.224 -06:00 [ERR] An exception occurred in the database while saving changes for context type 'Reserva.Infraestructure.Data.ThousandSunnyContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+Cannot insert explicit value for identity column in table 'Crucero' when IDENTITY_INSERT is set to OFF.
+=======
 2025-03-16 18:15:58.731 -06:00 [ERR] Failed executing DbCommand (25ms) [Parameters=[@p0='0', @p1='adasdasdad' (Size = 250) (DbType = AnsiString), @p2='dasdasd' (Nullable = false) (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
 SET IMPLICIT_TRANSACTIONS OFF;
 SET NOCOUNT ON;
@@ -778,6 +1009,7 @@ VALUES (@p0, @p1, @p2);
 2025-03-16 18:15:58.794 -06:00 [ERR] An exception occurred in the database while saving changes for context type 'Reserva.Infraestructure.Data.ThousandSunnyContext'.
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
@@ -788,7 +1020,11 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+<<<<<<< HEAD
+ClientConnectionId:723d3355-5c02-4be2-8775-72cbb417c696
+=======
 ClientConnectionId:cd045d88-76ac-445f-bea7-2581e0ebe031
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
 Error Number:544,State:1,Class:16
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
@@ -803,6 +1039,10 @@ Error Number:544,State:1,Class:16
    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+<<<<<<< HEAD
+Cannot insert explicit value for identity column in table 'Crucero' when IDENTITY_INSERT is set to OFF.
+=======
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
@@ -813,7 +1053,11 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+<<<<<<< HEAD
+ClientConnectionId:723d3355-5c02-4be2-8775-72cbb417c696
+=======
 ClientConnectionId:cd045d88-76ac-445f-bea7-2581e0ebe031
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
 Error Number:544,State:1,Class:16
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
@@ -826,6 +1070,18 @@ Error Number:544,State:1,Class:16
    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+<<<<<<< HEAD
+2025-03-16 22:39:08.298 -06:00 [ERR] Failed executing DbCommand (5ms) [Parameters=[@p0='0', @p1=NULL (Size = 250) (DbType = AnsiString), @p2='1' (Nullable = false) (Size = 50) (DbType = AnsiString), @p3='0', @p4='12', @p5=NULL (Size = 250) (DbType = AnsiString), @p6='0', @p7='Jon' (Nullable = false) (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Barco] ([idBarco], [Descripcion], [Nombre])
+VALUES (@p0, @p1, @p2);
+INSERT INTO [Crucero] ([idCrucero], [CantidadDias], [Descripcion], [idBarco], [Nombre])
+VALUES (@p3, @p4, @p5, @p6, @p7);
+2025-03-16 22:39:08.303 -06:00 [ERR] An exception occurred in the database while saving changes for context type 'Reserva.Infraestructure.Data.ThousandSunnyContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+Cannot insert explicit value for identity column in table 'Crucero' when IDENTITY_INSERT is set to OFF.
+=======
 2025-03-16 21:48:29.754 -06:00 [ERR] Failed executing DbCommand (22ms) [Parameters=[@p0='0', @p1='dadads' (Size = 250) (DbType = AnsiString), @p2='sdadas' (Nullable = false) (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
 SET IMPLICIT_TRANSACTIONS OFF;
 SET NOCOUNT ON;
@@ -834,6 +1090,7 @@ VALUES (@p0, @p1, @p2);
 2025-03-16 21:48:29.830 -06:00 [ERR] An exception occurred in the database while saving changes for context type 'Reserva.Infraestructure.Data.ThousandSunnyContext'.
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
@@ -844,7 +1101,11 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+<<<<<<< HEAD
+ClientConnectionId:723d3355-5c02-4be2-8775-72cbb417c696
+=======
 ClientConnectionId:b24bc057-1903-4756-80b1-c6e98ff3046f
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
 Error Number:544,State:1,Class:16
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
@@ -859,6 +1120,10 @@ Error Number:544,State:1,Class:16
    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+<<<<<<< HEAD
+Cannot insert explicit value for identity column in table 'Crucero' when IDENTITY_INSERT is set to OFF.
+=======
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
@@ -869,7 +1134,11 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+<<<<<<< HEAD
+ClientConnectionId:723d3355-5c02-4be2-8775-72cbb417c696
+=======
 ClientConnectionId:b24bc057-1903-4756-80b1-c6e98ff3046f
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
 Error Number:544,State:1,Class:16
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
@@ -882,6 +1151,18 @@ Error Number:544,State:1,Class:16
    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+<<<<<<< HEAD
+2025-03-16 22:40:34.842 -06:00 [ERR] Failed executing DbCommand (25ms) [Parameters=[@p0='0', @p1=NULL (Size = 250) (DbType = AnsiString), @p2='1' (Nullable = false) (Size = 50) (DbType = AnsiString), @p3='0', @p4='12', @p5=NULL (Size = 250) (DbType = AnsiString), @p6='0', @p7='Jon' (Nullable = false) (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Barco] ([idBarco], [Descripcion], [Nombre])
+VALUES (@p0, @p1, @p2);
+INSERT INTO [Crucero] ([idCrucero], [CantidadDias], [Descripcion], [idBarco], [Nombre])
+VALUES (@p3, @p4, @p5, @p6, @p7);
+2025-03-16 22:40:34.847 -06:00 [ERR] An exception occurred in the database while saving changes for context type 'Reserva.Infraestructure.Data.ThousandSunnyContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+Cannot insert explicit value for identity column in table 'Crucero' when IDENTITY_INSERT is set to OFF.
+=======
 2025-03-16 21:57:22.298 -06:00 [ERR] Failed executing DbCommand (19ms) [Parameters=[@p0='0', @p1='adadas' (Size = 250) (DbType = AnsiString), @p2='dadas' (Nullable = false) (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
 SET IMPLICIT_TRANSACTIONS OFF;
 SET NOCOUNT ON;
@@ -890,6 +1171,7 @@ VALUES (@p0, @p1, @p2);
 2025-03-16 21:57:22.366 -06:00 [ERR] An exception occurred in the database while saving changes for context type 'Reserva.Infraestructure.Data.ThousandSunnyContext'.
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
@@ -900,7 +1182,11 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+<<<<<<< HEAD
+ClientConnectionId:723d3355-5c02-4be2-8775-72cbb417c696
+=======
 ClientConnectionId:49264001-1614-430d-abab-2fcd12b45629
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
 Error Number:544,State:1,Class:16
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
@@ -915,6 +1201,10 @@ Error Number:544,State:1,Class:16
    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Barco' when IDENTITY_INSERT is set to OFF.
+<<<<<<< HEAD
+Cannot insert explicit value for identity column in table 'Crucero' when IDENTITY_INSERT is set to OFF.
+=======
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
@@ -925,6 +1215,9 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+<<<<<<< HEAD
+ClientConnectionId:723d3355-5c02-4be2-8775-72cbb417c696
+=======
 ClientConnectionId:49264001-1614-430d-abab-2fcd12b45629
 Error Number:544,State:1,Class:16
    --- End of inner exception stack trace ---
@@ -1150,6 +1443,7 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
 ClientConnectionId:23c666d9-f29c-4d10-a09d-0f513b7520bc
+>>>>>>> dbf404f04bd4c3444793be2493214ccaff25b3b5
 Error Number:544,State:1,Class:16
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
