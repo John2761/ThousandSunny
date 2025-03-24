@@ -13,14 +13,14 @@ namespace Reserva.Application.Profiles
             .ForMember(dest => dest.Habitaciones, opt => opt.MapFrom(src => src.BarcoHabitacion
                 .Select(bh => new BarcoHabitacionDTO
                 {
-                    NombreHabitacion = bh.HabitacionNavigation.Nombre,
+                    NombreHabitacion = bh.IdHabitacionNavigation.Nombre,
                     CantHabitaciones = bh.CantHabitaciones,
-                    HuespedesMax = bh.HabitacionNavigation.HuespedesMax
+                    HuespedesMax = bh.IdHabitacionNavigation.HuespedesMax
                 }).ToList()))
 
             // Calcular la capacidad total de huéspedes del barco
             .ForMember(dest => dest.CapacidadTotalHuespedes, opt => opt.MapFrom(src =>
-                src.BarcoHabitacion.Sum(bh => bh.CantHabitaciones * bh.HabitacionNavigation.HuespedesMax)))
+                src.BarcoHabitacion.Sum(bh => bh.CantHabitaciones * bh.IdHabitacionNavigation.HuespedesMax)))
 
             .ReverseMap();
         }

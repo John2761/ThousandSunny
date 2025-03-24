@@ -25,7 +25,7 @@ namespace Reserva.Application.Services.Implementations
             // Validar Stock disponible
             foreach (var item in dto.BarcoNavigation.BarcoHabitacion)
             {
-                var Habitacion = await _repositoryHabitacion.FindByIdAsync(item.BarcoNavigation.IdBarco);
+                var Habitacion = await _repositoryHabitacion.FindByIdAsync(item.IdBarcoNavigation.IdBarco);
 
                 if (dto.CantHabitaciones < 1)
                 {

@@ -11,7 +11,7 @@ public partial class BarcoHabitacion
 
     public int CantHabitaciones { get; set; }
 
-    public virtual Barco BarcoNavigation { get; set; } = null!;
+    public virtual Barco IdBarcoNavigation { get; set; } = null!;
 
-    public virtual Habitacion HabitacionNavigation { get; set; } = null!;
+    public virtual Habitacion IdHabitacionNavigation { get; set; } = null!;
 }

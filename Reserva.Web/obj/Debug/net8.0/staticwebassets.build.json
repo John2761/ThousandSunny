@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "lO0ssnAcHqQ8zC8jzM3I/20kerbA1EzYMGECgWTbxqI=",
+=======
+  "Hash": "Yyd8R4ZANeDcr57UTVEm8QOyFDRmhaLqmVfTRoL5AZk=",
+>>>>>>> f7d60b0bfd82123f93f8158c2601a07ae45e927e
   "Source": "Reserva.Web",
   "BasePath": "_content/Reserva.Web",
   "Mode": "Default",
@@ -10604,7 +10608,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 24 Feb 2025 19:52:42 GMT"
+=======
+          "Value": "Fri, 21 Mar 2025 06:36:49 GMT"
+>>>>>>> f7d60b0bfd82123f93f8158c2601a07ae45e927e
         },
         {
           "Name": "Cache-Control",
@@ -10649,7 +10657,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 24 Feb 2025 19:52:42 GMT"
+=======
+          "Value": "Fri, 21 Mar 2025 06:36:49 GMT"
+>>>>>>> f7d60b0bfd82123f93f8158c2601a07ae45e927e
         },
         {
           "Name": "Cache-Control",
@@ -10694,7 +10706,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 24 Feb 2025 19:52:42 GMT"
+=======
+          "Value": "Fri, 21 Mar 2025 06:36:49 GMT"
+>>>>>>> f7d60b0bfd82123f93f8158c2601a07ae45e927e
         },
         {
           "Name": "Cache-Control",
@@ -10731,7 +10747,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 24 Feb 2025 19:52:42 GMT"
+=======
+          "Value": "Fri, 21 Mar 2025 06:36:49 GMT"
+>>>>>>> f7d60b0bfd82123f93f8158c2601a07ae45e927e
         },
         {
           "Name": "Cache-Control",
