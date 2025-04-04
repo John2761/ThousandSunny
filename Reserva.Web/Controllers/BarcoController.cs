@@ -166,6 +166,15 @@ namespace Reserva.Web.Controllers
             return PartialView("_DetalleHabitaciones", habitaciones);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Update(int id)
+        {
+            var barco = await _serviceBarco.FindByIdAsync(id);
+            if (barco == null) return NotFound();
+
+            return View("Update", barco); // Asegura que carga la vista correcta
+        }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]

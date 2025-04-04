@@ -47,5 +47,51 @@ namespace Reserva.Infraestructure.Repository.Implementations
         .AsNoTracking()
         .ToListAsync();
         }
+        public async Task<List<Fecha>> ListFechasAsync()
+        {
+            return await _context.Fecha.Include(f => f.IdCruceroNavigation).ToListAsync();
+        }
+
+        public async Task<List<Complemento>> ListComplementosAsync()
+        {
+            return await _context.Complemento.ToListAsync();
+        }
+        public async Task<List<Itinerario>> GetItinerariosPorIdCruceroAsync(int idCrucero)
+        {
+            return await _context.Itinerario
+                .Where(i => i.IdCrucero == idCrucero)
+                .ToListAsync();
+        }
+
+        public async Task<List<(Habitacion habitacion, decimal precio)>> GetHabitacionesConPrecioPorFechaAsync(int idFecha)
+        {
+            var fecha = await _context.Fecha
+                .Include(f => f.IdCruceroNavigation)
+                .FirstOrDefaultAsync(f => f.IdFecha == idFecha);
+
+            if (fecha == null) return new();
+
+            var idBarco = fecha.IdCruceroNavigation.IdBarco;
+
+            var habitaciones = await _context.BarcoHabitacion
+                .Include(bh => bh.IdHabitacionNavigation)
+                .Where(bh => bh.IdBarco == idBarco)
+                .ToListAsync();
+
+            var precios = await _context.Precio
+                .Where(p => p.IdFecha == idFecha)
+                .ToListAsync();
+
+            var resultado = habitaciones.Select(h =>
+            {
+                var habitacion = h.IdHabitacionNavigation;
+                var precio = precios.FirstOrDefault(p => p.IdHabitacion == h.IdHabitacion)?.PrecioHabitacion ?? 0;
+                return (habitacion, precio);
+            }).ToList();
+
+            return resultado;
+        }
+
+
     }
 }

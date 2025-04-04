@@ -1,0 +1,48 @@
+2025-04-03 22:35:32.907 -06:00 [ERR] 
+EventId    :2564-250403103532
+ErrorList  :The request matched multiple endpoints. Matches: 
+
+Reserva.Web.Controllers.ReservacionController.RenderComplementoPartial (Reserva.Web)
+Reserva.Web.Controllers.ReservacionController.RenderComplementoPartial (Reserva.Web)
+StackTrace :   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context)
+
+2025-04-03 22:35:37.608 -06:00 [ERR] 
+EventId    :3730-250403103537
+ErrorList  :The request matched multiple endpoints. Matches: 
+
+Reserva.Web.Controllers.ReservacionController.RenderComplementoPartial (Reserva.Web)
+Reserva.Web.Controllers.ReservacionController.RenderComplementoPartial (Reserva.Web)
+StackTrace :   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context)
+
+2025-04-03 22:35:48.637 -06:00 [ERR] 
+EventId    :3238-250403103548
+ErrorList  :The request matched multiple endpoints. Matches: 
+
+Reserva.Web.Controllers.ReservacionController.RenderComplementoPartial (Reserva.Web)
+Reserva.Web.Controllers.ReservacionController.RenderComplementoPartial (Reserva.Web)
+StackTrace :   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context)
+

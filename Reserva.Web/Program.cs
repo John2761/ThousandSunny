@@ -36,6 +36,7 @@ builder.Services.AddAutoMapper(config =>
     config.AddProfile<ReservacionProfile>();
     config.AddProfile<HabitacionProfile>();
     config.AddProfile<BarcoProfile>();
+    config.AddProfile<BarcoHabitacionProfile>();
     config.AddProfile<CruceroProfile>();
     config.AddProfile<PuertoProfile>();
 });

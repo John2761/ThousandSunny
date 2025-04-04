@@ -1,0 +1,235 @@
+﻿@model Reserva.Web.ViewModels.ReservacionViewModel
+@{
+    ViewData["Title"] = "Crear Reservación";
+}
+
+<h2>Crear Reservación</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="IdFecha">Seleccionar Crucero y Fecha</label>
+        <select id="IdFecha" name="IdFecha" class="form-control">
+            <option value="">Seleccione una fecha</option>
+            @foreach (var fecha in Model.FechasDisponibles)
+            {
+                var fechaObj = Model.Fechas.FirstOrDefault(f => f.IdFecha.ToString() == fecha.Value);
+                if (fechaObj != null)
+                {
+                    <option value="@fecha.Value"
+                            data-idcrucero="@fechaObj.IdCrucero"
+                            data-fechasalida="@fechaObj.FechaSalida.ToString("yyyy-MM-dd")">
+                        @fecha.Text
+                    </option>
+                }
+            }
+
+        </select>
+
+    </div>
+
+    <div class="form-group">
+        <label for="IdItinerario">Itinerario</label>
+        <select asp-for="IdItinerario" class="form-control">
+            <option value="">Seleccione uno</option>
+            @* Llenar con JS o en backend si ya viene cargado *@
+        </select>
+    </div>
+
+    <hr />
+    <h4>Habitaciones Disponibles</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Seleccionar</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody id="habitacionesContainer">
+            <!-- JS agregará filas aquí -->
+        </tbody>
+
+    </table>
+
+    <h4>
+        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#huespedesCollapse" aria-expanded="false" aria-controls="huespedesCollapse">
+            Agregar Huéspedes
+        </button>
+    </h4>
+
+    <div class="collapse mt-3" id="huespedesCollapse">
+        <div class="card card-body">
+            <div id="huespedesContainer">
+                @for (int i = 0; i < Model.Huespedes.Count; i++)
+                {
+                    <partial name="_HuespedesForm" for="@Model.Huespedes[i]" />
+                }
+            </div>
+
+            <button type="button" class="btn btn-secondary mt-2" id="btnAgregarHuesped">
+                + Agregar otro huésped
+            </button>
+        </div>
+    </div>
+
+    <h4>
+        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#complementosCollapse" aria-expanded="false" aria-controls="complementosCollapse">
+            Agregar Complementos
+        </button>
+    </h4>
+
+    <div class="collapse mt-3" id="complementosCollapse">
+        <div class="card card-body">
+
+            <div class="form-group">
+                <label for="complementoSelector">Seleccionar complemento</label>
+                <select id="complementoSelector" class="form-control">
+                    <option value="">-- Seleccione --</option>
+                    @for (int i = 0; i < Model.Complementos.Count; i++)
+                    {
+                        <option value="@Model.Complementos[i].IdComplemento"
+                                data-nombre="@Model.Complementos[i].Nombre"
+                                data-precio="@Model.Complementos[i].Precio"
+                                data-tipo="@Model.Complementos[i].Tipo">
+                            @Model.Complementos[i].Nombre (@Model.Complementos[i].Precio.ToString("C"))
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <button type="button" class="btn btn-secondary mt-2" id="btnAgregarComplemento">
+                + Agregar complemento
+            </button>
+
+            <div id="complementosContainer" class="mt-4">
+                @for (int i = 0; i < Model.Complementos.Count; i++)
+                {
+                    if (Model.Complementos[i].Cantidad > 0)
+                    {
+                        <partial name="_ComplementoForm" for="@Model.Complementos[i]" />
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Reservar</button>
+</form>
+@section Scripts {
+
+    <script>
+        document.getElementById("IdFecha").addEventListener("change", function () {
+            const idFecha = this.value;
+
+            fetch(`/Reservacion/GetHabitacionesPorFecha?idFecha=${idFecha}`)
+                .then(response => response.json())
+                .then(data => {
+                    const contenedor = document.getElementById("habitacionesContainer");
+                    contenedor.innerHTML = "";
+
+                    data.forEach(h => {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td>
+                                <input type="checkbox" name="HabitacionesSeleccionadas" value="${h.id}" />
+                            </td>
+                            <td>${h.nombre}</td>
+                            <td>${h.precio}</td>
+                        `;
+                        contenedor.appendChild(row);
+                    });
+                });
+        });
+    </script>
+
+    <script>
+        document.getElementById("IdFecha").addEventListener("change", function () {
+            const selectedOption = this.options[this.selectedIndex];
+            const idCrucero = selectedOption.getAttribute("data-idcrucero");
+            const fechaSalida = selectedOption.getAttribute("data-fechasalida");
+
+            const itinerarioSelect = document.getElementById("IdItinerario");
+            itinerarioSelect.innerHTML = '<option value="">Cargando itinerarios...</option>';
+
+            if (!idCrucero || !fechaSalida) {
+                itinerarioSelect.innerHTML = '<option value="">Seleccione uno</option>';
+                return;
+            }
+
+            fetch(`/Reservacion/GetItinerariosPorCrucero?idCrucero=${idCrucero}&fechaSalidaStr=${fechaSalida}`)
+                .then(res => res.json())
+                .then(data => {
+                    itinerarioSelect.innerHTML = '<option value="">Seleccione uno</option>';
+                    data.forEach(i => {
+                        const option = document.createElement("option");
+                        option.value = i.id;
+                        option.textContent = `${i.nombre} - ${i.duracion} días - Regreso: ${i.fechaRegreso}`;
+                        itinerarioSelect.appendChild(option);
+                    });
+                });
+        });
+    </script>
+
+    <script>
+        let contadorHuespedes = @Model.Huespedes.Count;
+
+        document.getElementById("btnAgregarHuesped").addEventListener("click", function () {
+            fetch(`/Reservacion/RenderHuespedPartial?index=${contadorHuespedes}`)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("huespedesContainer").insertAdjacentHTML("beforeend", html);
+                    contadorHuespedes++;
+                });
+        });
+
+        document.getElementById("huespedesContainer").addEventListener("click", function (e) {
+            if (e.target && e.target.classList.contains("btn-quitar-huesped")) {
+                const bloque = e.target.closest(".huesped-item");
+                if (bloque) bloque.remove();
+            }
+        });
+    </script>
+
+    <script>
+        let contadorComplementos = @Model.Complementos.Count;
+
+        document.getElementById("btnAgregarComplemento").addEventListener("click", function () {
+            const selector = document.getElementById("complementoSelector");
+            const selectedOption = selector.options[selector.selectedIndex];
+            const id = selector.value;
+
+            if (!id) return;
+
+            const yaAgregado = document.querySelector(`input[name^='Complementos'][value='${id}']`);
+            if (yaAgregado) {
+                alert("Este complemento ya fue agregado.");
+                return;
+            }
+
+            // Tomamos los datos desde los atributos del option seleccionado
+            const nombre = selectedOption.getAttribute("data-nombre");
+            const precioRaw = selectedOption.getAttribute("data-precio");
+            const precio = precioRaw.replace(",", "."); // fuerza punto decimal
+            const tipo = selectedOption.getAttribute("data-tipo");
+
+            // Llamamos al servidor y le pasamos todo por querystring
+            fetch(`/Reservacion/RenderComplementoPartial?index=${contadorComplementos}&idComplemento=${id}&nombre=${encodeURIComponent(nombre)}&precio=${precio}&tipo=${tipo}`)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("complementosContainer").insertAdjacentHTML("beforeend", html);
+                    contadorComplementos++;
+                    selector.selectedIndex = 0;
+                });
+        });
+
+        document.getElementById("complementosContainer").addEventListener("click", function (e) {
+            if (e.target && e.target.classList.contains("btn-quitar-complemento")) {
+                const bloque = e.target.closest(".complemento-item");
+                if (bloque) bloque.remove();
+            }
+        });
+    </script>
+
+}
+

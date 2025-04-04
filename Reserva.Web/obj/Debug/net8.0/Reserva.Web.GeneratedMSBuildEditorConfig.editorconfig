@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyY29cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Barco/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyY29cVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Barco/_AddHabitacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyY29cX0FkZEhhYml0YWNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,12 +88,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Reservacion/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YWNpb25cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Reservacion/Detalle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YWNpb25cRGV0YWxsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Reservacion/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YWNpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Reservacion/_ComplementoForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YWNpb25cX0NvbXBsZW1lbnRvRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Reservacion/_HuespedesForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YWNpb25cX0h1ZXNwZWRlc0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Shared/Error.cshtml]
