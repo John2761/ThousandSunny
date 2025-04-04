@@ -108,7 +108,7 @@ namespace Reserva.Web.Controllers
                 nombre = h.Nombre,
                 precios = h.Precio
             });
-
+             
             return Json(result);
         }
 
