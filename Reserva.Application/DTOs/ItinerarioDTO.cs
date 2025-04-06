@@ -22,4 +22,12 @@ namespace Reserva.Application.DTOs
         public string? NombrePuerto { get; set; } // Se usa en la vista de detalle
 
     }
+    public class ItinerarioInfoDTO
+    {
+        public int IdItinerario { get; set; }
+        public string Descripcion { get; set; } = null!;
+        public int DuracionDias { get; set; }
+        public DateTime FechaRegreso { get; set; }
+    }
+
 }

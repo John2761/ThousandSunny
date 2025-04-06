@@ -1,0 +1,41 @@
+﻿@model Reserva.Web.ViewModels.ResumenReservaViewModel
+
+<div class="card shadow-sm border border-light p-3" style="background-color: #f9f9f9; font-size: 0.95rem;">
+    <h5 class="text-primary mb-3">Resumen de la Reserva</h5>
+
+    <p><strong>Crucero:</strong> @Model.NombreCrucero</p>
+    <p><strong>Puerto Salida:</strong> @Model.PuertoSalida</p>
+    <p><strong>Puerto Regreso:</strong> @Model.PuertoRegreso</p>
+    <p><strong>Fecha Salida:</strong> @Model.FechaInicio.ToString("yyyy-MM-dd")</p>
+    <p><strong>Fecha Regreso:</strong> @Model.FechaFin.ToString("yyyy-MM-dd")</p>
+
+    <hr />
+
+    <h5 class="text-secondary">Habitaciones</h5>
+    @foreach (var h in Model.Habitaciones)
+    {
+        <div>
+            • @h.Nombre - @h.CantidadHuespedes huésped(es) - @h.Precio.ToString("C")
+        </div>
+    }
+
+    <p class="mt-2"><strong>Total Habitaciones:</strong> @Model.TotalHabitaciones.ToString("C")</p>
+
+    <hr />
+
+    <h5 class="text-secondary">Complementos</h5>
+    @foreach (var c in Model.Complementos)
+    {
+        <div>
+            • @c.Nombre (@c.Tipo) x @c.Cantidad = @c.Total.ToString("C")
+        </div>
+    }
+
+    <p class="mt-2"><strong>Total Complementos:</strong> @Model.TotalComplementos.ToString("C")</p>
+
+    <hr />
+
+    <p><strong>Subtotal:</strong> @Model.Subtotal.ToString("C")</p>
+    <p><strong>Impuestos (13%):</strong> @Model.Impuestos.ToString("C")</p>
+    <h5 class="mt-2 text-success"><strong>Total a Pagar:</strong> @Model.Total.ToString("C")</h5>
+</div>

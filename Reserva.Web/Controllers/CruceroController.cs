@@ -96,7 +96,6 @@ namespace Reserva.Web.Controllers
             }
         }
 
-
         [HttpGet]
         public async Task<JsonResult> ObtenerHabitaciones(int idBarco)
         {
@@ -106,13 +105,9 @@ namespace Reserva.Web.Controllers
             {
                 id = h.IdHabitacion,
                 nombre = h.Nombre,
-                precios = h.Precios.Select(p => new
-                {
-                    nombreHabitacion = p.NombreHabitacion,
-                    precio = p.PrecioHabitacion
-                }).ToList()
+                precios = h.Precio
             });
-
+             
             return Json(result);
         }
 

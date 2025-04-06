@@ -11,6 +11,5 @@ namespace Reserva.Application.DTOs
         public string NombreHabitacion { get; set; } = null!;
         public decimal PrecioHabitacion {  set; get; }
 
-
     }
 }

@@ -15,7 +15,7 @@
 }
 
 <h2 class="text-center mt-4">Explora Nuestros Barcos</h2>
-<a asp-controller="Barco" asp-action="Create" class="btn btn-primary w-100">
+<a asp-controller="Barco" asp-action="Create" class="btn btn-primary w-25 mb-2">
     <i class="bi bi-eye"></i> Crear Barco
 </a>
 
@@ -25,7 +25,7 @@
         {
             var imagenUrl = imagesBarco.ContainsKey(barco.Nombre)
             ? Url.Content(imagesBarco[barco.Nombre])
-            : Url.Content("~/images/barco/barco-default.jpg"); // Imagen por defecto
+            : Url.Content("~/images/barco/nophoto.jpg"); // Imagen por defecto
 
             <div class="col">
                 <div class="card shadow-lg border-0 rounded-4 h-100">
@@ -34,8 +34,11 @@
                         <h5 class="card-title text-uppercase fw-bold text-primary">@barco.Nombre</h5>
                         <p class="card-text">@barco.Descripcion</p>
                         <div class="mt-auto text-center">
-                            <a asp-action="Detalle" asp-route-id="@barco.IdBarco" class="btn btn-primary w-100">
+                            <a asp-action="Detalle" asp-route-id="@barco.IdBarco" class="btn btn-primary w-40">
                                 <i class="bi bi-eye"></i> Ver Detalle
+                            </a>
+                            <a asp-action="Update"  asp-route-id="@barco.IdBarco" class="btn btn-warning w-40">
+                                <i class="bi bi-pencil-square"></i> Editar
                             </a>
                         </div>
                     </div>
