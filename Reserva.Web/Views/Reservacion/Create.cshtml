@@ -2,121 +2,214 @@
 @{
     ViewData["Title"] = "Crear Reservación";
 }
+<h2">Crear Reservación</h2>
 
-<h2>Crear Reservación</h2>
-
-<form asp-action="Create" method="post">
-    <div class="form-group">
-        <label for="IdFecha">Seleccionar Crucero y Fecha</label>
-        <select id="IdFecha" name="IdFecha" class="form-control">
-            <option value="">Seleccione una fecha</option>
-            @foreach (var fecha in Model.FechasDisponibles)
-            {
-                var fechaObj = Model.Fechas.FirstOrDefault(f => f.IdFecha.ToString() == fecha.Value);
-                if (fechaObj != null)
-                {
-                    <option value="@fecha.Value"
-                            data-idcrucero="@fechaObj.IdCrucero"
-                            data-fechasalida="@fechaObj.FechaSalida.ToString("yyyy-MM-dd")">
-                        @fecha.Text
-                    </option>
-                }
-            }
-
-        </select>
-
-    </div>
-
-    <div class="form-group">
-        <label for="IdItinerario">Itinerario</label>
-        <select asp-for="IdItinerario" class="form-control">
-            <option value="">Seleccione uno</option>
-            @* Llenar con JS o en backend si ya viene cargado *@
-        </select>
-    </div>
-
-    <hr />
-    <h4>Habitaciones Disponibles</h4>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Seleccionar</th>
-                <th>Nombre</th>
-                <th>Precio</th>
-            </tr>
-        </thead>
-        <tbody id="habitacionesContainer">
-            <!-- JS agregará filas aquí -->
-        </tbody>
-
-    </table>
-
-    <h4>
-        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#huespedesCollapse" aria-expanded="false" aria-controls="huespedesCollapse">
-            Agregar Huéspedes
-        </button>
-    </h4>
-
-    <div class="collapse mt-3" id="huespedesCollapse">
-        <div class="card card-body">
-            <div id="huespedesContainer">
-                @for (int i = 0; i < Model.Huespedes.Count; i++)
-                {
-                    <partial name="_HuespedesForm" for="@Model.Huespedes[i]" />
-                }
-            </div>
-
-            <button type="button" class="btn btn-secondary mt-2" id="btnAgregarHuesped">
-                + Agregar otro huésped
-            </button>
-        </div>
-    </div>
-
-    <h4>
-        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#complementosCollapse" aria-expanded="false" aria-controls="complementosCollapse">
-            Agregar Complementos
-        </button>
-    </h4>
-
-    <div class="collapse mt-3" id="complementosCollapse">
-        <div class="card card-body">
+<div class="row">
+    <!-- Formulario principal -->
+    <div class="col-md-8">
+        <form asp-action="Create" method="post">
 
             <div class="form-group">
-                <label for="complementoSelector">Seleccionar complemento</label>
-                <select id="complementoSelector" class="form-control">
-                    <option value="">-- Seleccione --</option>
-                    @for (int i = 0; i < Model.Complementos.Count; i++)
+                <label for="IdFecha">Seleccionar Crucero y Fecha</label>
+                <select id="IdFecha" name="IdFecha" class="form-control">
+                    <option value="">Seleccione una fecha</option>
+                    @foreach (var fecha in Model.FechasDisponibles)
                     {
-                        <option value="@Model.Complementos[i].IdComplemento"
-                                data-nombre="@Model.Complementos[i].Nombre"
-                                data-precio="@Model.Complementos[i].Precio"
-                                data-tipo="@Model.Complementos[i].Tipo">
-                            @Model.Complementos[i].Nombre (@Model.Complementos[i].Precio.ToString("C"))
-                        </option>
+                        var fechaObj = Model.Fechas.FirstOrDefault(f => f.IdFecha.ToString() == fecha.Value);
+                        if (fechaObj != null)
+                        {
+                            <option value="@fecha.Value"
+                                    data-idcrucero="@fechaObj.IdCrucero"
+                                    data-fechasalida="@fechaObj.FechaSalida.ToString("yyyy-MM-dd")">
+                                @fecha.Text
+                            </option>
+                        }
                     }
                 </select>
             </div>
 
-            <button type="button" class="btn btn-secondary mt-2" id="btnAgregarComplemento">
-                + Agregar complemento
-            </button>
-
-            <div id="complementosContainer" class="mt-4">
-                @for (int i = 0; i < Model.Complementos.Count; i++)
-                {
-                    if (Model.Complementos[i].Cantidad > 0)
-                    {
-                        <partial name="_ComplementoForm" for="@Model.Complementos[i]" />
-                    }
-                }
+            <div class="form-group">
+                <label for="IdItinerario">Itinerario</label>
+                <select asp-for="IdItinerario" class="form-control">
+                    <option value="">Seleccione uno</option>
+                </select>
             </div>
-        </div>
+
+            <hr />
+            <h4>Habitaciones Disponibles</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Seleccionar</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="habitacionesContainer"></tbody>
+            </table>
+
+            <h4>
+                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#huespedesCollapse" aria-expanded="false" aria-controls="huespedesCollapse">
+                    Agregar Huéspedes
+                </button>
+            </h4>
+
+            <div class="collapse mt-3" id="huespedesCollapse">
+                <div class="card card-body">
+                    <div id="huespedesContainer">
+                        @for (int i = 0; i < Model.Huespedes.Count; i++)
+                        {
+                            <partial name="_HuespedesForm" for="@Model.Huespedes[i]" />
+                        }
+                    </div>
+
+                    <button type="button" class="btn btn-secondary mt-2" id="btnAgregarHuesped">
+                        + Agregar otro huésped
+                    </button>
+                </div>
+            </div>
+
+            <h4>
+                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#complementosCollapse" 
+                            aria-expanded="false" aria-controls="complementosCollapse">
+                    Agregar Complementos
+                </button>
+            </h4>
+
+            <div class="collapse mt-3" id="complementosCollapse">
+                <div class="card card-body">
+
+                    <div class="form-group">
+                        <label for="complementoSelector">Seleccionar complemento</label>
+                        <select id="complementoSelector" class="form-control">
+                            <option value="">-- Seleccione --</option>
+                            @for (int i = 0; i < Model.Complementos.Count; i++)
+                            {
+                                <option value="@Model.Complementos[i].IdComplemento"
+                                        data-nombre="@Model.Complementos[i].Nombre"
+                                        data-precio="@Model.Complementos[i].Precio"
+                                        data-tipo="@Model.Complementos[i].Tipo">
+                                    @Model.Complementos[i].Nombre (@Model.Complementos[i].Precio.ToString("C"))
+                                </option>
+                            }
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn btn-secondary mt-2" id="btnAgregarComplemento">
+                        + Agregar complemento
+                    </button>
+
+                    <div id="complementosContainer" class="mt-4">
+                        @for (int i = 0; i < Model.Complementos.Count; i++)
+                        {
+                            if (Model.Complementos[i].Cantidad > 0)
+                            {
+                                <partial name="_ComplementoForm" for="@Model.Complementos[i]" />
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-4">Reservar</button>
+        </form>
     </div>
 
+    <!-- Panel lateral de resumen -->
+    <div class="col-md-4">
+        <div id="resumenContainer" class="sticky-top mt-3">
+            @await Html.PartialAsync("_ResumenReserva", Model.Resumen)
+        </div>
+    </div>
+</div>
 
-    <button type="submit" class="btn btn-primary">Reservar</button>
-</form>
 @section Scripts {
+
+
+    <script>
+        function actualizarResumen() {
+            const resumen = {
+                nombreCrucero: document.querySelector("#IdFecha option:checked")?.textContent.trim() || "Crucero no seleccionado",
+                puertoSalida: window.puertoSalida || "",
+                puertoRegreso: window.puertoRegreso || "",
+                fechaInicio: "2025-06-01",
+                fechaFin: "2025-06-07",
+                habitaciones: [],
+                complementos: []
+            };
+
+            document.getElementById("IdItinerario").addEventListener("change", function () {
+            const idItinerario = this.value;
+
+            fetch(`/Itinerario/ObtenerPuertos?idItinerario=${idItinerario}`)
+                .then(r => r.json())
+                .then(data => {
+                    window.puertoSalida = data.puertoSalida;
+                    window.puertoRegreso = data.puertoRegreso;
+
+                    actualizarResumen();
+                });
+            });
+
+            // Habitaciones seleccionadas
+            document.querySelectorAll("input[name='HabitacionesSeleccionadas']:checked").forEach(chk => {
+                const row = chk.closest("tr");
+                const nombre = row.querySelector("td:nth-child(2)").textContent.trim();
+                const precioStr = row.querySelector("td:nth-child(3)").textContent.replace(/[^\d,.-]/g, "").replace(",", ".")
+                const precio = parseFloat(precioStr.replace(/[^\d.-]/g, '').replace(",", ".")) || 0;
+
+                resumen.habitaciones.push({
+                    nombre: nombre,
+                    cantidadHuespedes: 2, // puedes conectar esto luego con datos reales
+                    precio: precio
+                });
+            });
+
+            // Complementos agregados
+            document.querySelectorAll(".complemento-item").forEach(c => {
+                const nombre = c.querySelector("input[name*='Nombre']").value;
+                const tipo = c.querySelector("input[name*='Tipo']").value;
+                const cantidad = parseInt(c.querySelector("input[name*='Cantidad']").value) || 0;
+                const precio = parseFloat(c.querySelector("input[name*='Precio']").value) || 0;
+
+                resumen.complementos.push({
+                    nombre: nombre,
+                    tipo: tipo,
+                    cantidad: cantidad,
+                    precioUnitario: precio
+                });
+            });
+
+            // Enviar y actualizar el resumen parcial
+            fetch("/Reservacion/ActualizarResumen", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(resumen)
+            })
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("resumenContainer").innerHTML = html;
+            });
+        }
+
+        // Lanzar actualización al hacer cambios
+        document.addEventListener("change", function (e) {
+            const targets = [
+                "input[name='HabitacionesSeleccionadas']",
+                "input[name*='Cantidad']",
+                "#IdFecha",
+                "#IdItinerario"
+            ];
+
+            if (targets.some(sel => e.target.matches(sel))) {
+                actualizarResumen();
+            }
+        });
+    </script>
+
+
 
     <script>
         document.getElementById("IdFecha").addEventListener("change", function () {

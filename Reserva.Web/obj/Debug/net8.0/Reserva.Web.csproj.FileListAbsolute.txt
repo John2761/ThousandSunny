@@ -800,6 +800,16 @@ C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\obj\Debug\net8.0\refint\
 C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.pdb
 C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.genruntimeconfig.cache
 C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\obj\Debug\net8.0\ref\Reserva.Web.dll
+C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\bin\Debug\net8.0\SweetAlert2.dll
+C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.csproj.AssemblyReference.cache
+C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.AssemblyInfoInputs.cache
+C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.AssemblyInfo.cs
+C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.csproj.CoreCompileInputs.cache
+C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.RazorAssemblyInfo.cache
+C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.RazorAssemblyInfo.cs
+C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.sourcelink.json
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\bin\Debug\net8.0\appsettings.json
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\bin\Debug\net8.0\Reserva.Web.staticwebassets.runtime.json
@@ -1064,15 +1074,6 @@ C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\bin\Debug\net8
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\bin\Debug\net8.0\Reserva.Infraestructure.dll
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\bin\Debug\net8.0\Reserva.Application.pdb
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\bin\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.csproj.AssemblyReference.cache
-C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.AssemblyInfoInputs.cache
-C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.AssemblyInfo.cs
-C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.csproj.CoreCompileInputs.cache
-C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.RazorAssemblyInfo.cache
-C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.RazorAssemblyInfo.cs
-C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.sourcelink.json
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\scopedcss\bundle\Reserva.Web.styles.css
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\scopedcss\projectbundle\Reserva.Web.bundle.scp.css
@@ -1092,4 +1093,3 @@ C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.pdb
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\Reserva.Web.genruntimeconfig.cache
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\obj\Debug\net8.0\ref\Reserva.Web.dll
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\bin\Debug\net8.0\SweetAlert2.dll

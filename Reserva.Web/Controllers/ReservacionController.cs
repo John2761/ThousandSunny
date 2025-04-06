@@ -122,6 +122,13 @@ namespace Reserva.Web.Controllers
             return Json(result);
         }
 
+        [HttpPost]
+        public IActionResult ActualizarResumen([FromBody] ResumenReservaViewModel resumen)
+        {
+            // Ya viene completamente formado desde el JS
+            return PartialView("_ResumenReserva", resumen);
+        }
+
 
     }
 }

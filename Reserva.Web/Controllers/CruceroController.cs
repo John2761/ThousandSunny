@@ -96,7 +96,6 @@ namespace Reserva.Web.Controllers
             }
         }
 
-
         [HttpGet]
         public async Task<JsonResult> ObtenerHabitaciones(int idBarco)
         {

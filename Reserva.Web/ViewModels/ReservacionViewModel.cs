@@ -3,8 +3,12 @@ using Reserva.Application.DTOs;
 
 namespace Reserva.Web.ViewModels
 {
+
     public class ReservacionViewModel
     {
+        //Vista parcial del resumen de la reserva
+        public ResumenReservaViewModel Resumen { get; set; } = new();
+
         public int IdFecha { get; set; }
         public List<SelectListItem> FechasDisponibles { get; set; } = new();
         public List<FechaDTO> Fechas { get; set; } = new();
@@ -20,6 +24,7 @@ namespace Reserva.Web.ViewModels
         public DateTime FechaReserva => DateTime.Now;
         public DateTime? FechaLimitePago { get; set; }
     }
+
 
     public class HabitacionSeleccionadaViewModel
     {
