@@ -315,7 +315,7 @@ public partial class ThousandSunnyContext : DbContext
 
         modelBuilder.Entity<Reservacion>(entity =>
         {
-            entity.HasKey(e => e.IdReservacion).HasName("PK__Reservac__C813D8AD28D68921");
+            entity.HasKey(e => e.IdReservacion).HasName("PKReservacC813D8AD28D68921");
 
             entity.Property(e => e.IdReservacion)
                 .ValueGeneratedNever()
@@ -330,22 +330,30 @@ public partial class ThousandSunnyContext : DbContext
             entity.HasOne(d => d.IdCruceroNavigation).WithMany(p => p.Reservacion)
                 .HasForeignKey(d => d.IdCrucero)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Reservaci__idCru__46E78A0C");
+                .HasConstraintName("FKReservaciidCru46E78A0C");
 
             entity.HasOne(d => d.IdDatosPagoNavigation).WithMany(p => p.Reservacion)
                 .HasForeignKey(d => d.IdDatosPago)
                 .OnDelete(DeleteBehavior.ClientSetNull)
 
+<<<<<<< HEAD
+                .HasConstraintName("FKReservaciidDat44FF419A");
+=======
                 .HasConstraintName("FK__Reservaci__idDat__44FF419A");
+>>>>>>> 086d463afcd1a5cc7303c4eb30390d9c9bd10e30
             entity.HasOne(d => d.IdFechaNavigation).WithMany(p => p.Reservacion)
                 .HasForeignKey(d => d.IdFecha)
                 .OnDelete(DeleteBehavior.ClientSetNull)
 
+<<<<<<< HEAD
+                .HasConstraintName("FKReservaciidFec44FF419A");
+=======
                 .HasConstraintName("FK__Reservaci__idFec__44FF419A");
+>>>>>>> 086d463afcd1a5cc7303c4eb30390d9c9bd10e30
             entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.Reservacion)
                 .HasForeignKey(d => d.IdUsuario)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Reservaci__idUsu__45F365D3");
+                .HasConstraintName("FKReservaciidUsu45F365D3");
         });
 
         modelBuilder.Entity<Rol>(entity =>
