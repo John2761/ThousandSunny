@@ -315,11 +315,13 @@ public partial class ThousandSunnyContext : DbContext
 
         modelBuilder.Entity<Reservacion>(entity =>
         {
-            entity.HasKey(e => e.IdReservacion).HasName("PK__Reservac__C813D8AD28D68921");
+            entity.HasKey(e => e.IdReservacion).HasName("PKReservacC813D8AD28D68921");
 
             entity.Property(e => e.IdReservacion)
                 .ValueGeneratedNever()
                 .HasColumnName("idReservacion");
+            entity.Property(e => e.FechaLimite).HasColumnType("datetime");
+            entity.Property(e => e.FechaReserva).HasColumnType("datetime");
             entity.Property(e => e.IdCrucero).HasColumnName("idCrucero");
             entity.Property(e => e.IdDatosPago).HasColumnName("idDatosPago");
             entity.Property(e => e.IdFecha).HasColumnName("idFecha");
@@ -328,17 +330,22 @@ public partial class ThousandSunnyContext : DbContext
             entity.HasOne(d => d.IdCruceroNavigation).WithMany(p => p.Reservacion)
                 .HasForeignKey(d => d.IdCrucero)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Reservaci__idCru__46E78A0C");
+                .HasConstraintName("FKReservaciidCru46E78A0C");
 
             entity.HasOne(d => d.IdDatosPagoNavigation).WithMany(p => p.Reservacion)
                 .HasForeignKey(d => d.IdDatosPago)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Reservaci__idDat__44FF419A");
 
+                .HasConstraintName("FKReservaciidDat44FF419A");
+            entity.HasOne(d => d.IdFechaNavigation).WithMany(p => p.Reservacion)
+                .HasForeignKey(d => d.IdFecha)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+
+                .HasConstraintName("FKReservaciidFec44FF419A");
             entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.Reservacion)
                 .HasForeignKey(d => d.IdUsuario)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Reservaci__idUsu__45F365D3");
+                .HasConstraintName("FKReservaciidUsu45F365D3");
         });
 
         modelBuilder.Entity<Rol>(entity =>
