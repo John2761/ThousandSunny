@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Reserva.Application.Services.Interfaces;
 using Reserva.Web.ViewModels;
+using System.Globalization;
 
 namespace Reserva.Web.Controllers
 {
@@ -61,6 +62,8 @@ namespace Reserva.Web.Controllers
             return View(viewModel);
         }
 
+        
+
         [HttpGet]
         public async Task<IActionResult> GetItinerariosPorCrucero(int idCrucero, string fechaSalidaStr)
         {
@@ -116,7 +119,7 @@ namespace Reserva.Web.Controllers
             {
                 id = h.IdHabitacion,
                 nombre = h.Nombre,
-                precio = h.Precio.ToString("C")
+                precio = string.Join(", ", h.Precios.Select(p => p.PrecioHabitacion.ToString("C", new CultureInfo("es-CR"))))
             });
 
             return Json(result);
@@ -127,6 +130,38 @@ namespace Reserva.Web.Controllers
         {
             // Ya viene completamente formado desde el JS
             return PartialView("_ResumenReserva", resumen);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Pagar(int id)
+        {
+            var reserva = await _serviceReservacion.FindByIdAsync(id);
+            if (reserva == null) return NotFound();
+
+            var model = new PagoViewModel
+            {
+                NombreUsuario = "Usuario Demo",
+                CorreoUsuario = "usuario@demo.com",
+
+                TotalReserva = reserva.TotalPagar,
+                MontoDeposito = reserva.TotalPagar * 0.50m, // o lo que corresponda por tu lógica
+                FechaLimitePago = DateTime.Now.AddDays(5) // puede venir de la reserva también
+            };
+
+            return View("PagarReserva", model);
+        }
+
+        [HttpPost]
+        public IActionResult Pagar(PagoViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Mostrar errores si hay problemas con los datos ingresados
+                return View("PagarReserva", model);
+            }
+
+            TempData["PagoRealizado"] = true;
+            return RedirectToAction("Index");
         }
 
 

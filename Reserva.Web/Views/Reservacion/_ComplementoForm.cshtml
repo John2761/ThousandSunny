@@ -13,7 +13,7 @@
 
     <div class="form-group">
         <label>Precio</label>
-        <input type="text" class="form-control" value="@Model.Precio.ToString("C")" readonly />
+        <input type="text" class="form-control" value="@Model.Precio.ToString("C", new System.Globalization.CultureInfo("es-CR"))" readonly />
     </div>
 
     <div class="form-group">

@@ -1,6 +1,7 @@
 ﻿using Reserva.Application.DTOs;
 using Reserva.Infraestructure.Models;
 
+
 namespace Reserva.Application.Services.Interfaces
 {
     public interface IServiceReservacion
@@ -10,5 +11,6 @@ namespace Reserva.Application.Services.Interfaces
         Task<ReservacionFormDTO> GetReservaFormDataAsync();
         Task<List<ItinerarioInfoDTO>> GetItinerariosPorCruceroAsync(int idCrucero, DateTime? fechaSalida);
         Task<List<HabitacionDTO>> GetHabitacionesPorFechaAsync(int idfecha);
+        
     }
 }

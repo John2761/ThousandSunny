@@ -36,7 +36,7 @@ namespace Reserva.Application.Profiles
                 .ReverseMap();
 
             CreateMap<Habitacion, HabitacionDTO>()
-                .ForMember(dest => dest.Precio, opt => opt.MapFrom(h => h.Precio)) // 🔹 Mapea los precios de la habitación
+                .ForMember(dest => dest.Precios, opt => opt.MapFrom(h => h.Precio)) // 🔹 Mapea los precios de la habitación
                 .ReverseMap();
 
             // Mapeo de Precio a PrecioHabitacionDTO, utilizando la navegación a Habitacion

@@ -92,6 +92,12 @@ namespace Reserva.Infraestructure.Repository.Implementations
             return resultado;
         }
 
-
+        public async Task<List<Precio>> GetPreciosPorFechaAsync(int idFecha)
+        {
+            return await _context.Precio
+                .Include(p => p.IdHabitacionNavigation)
+                .Where(p => p.IdFecha == idFecha)
+                .ToListAsync();
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace Reserva.Infraestructure.Repository.Interfaces
         Task<List<Complemento>> ListComplementosAsync();
         Task<List<Itinerario>> GetItinerariosPorIdCruceroAsync(int idCrucero);
         Task<List<(Habitacion habitacion, decimal precio)>> GetHabitacionesConPrecioPorFechaAsync(int idFecha);
-
+        Task<List<Precio>> GetPreciosPorFechaAsync(int idFecha);
 
     }
 }

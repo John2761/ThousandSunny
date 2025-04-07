@@ -11,31 +11,31 @@
 
     <hr />
 
-    <h5 class="text-secondary">Habitaciones</h5>
+    <h5 class="text-primary">Habitaciones</h5>
     @foreach (var h in Model.Habitaciones)
     {
         <div>
-            • @h.Nombre - @h.CantidadHuespedes huésped(es) - @h.Precio.ToString("C")
+            • @h.Nombre - @h.CantidadHuespedes huésped(es) - @h.Precio.ToString("C", new System.Globalization.CultureInfo("es-CR"))
         </div>
     }
 
-    <p class="mt-2"><strong>Total Habitaciones:</strong> @Model.TotalHabitaciones.ToString("C")</p>
+    <p class="mt-2"><strong>Total Habitaciones:</strong> @Model.TotalHabitaciones.ToString("C", new System.Globalization.CultureInfo("es-CR"))</p>
 
     <hr />
 
-    <h5 class="text-secondary">Complementos</h5>
+    <h5 class="text-primary">Complementos</h5>
     @foreach (var c in Model.Complementos)
     {
         <div>
-            • @c.Nombre (@c.Tipo) x @c.Cantidad = @c.Total.ToString("C")
+            • @c.Nombre (@c.Tipo) x @c.Cantidad = @c.Total.ToString("C", new System.Globalization.CultureInfo("es-CR"))
         </div>
     }
 
-    <p class="mt-2"><strong>Total Complementos:</strong> @Model.TotalComplementos.ToString("C")</p>
+    <p class="mt-2"><strong>Total Complementos:</strong> @Model.TotalComplementos.ToString("C", new System.Globalization.CultureInfo("es-CR"))</p>
 
     <hr />
 
-    <p><strong>Subtotal:</strong> @Model.Subtotal.ToString("C")</p>
-    <p><strong>Impuestos (13%):</strong> @Model.Impuestos.ToString("C")</p>
-    <h5 class="mt-2 text-success"><strong>Total a Pagar:</strong> @Model.Total.ToString("C")</h5>
+    <p><strong>Subtotal:</strong> @Model.Subtotal.ToString("C", new System.Globalization.CultureInfo("es-CR"))</p>
+    <p><strong>Impuestos (13%):</strong> @Model.Impuestos.ToString("C", new System.Globalization.CultureInfo("es-CR"))</p>
+    <h5 class="mt-2 text-success"><strong>Total a Pagar:</strong> @Model.Total.ToString("C", new System.Globalization.CultureInfo("es-CR"))</h5>
 </div>

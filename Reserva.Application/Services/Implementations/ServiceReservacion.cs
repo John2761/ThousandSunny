@@ -1,5 +1,6 @@
 ﻿
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Reserva.Application.DTOs;
 using Reserva.Application.Services.Interfaces;
 using Reserva.Infraestructure.Repository.Interfaces;
@@ -76,14 +77,35 @@ namespace Reserva.Application.Services.Implementations
 
         public async Task<List<HabitacionDTO>> GetHabitacionesPorFechaAsync(int idFecha)
         {
-            var data = await _repository.GetHabitacionesConPrecioPorFechaAsync(idFecha);
+            var precios = await _repository.GetPreciosPorFechaAsync(idFecha);
 
-            return data.Select(d => new HabitacionDTO
-            {
-                IdHabitacion = d.habitacion.IdHabitacion,
-                Nombre = d.habitacion.Nombre,
-                Precio = d.precio
-            }).ToList();
+            var preciosConDTO = precios
+                .Select(p => new
+                {
+                    Habitacion = p.IdHabitacionNavigation,
+                    Precio = new PrecioHabitacionDTO
+                    {
+                        NombreHabitacion = p.IdHabitacionNavigation.Nombre,
+                        PrecioHabitacion = p.PrecioHabitacion
+                    }
+                })
+                .ToList();
+
+            var agrupado = preciosConDTO
+                .GroupBy(p => p.Habitacion.IdHabitacion)
+                .Select(g => new HabitacionDTO
+                {
+                    IdHabitacion = g.Key,
+                    Nombre = g.First().Habitacion.Nombre,
+                    Descripcion = g.First().Habitacion.Descripcion,
+                    Tamaño = g.First().Habitacion.Tamaño,
+                    HuespedesMin = g.First().Habitacion.HuespedesMin,
+                    HuespedesMax = g.First().Habitacion.HuespedesMax,
+                    Precios = g.Select(x => x.Precio).ToList()
+                })
+                .ToList();
+
+            return agrupado;
         }
 
 

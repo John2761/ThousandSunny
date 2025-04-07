@@ -50,3 +50,303 @@ StackTrace :   at lambda_method1238(Closure, Object, ICollection`1, ResolutionCo
    at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
    at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context)
 
+2025-04-06 19:02:11.879 -06:00 [ERR] 
+EventId    :2624-250406070211
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Habitacion, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.HabitacionDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method106(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceHabitacion.ListAsync() in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\Services\Implementations\ServiceHabitacion.cs:line 66
+   at Reserva.Web.Controllers.HabitacionController.Index() in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\HabitacionController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-04-06 19:26:25.194 -06:00 [ERR] 
+EventId    :2537-250406072625
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Habitacion, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.HabitacionDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method106(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceHabitacion.ListAsync() in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\Services\Implementations\ServiceHabitacion.cs:line 66
+   at Reserva.Web.Controllers.HabitacionController.Index() in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\HabitacionController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-04-06 19:29:46.844 -06:00 [ERR] 
+EventId    :1678-250406072946
+ErrorList  :Error mapping types.
+
+Mapping types:
+Habitacion -> HabitacionDTO
+Reserva.Infraestructure.Models.Habitacion -> Reserva.Application.DTOs.HabitacionDTO
+
+Type Map configuration:
+Habitacion -> HabitacionDTO
+Reserva.Infraestructure.Models.Habitacion -> Reserva.Application.DTOs.HabitacionDTO
+
+Destination Member:
+Precio
+
+StackTrace :   at lambda_method132(Closure, Object, HabitacionDTO, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceHabitacion.FindByIdAsync(Int32 id) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\Services\Implementations\ServiceHabitacion.cs:line 52
+   at Reserva.Web.Controllers.HabitacionController.Detalle(Int32 id) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\HabitacionController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-04-06 19:29:51.285 -06:00 [ERR] 
+EventId    :198-250406072951
+ErrorList  :Error mapping types.
+
+Mapping types:
+Habitacion -> HabitacionDTO
+Reserva.Infraestructure.Models.Habitacion -> Reserva.Application.DTOs.HabitacionDTO
+
+Type Map configuration:
+Habitacion -> HabitacionDTO
+Reserva.Infraestructure.Models.Habitacion -> Reserva.Application.DTOs.HabitacionDTO
+
+Destination Member:
+Precio
+
+StackTrace :   at lambda_method132(Closure, Object, HabitacionDTO, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceHabitacion.FindByIdAsync(Int32 id) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\Services\Implementations\ServiceHabitacion.cs:line 52
+   at Reserva.Web.Controllers.HabitacionController.Detalle(Int32 id) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\HabitacionController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-04-06 19:32:24.378 -06:00 [ERR] 
+EventId    :4199-250406073224
+ErrorList  :Error mapping types.
+
+Mapping types:
+Habitacion -> HabitacionDTO
+Reserva.Infraestructure.Models.Habitacion -> Reserva.Application.DTOs.HabitacionDTO
+
+Type Map configuration:
+Habitacion -> HabitacionDTO
+Reserva.Infraestructure.Models.Habitacion -> Reserva.Application.DTOs.HabitacionDTO
+
+Destination Member:
+Precio
+
+StackTrace :   at lambda_method132(Closure, Object, HabitacionDTO, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceHabitacion.FindByIdAsync(Int32 id)
+   at Reserva.Web.Controllers.HabitacionController.Detalle(Int32 id) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\HabitacionController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-04-06 19:36:02.484 -06:00 [ERR] 
+EventId    :2413-250406073602
+ErrorList  :Error mapping types.
+
+Mapping types:
+Habitacion -> HabitacionDTO
+Reserva.Infraestructure.Models.Habitacion -> Reserva.Application.DTOs.HabitacionDTO
+
+Type Map configuration:
+Habitacion -> HabitacionDTO
+Reserva.Infraestructure.Models.Habitacion -> Reserva.Application.DTOs.HabitacionDTO
+
+Destination Member:
+Precio
+
+StackTrace :   at lambda_method132(Closure, Object, HabitacionDTO, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceHabitacion.FindByIdAsync(Int32 id)
+   at Reserva.Web.Controllers.HabitacionController.Editar(Int32 id) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\HabitacionController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-04-06 19:36:06.760 -06:00 [ERR] 
+EventId    :2564-250406073606
+ErrorList  :Error mapping types.
+
+Mapping types:
+Habitacion -> HabitacionDTO
+Reserva.Infraestructure.Models.Habitacion -> Reserva.Application.DTOs.HabitacionDTO
+
+Type Map configuration:
+Habitacion -> HabitacionDTO
+Reserva.Infraestructure.Models.Habitacion -> Reserva.Application.DTOs.HabitacionDTO
+
+Destination Member:
+Precio
+
+StackTrace :   at lambda_method132(Closure, Object, HabitacionDTO, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceHabitacion.FindByIdAsync(Int32 id)
+   at Reserva.Web.Controllers.HabitacionController.Detalle(Int32 id) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\HabitacionController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-04-06 19:43:02.979 -06:00 [ERR] 
+EventId    :2183-250406074302
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Habitacion, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.HabitacionDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method106(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceHabitacion.ListAsync() in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\Services\Implementations\ServiceHabitacion.cs:line 66
+   at Reserva.Web.Controllers.HabitacionController.Index() in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\HabitacionController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-04-06 19:52:38.298 -06:00 [ERR] 
+EventId    :4380-250406075238
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Habitacion, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.HabitacionDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method474(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceHabitacion.ListAsync() in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\Services\Implementations\ServiceHabitacion.cs:line 66
+   at Reserva.Web.Controllers.HabitacionController.Index() in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\HabitacionController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+
+2025-04-06 19:56:00.182 -06:00 [ERR] 
+EventId    :2356-250406075600
+ErrorList  :Error mapping types.
+
+Mapping types:
+List`1 -> ICollection`1
+System.Collections.Generic.List`1[[Reserva.Infraestructure.Models.Habitacion, Reserva.Infraestructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[Reserva.Application.DTOs.HabitacionDTO, Reserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+StackTrace :   at lambda_method106(Closure, Object, ICollection`1, ResolutionContext)
+   at Reserva.Application.Services.Implementations.ServiceHabitacion.ListAsync() in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\Services\Implementations\ServiceHabitacion.cs:line 66
+   at Reserva.Web.Controllers.HabitacionController.Index() in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Controllers\HabitacionController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Reserva.Web.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\Middleware\ErrorHandlingMiddleware.cs:line 23
+

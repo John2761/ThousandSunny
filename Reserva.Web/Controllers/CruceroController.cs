@@ -105,7 +105,7 @@ namespace Reserva.Web.Controllers
             {
                 id = h.IdHabitacion,
                 nombre = h.Nombre,
-                precios = h.Precio
+                precios = h.Precios
             });
              
             return Json(result);

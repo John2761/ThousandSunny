@@ -35,11 +35,6 @@ namespace Reserva.Application.DTOs
 
         public int? Cantidad { get; set; }
 
-        public decimal Precio { get; set; }
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 9754c396d4cfcd18556d8910e7fd7460e636251b
     }
 }

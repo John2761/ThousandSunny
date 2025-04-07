@@ -105,7 +105,7 @@ namespace Reserva.Web.Controllers
             }
         }
 
-        // 🚀 Método para la validación AJAX del nombre único
+        //Método para la validación AJAX del nombre único
         [HttpGet]
         public async Task<IActionResult> VerificarNombreUnico(string nombre)
         {

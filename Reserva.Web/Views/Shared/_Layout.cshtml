@@ -51,10 +51,16 @@
                         </ul>
 
                         <!-- Botón de búsqueda opcional -->
+                        <div class="d-flex ms-auto align-items-center gap-2">
+                            <a asp-controller="Reservacion" asp-action="Create" class="btn btn-search my-2 my-sm-0">
+                                🚢 Reservar Ahora
+                            </a>
+                       
                         <form class="d-flex ms-auto">
                             <input class="form-control me-sm-2" type="search" placeholder="Buscar">
                             <button class="btn btn-search my-2 my-sm-0" type="submit">Buscar</button>
                         </form>
+                        </div>
                     </div>
                 </div>
             </nav>
