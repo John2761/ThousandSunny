@@ -335,21 +335,15 @@ public partial class ThousandSunnyContext : DbContext
             entity.HasOne(d => d.IdDatosPagoNavigation).WithMany(p => p.Reservacion)
                 .HasForeignKey(d => d.IdDatosPago)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-
-<<<<<<< HEAD
-                .HasConstraintName("FKReservaciidDat44FF419A");
-=======
+                .HasConstraintName("FKReservaciidDat44FF419A")
                 .HasConstraintName("FK__Reservaci__idDat__44FF419A");
->>>>>>> 086d463afcd1a5cc7303c4eb30390d9c9bd10e30
+
             entity.HasOne(d => d.IdFechaNavigation).WithMany(p => p.Reservacion)
                 .HasForeignKey(d => d.IdFecha)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-
-<<<<<<< HEAD
-                .HasConstraintName("FKReservaciidFec44FF419A");
-=======
+                .HasConstraintName("FKReservaciidFec44FF419A")
                 .HasConstraintName("FK__Reservaci__idFec__44FF419A");
->>>>>>> 086d463afcd1a5cc7303c4eb30390d9c9bd10e30
+
             entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.Reservacion)
                 .HasForeignKey(d => d.IdUsuario)
                 .OnDelete(DeleteBehavior.ClientSetNull)
