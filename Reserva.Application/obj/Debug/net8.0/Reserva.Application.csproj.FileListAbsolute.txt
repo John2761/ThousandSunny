@@ -1,43 +1,3 @@
-C:\Users\John\Downloads\Git\Reserva.Application\bin\Debug\net8.0\Reserva.Application.deps.json
-C:\Users\John\Downloads\Git\Reserva.Application\bin\Debug\net8.0\Reserva.Application.dll
-C:\Users\John\Downloads\Git\Reserva.Application\bin\Debug\net8.0\Reserva.Application.pdb
-C:\Users\John\Downloads\Git\Reserva.Application\bin\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\Git\Reserva.Application\bin\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.AssemblyReference.cache
-C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\Reserva.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfoInputs.cache
-C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfo.cs
-C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.CoreCompileInputs.cache
-C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\Reserva..909FE32B.Up2Date
-C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\Reserva.Application.dll
-C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\refint\Reserva.Application.dll
-C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\Reserva.Application.pdb
-C:\Users\John\Downloads\Git\Reserva.Application\obj\Debug\net8.0\ref\Reserva.Application.dll
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.AssemblyReference.cache
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfoInputs.cache
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfo.cs
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.CoreCompileInputs.cache
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.sourcelink.json
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.dll
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\refint\Reserva.Application.dll
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.pdb
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.deps.json
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.dll
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.pdb
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.AssemblyReference.cache
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfoInputs.cache
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfo.cs
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.CoreCompileInputs.cache
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.sourcelink.json
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva..909FE32B.Up2Date
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.dll
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\obj\Debug\net8.0\refint\Reserva.Application.dll
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.pdb
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Application\obj\Debug\net8.0\ref\Reserva.Application.dll
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.deps.json
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.dll
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.pdb
@@ -54,19 +14,3 @@ C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Application\obj\De
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\refint\Reserva.Application.dll
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.pdb
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Application\obj\Debug\net8.0\ref\Reserva.Application.dll
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.deps.json
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.dll
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Application.pdb
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\bin\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.AssemblyReference.cache
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfoInputs.cache
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.AssemblyInfo.cs
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.csproj.CoreCompileInputs.cache
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.sourcelink.json
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva..909FE32B.Up2Date
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.dll
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\obj\Debug\net8.0\refint\Reserva.Application.dll
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\obj\Debug\net8.0\Reserva.Application.pdb
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Application\obj\Debug\net8.0\ref\Reserva.Application.dll

@@ -1,56 +1,3 @@
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.deps.json
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.runtimeconfig.json
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.AssemblyReference.cache
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfoInputs.cache
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfo.cs
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.CoreCompileInputs.cache
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\refint\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.genruntimeconfig.cache
-C:\Users\John\Downloads\Git\Reserva.Infraestructure\obj\Debug\net8.0\ref\Reserva.Infraestructure.dll
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.AssemblyReference.cache
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfoInputs.cache
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfo.cs
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.CoreCompileInputs.cache
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.sourcelink.json
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\refint\Reserva.Infraestructure.dll
-C:\Users\John\source\repos\John2761\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.deps.json
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.runtimeconfig.json
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.AssemblyReference.cache
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfoInputs.cache
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfo.cs
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.CoreCompileInputs.cache
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.sourcelink.json
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\refint\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.genruntimeconfig.cache
-C:\Users\John\Downloads\Ambiente Web II\Github\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\ref\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.deps.json
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.runtimeconfig.json
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.AssemblyReference.cache
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfoInputs.cache
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfo.cs
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.CoreCompileInputs.cache
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.sourcelink.json
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\refint\Reserva.Infraestructure.dll
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.genruntimeconfig.cache
-C:\Users\John\Downloads\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\ref\Reserva.Infraestructure.dll
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.deps.json
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.runtimeconfig.json
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.dll
@@ -66,18 +13,3 @@ C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Infraestructure\ob
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.pdb
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.genruntimeconfig.cache
 C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\ref\Reserva.Infraestructure.dll
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.deps.json
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.runtimeconfig.json
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\bin\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.AssemblyReference.cache
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfoInputs.cache
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.AssemblyInfo.cs
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.csproj.CoreCompileInputs.cache
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.sourcelink.json
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.dll
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\refint\Reserva.Infraestructure.dll
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.pdb
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\Reserva.Infraestructure.genruntimeconfig.cache
-C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Infraestructure\obj\Debug\net8.0\ref\Reserva.Infraestructure.dll

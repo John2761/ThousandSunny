@@ -17,117 +17,117 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Reserva.Web
 build_property.RootNamespace = Reserva.Web
-build_property.ProjectDir = C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web\
+build_property.ProjectDir = C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\perez\Desktop\GitHub\ThousandSunny\Reserva.Web
+build_property.MSBuildProjectDirectory = C:\Users\John\Downloads\Github\John2761\ThousandSunny\Reserva.Web
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Barco/Create.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Barco/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyY29cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Barco/Detalle.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Barco/Detalle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyY29cRGV0YWxsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Barco/Index.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Barco/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyY29cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Barco/Update.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Barco/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyY29cVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Barco/_AddHabitacion.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Barco/_AddHabitacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyY29cX0FkZEhhYml0YWNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Barco/_DetalleHabitaciones.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Barco/_DetalleHabitaciones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyY29cX0RldGFsbGVIYWJpdGFjaW9uZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Crucero/Crear.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Crucero/Crear.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3J1Y2Vyb1xDcmVhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Crucero/Detalle.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Crucero/Detalle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3J1Y2Vyb1xEZXRhbGxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Crucero/Index.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Crucero/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3J1Y2Vyb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Habitacion/Crear.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Habitacion/Crear.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvblxDcmVhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Habitacion/Detalle.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Habitacion/Detalle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvblxEZXRhbGxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Habitacion/Editar.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Habitacion/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvblxFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Habitacion/Index.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Habitacion/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Home/Index.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Home/Privacy.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Reservacion/Create.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Reservacion/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YWNpb25cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Reservacion/Detalle.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Reservacion/Detalle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YWNpb25cRGV0YWxsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Reservacion/Index.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Reservacion/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YWNpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Reservacion/_ComplementoForm.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Reservacion/_ComplementoForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YWNpb25cX0NvbXBsZW1lbnRvRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Reservacion/_HuespedesForm.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Reservacion/_HuespedesForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YWNpb25cX0h1ZXNwZWRlc0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Reservacion/_ResumenReserva.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Reservacion/_ResumenReserva.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YWNpb25cX1Jlc3VtZW5SZXNlcnZhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Shared/Error.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/_ViewImports.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/_ViewStart.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/perez/Desktop/GitHub/ThousandSunny/Reserva.Web/Views/Shared/_Layout.cshtml]
+[C:/Users/John/Downloads/Github/John2761/ThousandSunny/Reserva.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-x3clunp335
