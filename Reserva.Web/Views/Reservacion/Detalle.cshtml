@@ -141,6 +141,12 @@
             </div>
         }
 
+        <div class="text-center mt-4">
+            <a asp-action="DescargarPDF" asp-route-id="@Model.idReservacion" class="btn btn-success">
+                <i class="bi bi-file-earmark-pdf"></i> Descargar Resumen en PDF
+            </a>
+        </div>
+
         <!-- Botón de Regreso -->
         <div class="text-center mt-4">
             <a asp-action="Index" class="btn btn-secondary">

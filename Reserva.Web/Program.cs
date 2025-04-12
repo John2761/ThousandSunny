@@ -9,11 +9,18 @@ using Reserva.Infraestructure.Repository.Implementations;
 using Reserva.Application.Services.Interfaces;
 using Reserva.Application.Services.Implementations;
 using Reserva.Application.Profiles;
+using System.Globalization;
+using DinkToPdf;
+using DinkToPdf.Contracts;
+using Reserva.Web.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
+var context = new CustomAssemblyLoadContext();
+context.LoadUnmanagedLibrary(Path.Combine(Directory.GetCurrentDirectory(), "libwkhtmltox.dll"));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
 
 // Configurar D.I.
 //Repository 
@@ -111,4 +118,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+var cultureInfo = new CultureInfo("es-CR");
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 app.Run();

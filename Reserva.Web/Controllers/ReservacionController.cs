@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DinkToPdf.Contracts;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Reserva.Application.Services.Interfaces;
+using Reserva.Application.Services.PDF;
 using Reserva.Web.ViewModels;
 using System.Globalization;
 
@@ -9,10 +11,12 @@ namespace Reserva.Web.Controllers
     public class ReservacionController : Controller
     {
             private readonly IServiceReservacion _serviceReservacion;
+            private readonly IConverter _converter;
 
-            public ReservacionController(IServiceReservacion serviceReservacion)
+            public ReservacionController(IServiceReservacion serviceReservacion, IConverter converter)
             {
                 _serviceReservacion = serviceReservacion;
+                _converter = converter;
             }
 
 
@@ -29,6 +33,18 @@ namespace Reserva.Web.Controllers
                 var reservaciones = await _serviceReservacion.FindByIdAsync(id);
                 if (reservaciones == null) return NotFound();
                 return View(reservaciones);
+            }
+
+            [HttpGet]
+            public async Task<IActionResult> DescargarPDF(int id)
+            {
+                var reserva = await _serviceReservacion.FindByIdAsync(id);
+                if (reserva == null) return NotFound();
+
+                var pdfService = new DinkPDFService(_converter);
+                var pdfBytes = pdfService.GenerarPdf(reserva);
+
+                return File(pdfBytes, "application/pdf", $"Reserva_{id}.pdf");
             }
 
             [HttpGet]
