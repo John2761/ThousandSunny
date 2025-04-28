@@ -36,6 +36,7 @@ builder.Services.AddTransient<IServiceHabitacion, ServiceHabitacion>();
 builder.Services.AddTransient<IServiceBarco, ServiceBarco>();
 builder.Services.AddTransient<IServiceCrucero, ServiceCrucero>();
 builder.Services.AddTransient<IServicePuerto, ServicePuerto>();
+builder.Services.AddTransient<IServiceDashBoard, ServiceDashBoard>();
 
 //Configurar Automapper 
 builder.Services.AddAutoMapper(config =>

@@ -1,8 +1,123 @@
-﻿@{
+﻿@model ICollection<Reserva.Application.DTOs.CruceroDTO>
+
+@{
     ViewData["Title"] = "Inicio";
+
+    var imagesCrucero = new Dictionary<string, string>
+    {
+        { "Aventura Caribeña", "artico.jpg" },
+        { "Tesoros del Caribe", "caribe.jpg" },
+        { "Islas del Paraíso", "caribeña.jpg" },
+        { "Ruta Maya", "maya.jpg" },
+        { "Explorador Tropical", "tropical.jpg" }
+    };
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<div class="container mt-5">
+    <!-- Sección de Bienvenida Mejorada -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="~/images/crucero_inicio.jpg" class="img-fluid rounded-4 shadow" alt="Crucero de ensueño">
+        </div>
+        <div class="col-md-6 text-center">
+            <h1 class="display-5 fw-bold mb-4">¡Zarpa hacia tu próxima aventura!</h1>
+            <p class="lead mb-3">
+                Disfruta de <strong>destinos de ensueño</strong> en el Caribe, Mediterráneo y América del Sur.
+            </p>
+            <p class="lead mb-3">
+                Vive <strong>experiencias únicas</strong> a bordo de nuestros exclusivos cruceros.
+            </p>
+            <p class="lead mb-4">
+                ¡Reserva ahora y crea <strong>recuerdos inolvidables</strong> en alta mar!
+            </p>
+            <a class="btn btn-primary btn-lg px-4" asp-controller="Crucero" asp-action="Index">
+                Explorar Cruceros
+            </a>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <h2 class="text-center mb-4">Busca tu próximo crucero</h2>
+
+        <form method="get" asp-controller="Crucero" asp-action="Buscar">
+            <div class="row g-3 align-items-end">
+                <div class="col-md-3">
+                    <label for="Destino" class="form-label">Destino</label>
+                    <input type="text" class="form-control" id="Destino" name="Destino" placeholder="Ingrese destino">
+                </div>
+                <div class="col-md-3">
+                    <label for="PuertoSalida" class="form-label">Puerto de Salida</label>
+                    <input type="text" class="form-control" id="PuertoSalida" name="PuertoSalida" placeholder="Ingrese puerto">
+                </div>
+                <div class="col-md-2">
+                    <label for="Mes" class="form-label">Mes</label>
+                    <select class="form-select" id="Mes" name="Mes">
+                        @for (int mes = DateTime.Now.Month; mes <= 12; mes++)
+                        {
+                            <option value="@mes">@System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(mes)</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="Anio" class="form-label">Año</label>
+                    <select class="form-select" id="Anio" name="Anio">
+                        @for (int anio = DateTime.Now.Year; anio <= DateTime.Now.Year + 2; anio++)
+                        {
+                            <option value="@anio">@anio</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="OrdenarPor" class="form-label">Ordenar por</label>
+                    <select class="form-select" id="OrdenarPor" name="OrdenarPor">
+                        <option value="precioAsc">Precio (Menor a Mayor)</option>
+                        <option value="precioDesc">Precio (Mayor a Menor)</option>
+                        <option value="fechaAsc">Fecha más cercana</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary px-5">Buscar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Carrusel de Cruceros Disponibles -->
+    <h2 class="text-center mb-4">Cruceros Disponibles</h2>
+
+    <div id="crucerosCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                var crucero = Model.ElementAt(i);
+
+                string imagenCrucero = imagesCrucero.ContainsKey(crucero.Nombre)
+                ? imagesCrucero[crucero.Nombre]
+                : "default.jpg";
+
+                var imagenUrl = Url.Content($"~/images/crucero/{imagenCrucero}");
+
+                <div class="carousel-item @(i == 0 ? "active" : "")">
+                    <img src="@imagenUrl" class="d-block w-100" alt="@crucero.Nombre" style="height: 450px; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                        <h5>@crucero.Nombre</h5>
+                        <p>@crucero.Descripcion</p>
+                        <a asp-controller="Crucero" asp-action="Detalle" asp-route-id="@crucero.IdCrucero" class="btn btn-primary mt-2">
+                            Ver Detalle
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Botones de navegación -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#crucerosCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#crucerosCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>

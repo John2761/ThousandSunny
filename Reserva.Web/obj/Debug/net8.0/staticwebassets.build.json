@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ET9Sr+E4VZD0Q5n7xQaqIpsFKhcv5dCdZjCXtaAXIRE=",
+  "Hash": "cfT7j0NENPGcXwTmSUePsYfI8KusRu2RV7+FfbHtTS4=",
   "Source": "Reserva.Web",
   "BasePath": "_content/Reserva.Web",
   "Mode": "Default",
@@ -1023,6 +1023,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\crucero\\tropical.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\crucero_inicio.jpg",
+      "SourceId": "Reserva.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\",
+      "BasePath": "_content/Reserva.Web",
+      "RelativePath": "images/crucero_inicio#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "67icvsfzu2",
+      "Integrity": "3vmnIu3JZnn5NIMcfxOyXkaX3pzSwFpjQeUvFga2UkE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\crucero_inicio.jpg"
     },
     {
       "Identity": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\habitaciones\\1-estandar.png",
@@ -4756,6 +4777,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-+7HQ62di7UYKA8yAzZU/+JnVqrZJNBK+e1pFPvfSqLk="
+        }
+      ]
+    },
+    {
+      "Route": "images/crucero_inicio.67icvsfzu2.jpg",
+      "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\crucero_inicio.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47037"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3vmnIu3JZnn5NIMcfxOyXkaX3pzSwFpjQeUvFga2UkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 03:46:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "67icvsfzu2"
+        },
+        {
+          "Name": "label",
+          "Value": "images/crucero_inicio.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3vmnIu3JZnn5NIMcfxOyXkaX3pzSwFpjQeUvFga2UkE="
+        }
+      ]
+    },
+    {
+      "Route": "images/crucero_inicio.jpg",
+      "AssetFile": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\crucero_inicio.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47037"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3vmnIu3JZnn5NIMcfxOyXkaX3pzSwFpjQeUvFga2UkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 03:46:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3vmnIu3JZnn5NIMcfxOyXkaX3pzSwFpjQeUvFga2UkE="
         }
       ]
     },

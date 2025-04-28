@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Reserva.Application.Services.Interfaces;
 using Reserva.Web.Models;
 
 namespace Reserva.Web.Controllers;
@@ -7,15 +8,24 @@ namespace Reserva.Web.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IServiceCrucero _cruceroService;
 
-    public HomeController(ILogger<HomeController> logger)
+
+    public HomeController(ILogger<HomeController> logger, IServiceCrucero cruceroService)
     {
         _logger = logger;
+        _cruceroService = cruceroService;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View();
+        var todosLosCruceros = await _cruceroService.ListAsync();
+
+        var crucerosDisponibles = todosLosCruceros
+            .Where(c => c.FechasPrecios != null && c.FechasPrecios.Any(fp => fp.FechaSalida >= DateTime.Today))
+            .ToList();
+
+        return View(crucerosDisponibles);
     }
 
     public IActionResult Privacy()

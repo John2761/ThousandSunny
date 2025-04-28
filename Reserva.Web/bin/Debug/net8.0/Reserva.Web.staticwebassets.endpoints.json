@@ -2573,6 +2573,88 @@
       ]
     },
     {
+      "Route": "images/crucero_inicio.67icvsfzu2.jpg",
+      "AssetFile": "images/crucero_inicio.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47037"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3vmnIu3JZnn5NIMcfxOyXkaX3pzSwFpjQeUvFga2UkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 03:46:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "67icvsfzu2"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3vmnIu3JZnn5NIMcfxOyXkaX3pzSwFpjQeUvFga2UkE="
+        },
+        {
+          "Name": "label",
+          "Value": "images/crucero_inicio.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/crucero_inicio.jpg",
+      "AssetFile": "images/crucero_inicio.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47037"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3vmnIu3JZnn5NIMcfxOyXkaX3pzSwFpjQeUvFga2UkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 03:46:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3vmnIu3JZnn5NIMcfxOyXkaX3pzSwFpjQeUvFga2UkE="
+        }
+      ]
+    },
+    {
       "Route": "images/habitaciones/1-estandar.6im8fz9wz2.png",
       "AssetFile": "images/habitaciones/1-estandar.png",
       "Selectors": [],

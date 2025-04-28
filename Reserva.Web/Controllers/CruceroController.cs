@@ -111,6 +111,56 @@ namespace Reserva.Web.Controllers
             return Json(result);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Buscar(string? Destino, string? PuertoSalida, int? Mes, int? Anio, string? OrdenarPor)
+        {
+            var cruceros = await _serviceCrucero.ListAsync();
+
+            // Filtrado por Destino
+            if (!string.IsNullOrEmpty(Destino))
+            {
+                cruceros = cruceros.Where(c => c.Nombre.Contains(Destino, StringComparison.OrdinalIgnoreCase)).ToList();
+            }
+
+            // Filtrado por Puerto de Salida (desde Itinerario)
+            if (!string.IsNullOrEmpty(PuertoSalida))
+            {
+                cruceros = cruceros.Where(c => c.Itinerario.Any(i => i.NombrePuerto != null && i.NombrePuerto.Contains(PuertoSalida, StringComparison.OrdinalIgnoreCase))).ToList();
+            }
+
+            // Filtrado por Mes y Año (desde FechasPrecios)
+            if (Mes.HasValue && Anio.HasValue)
+            {
+                cruceros = cruceros.Where(c => c.FechasPrecios.Any(fp => fp.FechaSalida.Month == Mes && fp.FechaSalida.Year == Anio)).ToList();
+            }
+
+            // Ordenamiento
+            switch (OrdenarPor)
+            {
+                case "precioAsc":
+                    cruceros = cruceros
+                        .Where(c => c.FechasPrecios.Any(fp => fp.PrecioHabitacion.Any()))
+                        .OrderBy(c => c.FechasPrecios.Min(fp => fp.PrecioHabitacion.Min(p => p.PrecioHabitacion)))
+                        .ToList();
+                    break;
+
+                case "precioDesc":
+                    cruceros = cruceros
+                        .Where(c => c.FechasPrecios.Any(fp => fp.PrecioHabitacion.Any()))
+                        .OrderByDescending(c => c.FechasPrecios.Min(fp => fp.PrecioHabitacion.Min(p => p.PrecioHabitacion)))
+                        .ToList();
+                    break;
+
+                case "fechaAsc":
+                    cruceros = cruceros.OrderBy(c => c.FechasPrecios.Min(fp => fp.FechaSalida)).ToList();
+                    break;
+
+                default:
+                    break;
+            }
+
+            return View("Index", cruceros); // Usamos la misma vista Index
+        }
 
     }
 }

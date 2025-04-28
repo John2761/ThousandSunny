@@ -10,6 +10,7 @@ wwwroot\images\crucero\caribe.jpg
 wwwroot\images\crucero\caribeña.jpg
 wwwroot\images\crucero\maya.jpg
 wwwroot\images\crucero\tropical.jpg
+wwwroot\images\crucero_inicio.jpg
 wwwroot\images\habitaciones\1-estandar.png
 wwwroot\images\habitaciones\2-deluxe.png
 wwwroot\images\habitaciones\3-familiar.png

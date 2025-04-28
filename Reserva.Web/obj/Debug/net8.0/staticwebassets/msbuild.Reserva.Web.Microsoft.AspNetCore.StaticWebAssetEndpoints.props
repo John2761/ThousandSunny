@@ -144,6 +144,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-\u002B7HQ62di7UYKA8yAzZU/\u002BJnVqrZJNBK\u002Be1pFPvfSqLk="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"90547"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022\u002B7HQ62di7UYKA8yAzZU/\u002BJnVqrZJNBK\u002Be1pFPvfSqLk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Feb 2025 19:52:42 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Reserva.Web/images/crucero_inicio.67icvsfzu2.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\crucero_inicio.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"67icvsfzu2"},{"Name":"integrity","Value":"sha256-3vmnIu3JZnn5NIMcfxOyXkaX3pzSwFpjQeUvFga2UkE="},{"Name":"label","Value":"_content/Reserva.Web/images/crucero_inicio.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"47037"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00223vmnIu3JZnn5NIMcfxOyXkaX3pzSwFpjQeUvFga2UkE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 28 Apr 2025 03:46:22 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Reserva.Web/images/crucero_inicio.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\crucero_inicio.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-3vmnIu3JZnn5NIMcfxOyXkaX3pzSwFpjQeUvFga2UkE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"47037"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00223vmnIu3JZnn5NIMcfxOyXkaX3pzSwFpjQeUvFga2UkE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 28 Apr 2025 03:46:22 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Reserva.Web/images/habitaciones/1-estandar.6im8fz9wz2.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\habitaciones\1-estandar.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

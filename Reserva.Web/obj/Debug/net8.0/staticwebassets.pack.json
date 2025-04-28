@@ -65,6 +65,10 @@
       "PackagePath": "staticwebassets\\images\\crucero\\tropical.jpg"
     },
     {
+      "Id": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\crucero_inicio.jpg",
+      "PackagePath": "staticwebassets\\images\\crucero_inicio.jpg"
+    },
+    {
       "Id": "C:\\Users\\perez\\Desktop\\GitHub\\ThousandSunny\\Reserva.Web\\wwwroot\\images\\habitaciones\\1-estandar.png",
       "PackagePath": "staticwebassets\\images\\habitaciones\\1-estandar.png"
     },
